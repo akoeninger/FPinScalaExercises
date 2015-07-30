@@ -83,10 +83,13 @@ object List {
     * parameter is even called.
     */
 
+  /** Exercise 3.8
+    * Result: Cons(1,Cons(2,Cons(3,Nil)))
+    */
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
-    println(List.dropWhile[Int](List(1, 2, 3, 4), _ < 4))
+    println(List.foldRight(List(1,2,3), Nil:List[Int])(Cons(_,_)))
   }
 }
