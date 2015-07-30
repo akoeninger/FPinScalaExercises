@@ -86,6 +86,9 @@ object List {
   /** Exercise 3.8
     * Result: Cons(1,Cons(2,Cons(3,Nil)))
     */
+  
+  def length[A](as: List[A]): Int =
+    foldRight(as, 0)((_, acc) => acc + 1)
 }
 
 object Chapter3 {
