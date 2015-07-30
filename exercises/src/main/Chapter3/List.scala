@@ -1,5 +1,7 @@
 package main.Chapter3
 
+import scala.annotation.tailrec
+
 
 sealed trait List[+A]
 case object Nil extends List[Nothing]
@@ -40,6 +42,7 @@ object List {
   }
 
   // Exercise 3.4
+  @tailrec
   def drop[A](l: List[A], n: Int): List[A] = (l, n) match {
     case (Nil, _) => Nil
     case (_, 0) => l
@@ -47,8 +50,8 @@ object List {
   }
 
   // Exercise 3.5
+  @tailrec
   def dropWhile[A](l: List[A], f: A => Boolean): List[A] = l match {
-    case Nil => Nil
     case Cons(x, xs) if f(x) => dropWhile(xs, f)
     case _ => l
   }
@@ -60,7 +63,26 @@ object List {
     case Cons(x, xs) => Cons(x, init(xs))
   }
 
-  override def toString: String = super.toString
+  def foldRight[A, B](as: List[A], z: B)(f: (A, B) => B): B = as match {
+    case Nil => z
+    case Cons(x, xs) => f(x, foldRight(xs, z)(f))
+  }
+
+  def sum2(ns: List[Int]) =
+    foldRight(ns, 0)((x, y) => x + y)
+
+  def product2(ns: List[Double]) =
+    foldRight(ns, 1.0)(_ * _)
+
+  /** Exercise 3.7
+    *
+    * Can product be implemented with short-circuit using foldRight to halt recursion and
+    * return 0.0 if it encounters a 0.0?
+    *
+    * No, foldRight as implemented traverses to the end of the list before the function
+    * parameter is even called.
+    */
+
 }
 
 object Chapter3 {
