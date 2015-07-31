@@ -97,10 +97,16 @@ object List {
     case Nil => z
     case Cons(h, t) => foldLeft(t, f(z, h))(f)
   }
+
+  def sumLeft(ns: List[Int]) = foldLeft(ns, 0)(_ + _)
+
+  def productLeft(ns: List[Double]) = foldLeft(ns, 1.0)(_ * _)
+
+  def lengthLeft[A](as: List[A]): Int = foldLeft(as, 0)((acc, _) => acc + 1)
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
-    println(List.foldLeft(List(1,2,3), 0)(_ + _))
+    println(List.lengthLeft(List(1,2,3)))
   }
 }
