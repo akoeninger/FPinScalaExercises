@@ -86,13 +86,21 @@ object List {
   /** Exercise 3.8
     * Result: Cons(1,Cons(2,Cons(3,Nil)))
     */
-  
+
+  // Exercise 3.9
   def length[A](as: List[A]): Int =
     foldRight(as, 0)((_, acc) => acc + 1)
+
+  /* Exercise 3.10 */
+  @tailrec
+  def foldLeft[A, B](as: List[A], z: B)(f: (B, A) => B): B = as match {
+    case Nil => z
+    case Cons(h, t) => foldLeft(t, f(z, h))(f)
+  }
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
-    println(List.foldRight(List(1,2,3), Nil:List[Int])(Cons(_,_)))
+    println(List.foldLeft(List(1,2,3), 0)(_ + _))
   }
 }
