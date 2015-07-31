@@ -103,10 +103,13 @@ object List {
   def productLeft(ns: List[Double]) = foldLeft(ns, 1.0)(_ * _)
 
   def lengthLeft[A](as: List[A]): Int = foldLeft(as, 0)((acc, _) => acc + 1)
+
+  def reverse[A](as: List[A]) = foldLeft(as, Nil:List[A])((list, value) => Cons(value, list))
+
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
-    println(List.lengthLeft(List(1,2,3)))
+    println(List.reverse(List(1,2,3)))
   }
 }
