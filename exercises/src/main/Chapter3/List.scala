@@ -98,18 +98,28 @@ object List {
     case Cons(h, t) => foldLeft(t, f(z, h))(f)
   }
 
-  def sumLeft(ns: List[Int]) = foldLeft(ns, 0)(_ + _)
+  def sum3(ns: List[Int]) = foldLeft(ns, 0)(_ + _)
 
-  def productLeft(ns: List[Double]) = foldLeft(ns, 1.0)(_ * _)
+  def product3(ns: List[Double]) = foldLeft(ns, 1.0)(_ * _)
 
-  def lengthLeft[A](as: List[A]): Int = foldLeft(as, 0)((acc, _) => acc + 1)
+  def length2[A](as: List[A]): Int = foldLeft(as, 0)((acc, _) => acc + 1)
 
   def reverse[A](as: List[A]) = foldLeft(as, Nil:List[A])((list, value) => Cons(value, list))
+
+  def foldLeftViaFoldRight[A, B](as: List[A], z: B)(f: (B, A) => B): B =
+    foldRight(as, (b: B) => b)((a, g) => b => g(f(b, a)))(z)
+
+  def foldRightViaFoldLeft[A, B](as: List[A], z: B)(f: (A, B) => B): B =
+    foldLeft(reverse(as), z)((b, a) => f(a, b))
+
+  def foldRightViaFoldLeft_1[A, B](l: List[A], z: B)(f: (A, B) => B): B =
+    foldLeft(l, (b: B) => b)((g, a) => b => g(f(a, b)))(z)
 
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
-    println(List.reverse(List(1,2,3)))
+    println(List.foldRightViaFoldLeft(List(1,2,3), Nil:List[Int])((b, a) => Cons(b, a)))
+    println(List.foldLeft(List(1,2,3), 1)(_ * _))
   }
 }
