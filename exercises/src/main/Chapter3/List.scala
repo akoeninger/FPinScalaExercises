@@ -23,10 +23,7 @@ object List {
     if (as.isEmpty) Nil
     else Cons(as.head, apply(as.tail: _*))
 
-  def append[A](a1: List[A], a2: List[A]): List[A] = a1 match {
-    case Nil => a2
-    case Cons(h,t) => Cons(h, append(t, a2))
-  }
+  def append[A](a1: List[A], a2: List[A]): List[A] = foldRight(a1, a2)(Cons(_, _))
 
   // Exercise 3.1 == 3
   // Exercise 3.2
@@ -119,7 +116,7 @@ object List {
 
 object Chapter3 {
   def main(args: Array[String]) {
-    println(List.foldRightViaFoldLeft(List(1,2,3), Nil:List[Int])((b, a) => Cons(b, a)))
-    println(List.foldLeft(List(1,2,3), 1)(_ * _))
+  
+    println(List.append(List(1,2,3), List(1)) )
   }
 }
