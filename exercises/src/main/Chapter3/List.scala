@@ -18,7 +18,7 @@ object List {
     case Cons(0.0, _) => 0.0
     case Cons(x, xs) => x * product(xs)
   }
-  
+
   def apply[A](as: A*): List[A] =
     if (as.isEmpty) Nil
     else Cons(as.head, apply(as.tail: _*))
@@ -118,11 +118,17 @@ object List {
 
   def addOne(l: List[Int]): List[Int] = foldRight(l, Nil: List[Int])((h, t) => Cons(h+1, t))
 
+  def doubleToString(l: List[Double]): List[String] =
+    foldRight(l, Nil: List[String])((h, t) => Cons(h.toString, t))
+
+  def map[A, B](as: List[A])(f: A => B): List[B] =
+    foldRight(as, Nil: List[B])((h, t) => Cons(f(h), t))
+
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
-println(List.concat(List(List(1,2,3), List(4,5,6), List(7,8), List(9), List(10))))
-    println(List.append(List(1,2,3), List(1)) )
+    println(List.doubleToString(List(0.0, 1.5)))
+    println(List.map(List(1, 2, 3))(_ + 1))
   }
 }
