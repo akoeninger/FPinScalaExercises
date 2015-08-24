@@ -112,11 +112,15 @@ object List {
   def foldRightViaFoldLeft_1[A, B](l: List[A], z: B)(f: (A, B) => B): B =
     foldLeft(l, (b: B) => b)((g, a) => b => g(f(a, b)))(z)
 
+  // 3.15 Concatenate a list of lists into a single list. Runtime should be linear to total
+  // length of lists.
+  def concat[A](l: List[List[A]]): List[A] = foldRight(l, Nil: List[A])(append)
+
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
-  
+println(List.concat(List(List(1,2,3), List(4,5,6), List(7,8), List(9), List(10))))
     println(List.append(List(1,2,3), List(1)) )
   }
 }
