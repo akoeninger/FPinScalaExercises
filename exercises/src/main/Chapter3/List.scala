@@ -124,10 +124,14 @@ object List {
   def map[A, B](as: List[A])(f: A => B): List[B] =
     foldRight(as, Nil: List[B])((h, t) => Cons(f(h), t))
 
+  def filter[A](as: List[A])(f: A => Boolean): List[A] =
+    foldRight(as, Nil: List[A])((h, t) => if (f(h)) Cons(h, t) else t)
+
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
+    println (List.filter(List(1,2,6,8,4,0))(_ < 5))
     println(List.doubleToString(List(0.0, 1.5)))
     println(List.map(List(1, 2, 3))(_ + 1))
   }
