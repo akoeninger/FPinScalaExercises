@@ -129,12 +129,13 @@ object List {
 
   def flatMap[A, B](as: List[A])(f: A => List[B]): List[B] = concat(map(as)(f))
 
+  def filterViaFlatMap[A](as: List[A])(f: A => Boolean): List[A] =
+    flatMap(as)(a => if (f(a)) List(a) else Nil: List[A])
+
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
-    println (List.filter(List(1,2,6,8,4,0))(_ < 5))
-    println(List.doubleToString(List(0.0, 1.5)))
-    println(List.map(List(1, 2, 3))(a => List(a,a)))
+    println(List.filterViaFlatMap(List(1,4,2,5,10))(_ > 5))
   }
 }
