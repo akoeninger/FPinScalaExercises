@@ -132,6 +132,14 @@ object List {
   def filterViaFlatMap[A](as: List[A])(f: A => Boolean): List[A] =
     flatMap(as)(a => if (f(a)) List(a) else Nil: List[A])
 
+  def addLists(l1: List[Int], l2: List[Int]): List[Int] = l1 match {
+    case Nil => Nil
+    case Cons(h1, t1) => l2 match {
+      case Nil => Nil
+      case Cons(h2, t2) => Cons(h1 + h2, addLists(t1, t2))
+    }
+  }
+
 }
 
 object Chapter3 {
