@@ -140,6 +140,14 @@ object List {
     }
   }
 
+  def zipWith[A](l1: List[A], l2: List[A])(f: (A, A) => A): List[A] = l1 match {
+    case Nil => Nil
+    case Cons(h1, t1) => l2 match {
+      case Nil => Nil
+      case Cons(h2, t2) => Cons(f(h1, h2), zipWith(t1, t2)(f))
+    }
+  }
+
 }
 
 object Chapter3 {
