@@ -148,10 +148,30 @@ object List {
     }
   }
 
+  // Hard
+  def hasSubsequence[A](sup: List[A], sub: List[A]): Boolean = {
+    
+    def checkSub(sup1: List[A], sub1: List[A], matched: List[A]): Boolean = {
+      sub1 match {
+        case Nil => true
+        case Cons(h1, t1) => sup1 match {
+          case Cons(h2, t2) if h1 == h2 =>
+            if (checkSub(t2, t1, Cons(h1, matched))) true
+            else checkSub(t2, sub, Nil: List[A])
+          case Cons(h2, t2) => hasSubsequence(t2, sub)
+        }
+      }
+    }
+
+    if (length(sup) < length(sub))
+      false
+    else
+      checkSub(sup, sub, Nil: List[A])
+  }
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
-    println(List.filterViaFlatMap(List(1,4,2,5,10))(_ > 5))
+    println(List.hasSubsequence(List(1,2,3,3,4), List(2,1)))
   }
 }
