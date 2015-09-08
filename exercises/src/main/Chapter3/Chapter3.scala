@@ -199,10 +199,15 @@ object Tree {
     }
     depthR(tree, 0)
   }
+
+  def map[A, B](tree: Tree[A])(f: A => B): Tree[B] = tree match {
+    case Leaf(v) ⇒ Leaf(f(v))
+    case Branch(l, r) ⇒ Branch(map(l)(f), map(r)(f))
+  }
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
-    println(List.hasSubsequence(List(1,2,3,3,4), List(2,1)))
+    println(Tree.map(Branch[Int](Leaf(0), Branch(Leaf(1), Leaf(2))))(_ + 1))
   }
 }
