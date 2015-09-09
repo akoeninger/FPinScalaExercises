@@ -180,34 +180,45 @@ object Tree {
     case Branch(l, r) ⇒ 1 + size(l) + size(r)
   }
 
-  def maximum(tree: Tree[Int]): Int = {
-    def maxR(t: Tree[Int], m: Int): Int = t match {
-      case Leaf(v) ⇒ v max m
-      case Branch(l, r) ⇒ maxR(l, Int.MinValue) max maxR(r, Int.MinValue)
-    }
+  def sizeByFold[A](tree: Tree[A]): Int =
+    fold(tree)(_ => 1)((l, r) => 1 + l + r)
 
-    tree match {
-      case Leaf(v) ⇒ v
-      case Branch(l, r) ⇒ maxR(l, Int.MinValue) max maxR(r, Int.MinValue)
-    }
+  def maximum(tree: Tree[Int]): Int = tree match {
+    case Leaf(v) ⇒ v
+    case Branch(l, r) ⇒ maximum(l) max maximum(r)
   }
 
-  def depth[A](tree: Tree[A]): Int = {
-    def depthR(t: Tree[A], d: Int): Int = t match {
-      case Leaf(_) ⇒ d
-      case Branch(l, r) ⇒ depthR(l, d + 1) max depthR(r, d + 1)
-    }
-    depthR(tree, 0)
+  def maxViaFold(tree: Tree[Int]): Int =
+    fold(tree)(v => v)((l, r) => l max r)
+
+  def depth[A](tree: Tree[A]): Int = tree match {
+      case Leaf(_) ⇒ 0
+      case Branch(l, r) ⇒ 1 + (depth(l) max depth(r))
   }
+
+  def depthViaFold[A](tree: Tree[A]): Int =
+    fold(tree)(_ => 0)((l, r) => 1 + (l max r))
 
   def map[A, B](tree: Tree[A])(f: A => B): Tree[B] = tree match {
     case Leaf(v) ⇒ Leaf(f(v))
     case Branch(l, r) ⇒ Branch(map(l)(f), map(r)(f))
   }
+
+  def mapViaFold[A, B](tree: Tree[A])(f: A => B): Tree[B] =
+    fold(tree)(a => Leaf(f(a)): Tree[B])(Branch(_, _))
+
+  /**
+   * f: A => B handles the Leaf case to transform the terminal node from A to B
+   * g: (B, B) => B handles transforming the Branch cases after their values have been transformed from A => B
+   */
+  def fold[A, B](tree: Tree[A])(f: A => B)(g: (B, B) => B): B = tree match {
+    case Leaf(v) => f(v)
+    case Branch(l, r) => g(fold(l)(f)(g), fold(r)(f)(g))
+  }
 }
 
 object Chapter3 {
   def main(args: Array[String]) {
-    println(Tree.map(Branch[Int](Leaf(0), Branch(Leaf(1), Leaf(2))))(_ + 1))
+    println(Tree.sizeByFold(Branch[Int](Leaf(0), Branch(Leaf(1), Leaf(2)))))
   }
 }
