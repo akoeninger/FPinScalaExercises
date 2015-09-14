@@ -3,6 +3,10 @@ package main.Chapter3.Chapter4
 
 object Chapter4 {
   sealed trait Option[+A] {
+    def mean(xs: Seq[Double]): Option[Double] =
+      if (xs.isEmpty) None
+      else Some(xs.sum / xs.length)
+
     def map[B](f: A => B): Option[B] = this match {
       case None => None
       case Some(v) => Some(f(v))
@@ -22,6 +26,11 @@ object Chapter4 {
     def filter(f: A => Boolean): Option[A] =
       if (map(f) getOrElse false) this
       else None
+
+    def variance(xs: Seq[Double]): Option[Double] =
+      mean(xs) flatMap { m =>
+        mean(xs map (x => math.pow(x - m, 2)))
+      }
   }
 
   case class Some[+A](get: A) extends Option[A]
