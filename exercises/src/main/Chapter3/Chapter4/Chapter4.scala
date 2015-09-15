@@ -2,6 +2,14 @@ package main.Chapter3.Chapter4
 
 
 object Chapter4 {
+  val absO: Option[Double] => Option[Double] = lift(math.abs)
+
+  def lift[A, B](f: A => B): Option[A] => Option[B] = _ map f
+
+  def Try[A](a: => A): Option[A] =
+    try Some(a)
+    catch { case e: Exception => None }
+  
   sealed trait Option[+A] {
     def mean(xs: Seq[Double]): Option[Double] =
       if (xs.isEmpty) None
@@ -32,11 +40,17 @@ object Chapter4 {
         mean(xs map (x => math.pow(x - m, 2)))
       }
   }
+  
+  def map2[A, B, C](a: Option[A], b: Option[B])(f: (A, B) => C): Option[C] = a flatMap { a1 =>
+    b map { b1 =>
+      f(a1, b1)
+    }
+  }
 
   case class Some[+A](get: A) extends Option[A]
   case object None extends Option[Nothing]
 
   def main(args: Array[String]) {
-
+  
   }
 }
