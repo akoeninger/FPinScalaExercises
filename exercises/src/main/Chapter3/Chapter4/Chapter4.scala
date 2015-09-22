@@ -73,7 +73,15 @@ object Chapter4 {
   def sequence_book[A](a: List[Option[A]]): Option[List[A]] =
     a.foldRight[Option[List[A]]](Some(Nil))((x, y) => map2(x, y)(_ :: _))
 
+  def traverse[A, B](a: List[A])(f: A => Option[B]): Option[List[B]] = {
+    a.foldRight[Option[List[B]]](Some(Nil)) { (x, y) =>
+      y flatMap { t =>
+        f(x).map(_ :: t)
+      }
+    }
+  }
+
   def main(args: Array[String]) {
-    println(Option.sequence(List(Some(1), Some(2), None, Some(3))))
+    println(traverse(List("1", "a", "3"))(s => Try(s.toInt)))
   }
 }
