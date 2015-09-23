@@ -52,16 +52,9 @@ object Chapter4 {
 
   object Option {
     def sequence[A](a: List[Option[A]]): Option[List[A]] = {
-      a match {
-        case Nil => Some(Nil)
-        case h :: t =>
-          h match {
-            case None => None
-            case Some(v) => sequence(t) map (v :: _)
-          }
-      }
+      traverse(a)(a1 => a1)
     }
-  }
+
 
   def sequence_1[A](a: List[Option[A]]): Option[List[A]] = a match {
     case Nil => Some(Nil)
@@ -80,8 +73,8 @@ object Chapter4 {
       }
     }
   }
-
+}
   def main(args: Array[String]) {
-    println(traverse(List("1", "a", "3"))(s => Try(s.toInt)))
+    println(Option.traverse(List(Some("1"), Some("a"), Some("3")))(s => s))
   }
 }
