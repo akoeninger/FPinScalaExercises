@@ -41,12 +41,6 @@ object Chapter4 {
       }
   }
 
-  def map2[A, B, C](a: Option[A], b: Option[B])(f: (A, B) => C): Option[C] = a flatMap { a1 =>
-    b map { b1 =>
-      f(a1, b1)
-    }
-  }
-
   case class Some[+A](get: A) extends Option[A]
   case object None extends Option[Nothing]
 
@@ -55,6 +49,10 @@ object Chapter4 {
       traverse(a)(a1 => a1)
     }
 
+    def map2[A, B, C](a: Option[A], b: Option[B])(f: (A, B) => C): Option[C] = for {
+      aa ← a
+      bb ← b
+    } yield f(aa, bb)
 
   def sequence_1[A](a: List[Option[A]]): Option[List[A]] = a match {
     case Nil => Some(Nil)
@@ -74,6 +72,45 @@ object Chapter4 {
     }
   }
 }
+
+  sealed trait Either[+E, +A] {
+    def mean(xs: IndexedSeq[Double]): Either[String, Double] =
+      if (xs.isEmpty)
+        Left("mean of empty left")
+      else
+        Right(xs.sum / xs.length)
+
+    def safeDiv(x: Int, y: Int): Either[Exception, Int] =
+      try Right(x / y)
+      catch { case e: Exception => Left(e) }
+
+    def Try[AA >: A](a: => AA): Either[Exception, AA] =
+      try Right(a)
+      catch { case e: Exception => Left(e) }
+
+
+    def map[B](f: A => B): Either[E, B] = this match {
+      case Right(v) => Right(f(v))
+      case Left(e) => Left(e)
+    }
+    def flatMap[EE >: E, B](f: A => Either[EE, B]): Either[EE, B] = this match {
+      case Right(v) => f(v)
+      case Left(e) => Left(e)
+    }
+    def orElse[EE >: E, B >: A](b: => Either[EE, B]): Either[EE, B] = this match {
+      case Right(_) => this
+      case Left(_) => b
+    }
+    def map2[EE >: E, B, C](b: Either[EE, B])(f: (A, B) => C): Either[EE, C] = for {
+      a ← this
+      bb ← b
+    } yield f(a, bb)
+
+  }
+  case class Left[+E](value: E) extends Either[E, Nothing]
+  case class Right[+A](value: A) extends Either[Nothing, A]
+
+
   def main(args: Array[String]) {
     println(Option.traverse(List(Some("1"), Some("a"), Some("3")))(s => s))
   }
