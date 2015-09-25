@@ -1,4 +1,4 @@
-package main.Chapter3.Chapter4
+package main.Chapter4
 
 
 object Chapter4 {
