@@ -51,8 +51,23 @@ package object Chapter5 {
       }
       loop(n, this)
     }
+
+    def takeWhile(p: A => Boolean): Stream[A] = {
+      def go(s: Stream[A]): Stream[A] = s match {
+        case Empty => Empty
+        case Cons(h, t) =>
+          lazy val head = h()
+
+          if (p(head))
+            Stream.cons(head, go(t()))
+          else
+            Empty
+
+      }
+      go(this)
+    }
   }
-  
+
   case object Empty extends Stream[Nothing]
   case class Cons[+A](h: () => A, t: () => Stream[A]) extends Stream[A]
 
@@ -69,13 +84,6 @@ package object Chapter5 {
   }
 
   def main(args: Array[String]): Unit = {
-    def method(n: Int): Int = {
-      println(s"this is $n")
-      n
-    }
-
-    val test = Stream.cons(method(0), Stream.cons(method(1), Stream(method(2))))
-
-    println(test.take(2).toList)
+    println(Stream(1,2,3,4,5,6,7,8,9,10).takeWhile(_ < 8).toListFast)
   }
 }
