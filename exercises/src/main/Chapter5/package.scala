@@ -67,10 +67,13 @@ package object Chapter5 {
       go(this)
     }
 
+
     def foldRight[B](z: => B)(f: (A, => B) => B): B = this match {
       case Cons(h, t) => f(h(), t().foldRight(z)(f))
       case _ => z
     }
+
+    def forAll(p: A => Boolean): Boolean = foldRight(true)((a, b) => p(a) && b)
   }
 
   case object Empty extends Stream[Nothing]
@@ -89,6 +92,9 @@ package object Chapter5 {
   }
 
   def main(args: Array[String]): Unit = {
-    println(Stream(1,2,3,4,5,6,7,8,9,10).takeWhile(_ < 8).toListFast)
+    println(Stream(1,2,3,4,5,6,7,8,9,10).forAll({ a =>
+      println(a)
+      a < 8
+    }))
   }
 }
