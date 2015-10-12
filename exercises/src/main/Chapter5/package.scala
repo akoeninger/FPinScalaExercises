@@ -67,6 +67,8 @@ package object Chapter5 {
       go(this)
     }
 
+    def takeWhileViaFoldRight(p: A => Boolean): Stream[A] =
+      foldRight(Empty: Stream[A])((a, b) => if (p(a)) Stream.cons(a, b) else Empty)
 
     def foldRight[B](z: => B)(f: (A, => B) => B): B = this match {
       case Cons(h, t) => f(h(), t().foldRight(z)(f))
@@ -92,9 +94,9 @@ package object Chapter5 {
   }
 
   def main(args: Array[String]): Unit = {
-    println(Stream(1,2,3,4,5,6,7,8,9,10).forAll({ a =>
+    println(Stream(1,2,3,4,5,6,7,8,9,10).takeWhileViaFoldRight({ a =>
       println(a)
       a < 8
-    }))
+    }).toListFast)
   }
 }
