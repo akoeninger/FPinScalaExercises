@@ -6,6 +6,8 @@ import scala.collection.mutable.ListBuffer
 package object Chapter5 {
 
   sealed trait Stream[+A] {
+    import Stream._
+
     def headOption: Option[A] = this match {
       case Empty => None
       case Cons(h, t) => Some(h())
@@ -37,9 +39,9 @@ package object Chapter5 {
         case Empty => Empty
         case Cons(h, t) =>
           if (i > 0)
-            Stream.cons[A](h(), go(i - 1, t()))
+            cons[A](h(), go(i - 1, t()))
           else
-            Stream.cons[A](h(), Empty)
+            cons[A](h(), Empty)
       }
 
       go(n, this)
@@ -63,16 +65,28 @@ package object Chapter5 {
           lazy val head = h()
 
           if (p(head))
-            Stream.cons(head, go(t()))
+            cons(head, go(t()))
           else
-            Empty
+            empty
 
       }
       go(this)
     }
 
+    def map[B](f: A => B): Stream[B] =
+      foldRight(Empty: Stream[B])((a, b) => cons(f(a), b))
+
+    def filter(p: A => Boolean): Stream[A] =
+      foldRight(Empty: Stream[A])((a, acc) => if (p(a)) cons(a, acc) else acc)
+
+    def append[B >: A](s: => Stream[B]): Stream[B] =
+      foldRight(s)((h, t) => cons(h, t))
+
+    def flatMap[B](f: A => Stream[B]): Stream[B] =
+      foldRight(empty[B])((a, b) => f(a) append b)
+
     def takeWhileViaFoldRight(p: A => Boolean): Stream[A] =
-      foldRight(Empty: Stream[A])((a, b) => if (p(a)) Stream.cons(a, b) else Empty)
+      foldRight(Empty: Stream[A])((a, b) => if (p(a)) cons(a, b) else empty)
 
     def foldRight[B](z: => B)(f: (A, => B) => B): B = this match {
       case Cons(h, t) => f(h(), t().foldRight(z)(f))
@@ -98,6 +112,6 @@ package object Chapter5 {
   }
 
   def main(args: Array[String]): Unit = {
-    println(Stream(1,2,3,4,5,6,7,8,9,10).headOptionViaFoldRight)
+    println(Stream(1,2,3,4,5,6,7,8,9,10).append(Stream(11)).toList)
   }
 }
