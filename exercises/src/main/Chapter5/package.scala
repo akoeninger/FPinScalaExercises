@@ -10,6 +10,10 @@ package object Chapter5 {
       case Empty => None
       case Cons(h, t) => Some(h())
     }
+
+    def headOptionViaFoldRight: Option[A] =
+      foldRight(None: Option[A])((a, acc) => Some(a))
+
     def toList: List[A] = this match {
       case Empty => Nil
       case Cons(h, t) => h() :: t().toList
@@ -94,9 +98,6 @@ package object Chapter5 {
   }
 
   def main(args: Array[String]): Unit = {
-    println(Stream(1,2,3,4,5,6,7,8,9,10).takeWhileViaFoldRight({ a =>
-      println(a)
-      a < 8
-    }).toListFast)
+    println(Stream(1,2,3,4,5,6,7,8,9,10).headOptionViaFoldRight)
   }
 }
