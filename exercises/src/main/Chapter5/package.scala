@@ -119,12 +119,18 @@ package object Chapter5 {
       case _ => None
     }
 
+    def zip[B](s2: Stream[B]): Stream[(A, B)] =
+      zipWith(s2)((_, _))
+
     def zipAll[B](s2: Stream[B]): Stream[(Option[A], Option[B])] = unfold((this, s2)) {
       case (Cons(h, t), Cons(h1, t1)) => Some( ( (Some(h()), Some(h1()) ), (t(), t1())) )
       case (Cons(h, t), _) => Some( ( (Some(h()), None), (t(), empty[B]) ) )
       case (_, Cons(h1, t1)) => Some( ( (None, Some(h1())), (empty, t1())))
       case _ => None
     }
+
+    def startsWith[B](s: Stream[B]): Boolean =
+      this.zip(s).forAll(p => p._1 == p._2)
 
   }
 
@@ -176,6 +182,6 @@ package object Chapter5 {
   }
 
   def main(args: Array[String]): Unit = {
-    println(Stream(1,2,3,4).mapViaUnfold(_ + 3).zipAll(Stream.ones).takeViaUnfold( 6).toList)
+    println(Stream(2,3,4).startsWith(Stream.ones.take(1)))
   }
 }
