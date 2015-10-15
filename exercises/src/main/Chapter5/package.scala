@@ -127,6 +127,11 @@ package object Chapter5 {
       def go(f0: Int, f1: Int): Stream[Int] = cons(f0, go(f1, f0 + f1))
       go(0, 1)
     }
+
+    def unfold[A, S](z: S)(f: S => Option[(A, S)]): Stream[A] = f(z) match {
+      case None => empty[A]
+      case Some((h, s)) => cons(h, unfold(s)(f))
+    }
   }
 
   def main(args: Array[String]): Unit = {
