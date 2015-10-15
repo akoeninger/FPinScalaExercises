@@ -58,7 +58,7 @@ package object Chapter5 {
       @tailrec
       def loop(i: Int, s: Stream[A]): Stream[A] = s match {
         case Empty => Empty
-        case Cons(_, t) if i > 0 => loop(i - 1, t())
+        case Cons(_, t) if i > 1 => loop(i - 1, t())
         case Cons(_, t) => t()
       }
       loop(n, this)
@@ -110,6 +110,9 @@ package object Chapter5 {
       case _ => z
     }
 
+    def exists(p: A => Boolean): Boolean =
+      foldRight(false)((a, b) => p(a) || b)
+
     def forAll(p: A => Boolean): Boolean = foldRight(true)((a, b) => p(a) && b)
 
     def find(p: A => Boolean): Option[A] = filter(p).headOption
@@ -129,8 +132,18 @@ package object Chapter5 {
       case _ => None
     }
 
-    def startsWith[B](s: Stream[B]): Boolean =
-      this.zip(s).forAll(p => p._1 == p._2)
+    def startsWith[A](s: Stream[A]): Boolean =
+      zipAll(s).takeWhile(_._2.isDefined).forAll(p => p._1 == p._2)
+
+    def tails: Stream[Stream[A]] = unfold(this) {
+      case Empty => None
+      case s => Some((s, s drop 1))
+    } append Stream(empty)
+
+
+    def hasSubsequence[A](s: Stream[A]): Boolean =
+      tails.exists( _ startsWith s)
+
 
   }
 
@@ -182,6 +195,6 @@ package object Chapter5 {
   }
 
   def main(args: Array[String]): Unit = {
-    println(Stream(2,3,4).startsWith(Stream.ones.take(1)))
+    println(Stream(2,3,4).hasSubsequence(Stream(3,4)))
   }
 }
