@@ -123,9 +123,21 @@ package object Chapter5 {
     def from(n: Int): Stream[Int] =
       cons(n, from(n + 1))
 
+    def fromViaUnfold(n: Int): Stream[Int] =
+      unfold(n)(n => Some(n, n + 1))
+
+    def constantViaUnfold[A](a: A): Stream[A] =
+      unfold(a)(p => Some(p, p))
+
+    def ones: Stream[Int] = unfold(1)(_ => Some(1,1))
+
     val fibs: Stream[Int] = {
       def go(f0: Int, f1: Int): Stream[Int] = cons(f0, go(f1, f0 + f1))
       go(0, 1)
+    }
+
+    val fibsViaUnfold: Stream[Int] = {
+      unfold((0, 1)) { case (f0, f1) => Some(f0, (f1, f0 + f1)) }
     }
 
     def unfold[A, S](z: S)(f: S => Option[(A, S)]): Stream[A] = f(z) match {
@@ -135,6 +147,6 @@ package object Chapter5 {
   }
 
   def main(args: Array[String]): Unit = {
-    println(Stream.constant(1).take(2).toList)
+    println(Stream.fibsViaUnfold.take(7).toList)
   }
 }
