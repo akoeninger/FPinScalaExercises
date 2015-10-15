@@ -47,6 +47,12 @@ package object Chapter5 {
       go(n, this)
     }
 
+    def takeViaUnfold(n: Int): Stream[A] = unfold((this, n)) {
+      case (Cons(h, t), 1) => Some((h(), (empty, 0)))
+      case (Cons(h, t), x) if x > 1=> Some((h(), (t(), x - 1)))
+      case _ => None
+    }
+
     def drop(n: Int): Stream[A] = {
 
       @tailrec
@@ -76,6 +82,11 @@ package object Chapter5 {
     def map[B](f: A => B): Stream[B] =
       foldRight(Empty: Stream[B])((a, b) => cons(f(a), b))
 
+    def mapViaUnfold[B](f: A => B): Stream[B] = unfold(this) {
+      case Cons(h, t) => Some(f(h()), t())
+      case Empty => None
+    }
+
     def filter(p: A => Boolean): Stream[A] =
       foldRight(Empty: Stream[A])((a, acc) => if (p(a)) cons(a, acc) else acc)
 
@@ -88,6 +99,12 @@ package object Chapter5 {
     def takeWhileViaFoldRight(p: A => Boolean): Stream[A] =
       foldRight(Empty: Stream[A])((a, b) => if (p(a)) cons(a, b) else empty)
 
+    def takeWhileViaUnfold(p: A => Boolean): Stream[A] = unfold(this) {
+      case Cons(h, t) if p(h()) => Some((h(), t()))
+      case _ => None
+    }
+
+
     def foldRight[B](z: => B)(f: (A, => B) => B): B = this match {
       case Cons(h, t) => f(h(), t().foldRight(z)(f))
       case _ => z
@@ -96,6 +113,18 @@ package object Chapter5 {
     def forAll(p: A => Boolean): Boolean = foldRight(true)((a, b) => p(a) && b)
 
     def find(p: A => Boolean): Option[A] = filter(p).headOption
+
+    def zipWith[B, C](s: Stream[B])(f: (A, B) => C): Stream[C] = unfold((this, s)) {
+      case (Cons(h, t), Cons(h1, t1)) => Some((f(h(), h1()), (t(), t1())))
+      case _ => None
+    }
+
+    def zipAll[B](s2: Stream[B]): Stream[(Option[A], Option[B])] = unfold((this, s2)) {
+      case (Cons(h, t), Cons(h1, t1)) => Some( ( (Some(h()), Some(h1()) ), (t(), t1())) )
+      case (Cons(h, t), _) => Some( ( (Some(h()), None), (t(), empty[B]) ) )
+      case (_, Cons(h1, t1)) => Some( ( (None, Some(h1())), (empty, t1())))
+      case _ => None
+    }
 
   }
 
@@ -147,6 +176,6 @@ package object Chapter5 {
   }
 
   def main(args: Array[String]): Unit = {
-    println(Stream.fibsViaUnfold.take(7).toList)
+    println(Stream(1,2,3,4).mapViaUnfold(_ + 3).zipAll(Stream.ones).takeViaUnfold( 6).toList)
   }
 }
