@@ -113,7 +113,15 @@ package object Chapter5 {
     def apply[A](as: A*): Stream[A] =
       if (as.isEmpty) empty else cons(as.head, apply(as.tail: _*))
 
-    def constant[A](a: A): Stream[A] = cons(a, constant(a))
+    def constant[A](a: A): Stream[A] = {
+      // cons(a, constant(a))
+      // more efficient book answer:
+      lazy val tail: Stream[A] = Cons(() => a, () => tail)
+      tail
+    }
+
+    def from(n: Int): Stream[Int] =
+      cons(n, from(n + 1))
   }
 
   def main(args: Array[String]): Unit = {
