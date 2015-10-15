@@ -132,7 +132,7 @@ package object Chapter5 {
       case _ => None
     }
 
-    def startsWith[A](s: Stream[A]): Boolean =
+    def startsWith[A1 >: A](s: Stream[A1]): Boolean =
       zipAll(s).takeWhile(_._2.isDefined).forAll(p => p._1 == p._2)
 
     def tails: Stream[Stream[A]] = unfold(this) {
@@ -141,7 +141,7 @@ package object Chapter5 {
     } append Stream(empty)
 
 
-    def hasSubsequence[A](s: Stream[A]): Boolean =
+    def hasSubsequence[A1 >: A](s: Stream[A1]): Boolean =
       tails.exists( _ startsWith s)
 
 
