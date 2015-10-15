@@ -38,7 +38,7 @@ package object Chapter5 {
       def go(i: Int, s: Stream[A]): Stream[A] = s match {
         case Empty => Empty
         case Cons(h, t) =>
-          if (i > 0)
+          if (i > 1)
             cons[A](h(), go(i - 1, t()))
           else
             cons[A](h(), Empty)
@@ -94,6 +94,9 @@ package object Chapter5 {
     }
 
     def forAll(p: A => Boolean): Boolean = foldRight(true)((a, b) => p(a) && b)
+
+    def find(p: A => Boolean): Option[A] = filter(p).headOption
+
   }
 
   case object Empty extends Stream[Nothing]
@@ -109,9 +112,11 @@ package object Chapter5 {
 
     def apply[A](as: A*): Stream[A] =
       if (as.isEmpty) empty else cons(as.head, apply(as.tail: _*))
+
+    def constant[A](a: A): Stream[A] = cons(a, constant(a))
   }
 
   def main(args: Array[String]): Unit = {
-    println(Stream(1,2,3,4,5,6,7,8,9,10).append(Stream(11)).toList)
+    println(Stream.constant(1).take(2).toList)
   }
 }
