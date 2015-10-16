@@ -8,9 +8,7 @@ package object Chapter6 {
 
     def nonNegativeInt(rng: RNG): (Int, RNG) = {
       val (i, newRNG) = rng.nextInt
-      val n = if (i == Int.MinValue) Int.MaxValue else abs(i)
-
-      (n, newRNG)
+      (if (i < 0) -(i + 1) else i, newRNG)
     }
 
     def double(rng: RNG): (Double, RNG) = {
@@ -21,6 +19,27 @@ package object Chapter6 {
       val d = (max - n) / max.toDouble
 
       (d, nextState)
+    }
+
+    def intDouble(rng: RNG): ((Int, Double), RNG) = {
+      val (i, rng1) = rng.nextInt
+      val (d, rng2) = rng1.double(rng1)
+
+      ((i, d), rng2)
+    }
+
+    def doubleInt(rng: RNG): ((Double, Int), RNG) = {
+      val ((i, d), rng2) = intDouble(rng)
+
+      ((d, i), rng2)
+    }
+
+    def double3(rng: RNG): ((Double, Double, Double), RNG) = {
+      val (d1, r1) = double(rng)
+      val (d2, r2) = double(r1)
+      val (d3, r3) = double(r2)
+
+      ((d1, d2, d3), r3)
     }
   }
 
