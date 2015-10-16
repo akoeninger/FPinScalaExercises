@@ -41,6 +41,19 @@ package object Chapter6 {
 
       ((d1, d2, d3), r3)
     }
+
+    def ints(count: Int)(rng: RNG): (List[Int], RNG) = {
+      def go(c: Int, r: RNG, list: List[Int]): (List[Int], RNG) = {
+        if (c == 0)
+          (list, r)
+        else {
+          val (i, r1) = r.nextInt
+          go(c - 1, r1, i :: list)
+        }
+      }
+
+      go(count, rng, Nil)
+    }
   }
 
   case class SimpleRNG(seed: Long) extends RNG {
