@@ -4,22 +4,29 @@ import scala.math._
 
 package object Chapter6 {
   trait RNG {
+    type Rand[+A] = RNG => (A, RNG)
+
     def nextInt: (Int, RNG)
+
+    val int: Rand[Int] = _.nextInt
+
+    def unit[A](a: A): Rand[A] = rng => (a, rng)
+
+    def map[A, B](s: Rand[A])(f: A => B): Rand[B] = rng => {
+      val (a, rng2) = s(rng)
+      (f(a), rng2)
+    }
+
+    def nonNegativeEven: Rand[Int] = map(nonNegativeInt)(i => i - i % 2)
 
     def nonNegativeInt(rng: RNG): (Int, RNG) = {
       val (i, newRNG) = rng.nextInt
       (if (i < 0) -(i + 1) else i, newRNG)
     }
 
-    def double(rng: RNG): (Double, RNG) = {
-      val (i, nextState) = nonNegativeInt(rng)
-      val max = Int.MaxValue
-      val n = if (i == 0) i + 1 else i
+    def double(rng: RNG): (Double, RNG) = _double(rng)
 
-      val d = (max - n) / max.toDouble
-
-      (d, nextState)
-    }
+    val _double: Rand[Double] = map(nonNegativeInt)(_ / (Int.MaxValue.toDouble + 1))
 
     def intDouble(rng: RNG): ((Int, Double), RNG) = {
       val (i, rng1) = rng.nextInt
