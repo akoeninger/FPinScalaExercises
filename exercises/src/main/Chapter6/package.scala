@@ -59,6 +59,9 @@ trait RNG {
     go(count, rng, Nil)
   }
 
+  def initsViaSequence(count: Int): Rand[List[Int]] =
+    sequence(List.fill(count)(int))
+
   def map2[A, B, C](ra: Rand[A], rb: Rand[B])(f: (A, B) => C): Rand[C] = rng => {
     val (a, r1) = ra(rng)
     val (b, r2) = rb(r1)
@@ -69,6 +72,13 @@ trait RNG {
 
   val randIntDouble: Rand[(Int, Double)] = both(int, double)
   val randDoubleInt: Rand[(Double, Int)] = both(double, int)
+
+  def sequence[A](fs: List[Rand[A]]): Rand[List[A]] = rng => {
+    fs.foldLeft((Nil: List[A], rng))((acc, a) => {
+      val (i, r1) = a(acc._2)
+      (i :: acc._1, r1)
+    })
+  }
 }
 
 case class SimpleRNG(seed: Long) extends RNG {
@@ -84,6 +94,6 @@ package object Chapter6 {
 
 
   def main(args: Array[String]): Unit = {
-    println(SimpleRNG(1L).double(SimpleRNG(1L)))
+    println(SimpleRNG(1L).sequence(List(SimpleRNG(1L).int, SimpleRNG(2L).int))(SimpleRNG(3L)))
   }
 }
