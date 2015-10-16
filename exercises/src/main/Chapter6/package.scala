@@ -12,6 +12,16 @@ package object Chapter6 {
 
       (n, newRNG)
     }
+
+    def double(rng: RNG): (Double, RNG) = {
+      val (i, nextState) = nonNegativeInt(rng)
+      val max = Int.MaxValue
+      val n = if (i == 0) i + 1 else i
+
+      val d = (max - n) / max.toDouble
+
+      (d, nextState)
+    }
   }
 
   case class SimpleRNG(seed: Long) extends RNG {
