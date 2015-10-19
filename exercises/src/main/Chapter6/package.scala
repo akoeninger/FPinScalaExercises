@@ -79,6 +79,19 @@ trait RNG {
       (i :: acc._1, r1)
     })
   }
+
+  def flatMap[A, B](f: Rand[A])(g: A => Rand[B]): Rand[B] = { rng =>
+    val (a, frng) = f(rng)
+    g(a)(frng)
+  }
+
+  def nonNegativeLessThan(n: Int): Rand[Int] = flatMap(nonNegativeInt)(a => {
+    val mod = a % n
+    if (a + (n - 1) - mod >= 0)
+      unit(mod)
+    else
+      nonNegativeLessThan(n)
+  })
 }
 
 case class SimpleRNG(seed: Long) extends RNG {
