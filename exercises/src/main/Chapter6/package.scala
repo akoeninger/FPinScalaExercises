@@ -144,10 +144,37 @@ case class SimpleRNG(seed: Long) extends RNG {
   }
 }
 
+sealed trait Input
+case object Coin extends Input
+case object Turn extends Input
+
+case class Machine(locked: Boolean, candies: Int, coins: Int) {
+  private def empty: Boolean = candies == 0
+
+  def input(i: Input): Machine = i match {
+    case _ if empty => this
+    case Coin if !locked => this
+    case Coin => Machine(false, candies, coins + 1)
+    case Turn if locked => this
+    case Turn => Machine(true, candies - 1, coins)
+  }
+}
+
+object Candy {
+  import State._
+
+  def simulateMachine(inputs: List[Input]): State[Machine, (Int, Int)] = {
+    for {
+      _ ← sequence(inputs.map(i => State.modify((s: Machine) => s.input(i))))
+      s ← get
+    } yield (s.coins, s.candies)
+  }
+}
+
 package object Chapter6 {
 
 
   def main(args: Array[String]): Unit = {
-    println(SimpleRNG(1L).sequence(List(SimpleRNG(1L).int, SimpleRNG(2L).int))(SimpleRNG(3L)))
+    println(Candy.simulateMachine(List(Coin, Coin, Turn, Turn, Coin, Turn, Coin, Turn, Turn)).run(Machine(true, 10, 0)))
   }
 }
