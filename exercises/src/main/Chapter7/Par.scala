@@ -20,7 +20,6 @@ object Par {
     @volatile
     var cache: Option[C] = None
 
-
     override def isCancelled: Boolean = af.isCancelled || bf.isCancelled
 
     override def get(): C = compute(Long.MaxValue)
@@ -32,21 +31,20 @@ object Par {
 
     override def isDone: Boolean = cache.isDefined
 
-    private def compute(timeoutMS: Long): C = cache match {
-      case Some(x) => x
-      case None => {
-        val start = System.currentTimeMillis()
-        val ar = af.get(timeoutMS, TimeUnit.MILLISECONDS)
-        val stop = System.currentTimeMillis()
+    private def computeC(timeoutMS: Long): C = {
+      val start = System.currentTimeMillis()
+      val ar = af.get(timeoutMS, TimeUnit.MILLISECONDS)
+      val stop = System.currentTimeMillis()
 
-        val br = bf.get(timeoutMS - (stop - start), TimeUnit.MILLISECONDS)
+      val br = bf.get(timeoutMS - (stop - start), TimeUnit.MILLISECONDS)
 
-        val result = f(ar, br)
+      val result = f(ar, br)
 
-        cache = Some(result)
-        result
-      }
+      cache = Some(result)
+      result
     }
+
+    private def compute(timeoutMS: Long): C = cache.fold(computeC(timeoutMS))(identity)
   }
 
   def map2[A,B,C](a: Par[A], b: Par[B])(f: (A,B) => C): Par[C] = // `map2` doesn't evaluate the call to `f` in a separate logical thread, in accord with our design choice of having `fork` be the sole function in the API for controlling parallelism. We can always do `fork(map2(a,b)(f))` if we want the evaluation of `f` to occur in a separate thread.
