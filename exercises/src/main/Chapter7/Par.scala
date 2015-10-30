@@ -1,5 +1,6 @@
 package main.Chapter7
 
+import java.util
 import java.util.concurrent._
 
 import scala.collection.immutable
@@ -65,7 +66,7 @@ object Par {
 
   def asyncF[A, B](f: A => B): A => Par[B] = (a: A) => lazyUnit(f(a))
 
-  def sequence[A](ps: List[Par[A]]): Par[List[A]] =
+  def sequence_simple[A](ps: List[Par[A]]): Par[List[A]] =
     ps.foldRight(unit(Nil: List[A]))((p, acc) => map2(p, acc)(_ :: _))
 
   // Forks recursive step in new logical thread, effectively making it tail-recursive
@@ -84,9 +85,16 @@ object Par {
     }
   }
 
+  def sequence[A](ps: List[Par[A]]): Par[List[A]] = map(sequenceBalanced(ps.toIndexedSeq))(_.toList)
+
   def parMap[A, B](ps: List[A])(f: A => B): Par[List[B]] = fork {
     val fbs: List[Par[B]] = ps.map(asyncF(f))
     sequence(fbs)
+  }
+
+  def parFilter[A](as: List[A])(f: A => Boolean): Par[List[A]] = {
+    val pars: List[Par[List[A]]] = as map asyncF((a: A) => if (f(a)) List(a) else Nil)
+    map(sequence(pars))(_.flatten)
   }
 
   def map[A,B](pa: Par[A])(f: A => B): Par[B] =
@@ -125,6 +133,12 @@ object Examples {
     }
 
   def main(args: Array[String]) {
+    Par.parFilter(List(1, 2, 3, 4, -1, 0, 1, 6, 7, 8, 9, 10))(a => {
+      println(a)
+      a > 0 && a < 10
+    })
+
+
 
   }
 }
