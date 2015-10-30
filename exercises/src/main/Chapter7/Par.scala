@@ -2,6 +2,8 @@ package main.Chapter7
 
 import java.util.concurrent._
 
+import scala.collection.immutable
+
 object Par {
   type Par[A] = ExecutorService => Future[A]
 
@@ -64,7 +66,23 @@ object Par {
   def asyncF[A, B](f: A => B): A => Par[B] = (a: A) => lazyUnit(f(a))
 
   def sequence[A](ps: List[Par[A]]): Par[List[A]] =
-    ps.foldRight(unit(Nil: List[A]))((p, acc) => map2(p, acc)((a, b) => a :: b))
+    ps.foldRight(unit(Nil: List[A]))((p, acc) => map2(p, acc)(_ :: _))
+
+  // Forks recursive step in new logical thread, effectively making it tail-recursive
+  def sequenceRight[A](as: List[Par[A]]): Par[List[A]] = as match {
+    case Nil => unit(Nil)
+    case h :: t => map2(h, fork(sequenceRight(t)))(_ :: _)
+  }
+
+  // Divides list in half and runs both halves in parallel
+  def sequenceBalanced[A](as: IndexedSeq[Par[A]]): Par[IndexedSeq[A]] = fork {
+    if (as.isEmpty) unit(Vector())
+    else if (as.length == 1) map(as.head)(a => Vector(a))
+    else {
+      val (l, r) = as.splitAt(as.length / 2)
+      map2(sequenceBalanced(l), sequenceBalanced(r))(_ ++ _)
+    }
+  }
 
   def map[A,B](pa: Par[A])(f: A => B): Par[B] =
     map2(pa, unit(()))((a,_) => f(a))
