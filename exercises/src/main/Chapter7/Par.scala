@@ -165,7 +165,7 @@ object Examples {
       Par.unit(ints.headOption getOrElse 0) // `headOption` is a method defined on all collections in Scala. We saw this function in chapter 3.
     else {
       val (l,r) = ints.splitAt(ints.length/2) // Divide the sequence in half using the `splitAt` function.
-      Par.map2(sum(l), sum(r))(_ + _)
+      sum(l).map2(sum(r))(_ + _)
     }
 
   def main(args: Array[String]) {
@@ -174,6 +174,21 @@ object Examples {
       a > 0 && a < 10
     })
 
+
+    /* Exercise 7.7
+      map(y)(id) == y
+      Given f compose g = p compose q =>
+         map(y)(f) compose map(y)(g) = map(y)(p) compose map(y)(q)
+      let p = id and q = f compose g
+
+      map(y)(f) compose map(y)(g)
+        = map(y)(id) compose map(y)( f compose g)
+        = id(y) compose map(y)(f compose g)
+        = map(y)(f compose g)
+
+
+
+     */
 
 
   }
