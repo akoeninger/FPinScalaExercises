@@ -1,9 +1,6 @@
 package main.Chapter7
 
-import java.util
 import java.util.concurrent._
-
-import scala.collection.immutable
 
 object Par {
   type Par[A] = ExecutorService => Future[A]
@@ -58,6 +55,24 @@ object Par {
       val bf = b(es)
       Map2Future(af, bf, f)
     }
+
+  def map3[A, B, C, D](a: Par[A], b: Par[B], c: Par[C])(f: (A, B, C) => D): Par[D] =
+    map2(map2(a, b)((a, b) => (a, b)), c)((ab, c) => f(ab._1, ab._2, c))
+
+  def map4[A, B, C, D, E](a: Par[A], b: Par[B], c: Par[C], d: Par[D])(f: (A, B, C, D) => E): Par[E] =
+    map2(
+      map2(a, b)((a, b) => (a, b)),
+      map2(c, d)((c, d) => (c, d))
+    )((ab, cd) => f(ab._1, ab._2, cd._1, cd._2))
+
+  def map5[A, B, C, D, E, F](a: Par[A], b: Par[B], c: Par[C], d: Par[D], e: Par[E])(f: (A, B, C, D, E) => F): Par[F] =
+    map2(
+      map2(
+        map2(a, b)((a, b) => (a, b)),
+        map2(c, d)((c, d) => (c, d))
+      )((ab, cd) => (ab._1, ab._2, cd._1, cd._2)),
+      e
+    )((abcd, e) => f(abcd._1, abcd._2, abcd._3, abcd._4, e))
 
   def fork[A](a: => Par[A]): Par[A] = // This is the simplest and most natural implementation of `fork`, but there are some problems with it--for one, the outer `Callable` will block waiting for the "inner" task to complete. Since this blocking occupies a thread in our thread pool, or whatever resource backs the `ExecutorService`, this implies that we're losing out on some potential parallelism. Essentially, we're using two threads when one should suffice. This is a symptom of a more serious problem with the implementation, and we will discuss this later in the chapter.
     es => es.submit(new Callable[A] {
@@ -118,7 +133,21 @@ object Par {
 
   class ParOps[A](p: Par[A]) {
 
+    def map[B](f: (A => B)): Par[B] = Par.map(p)(f)
 
+    def map2[B, C](b: Par[B])(f: (A, B) => C): Par[C] = Par.map2(p, b)(f)
+
+    def run(s: ExecutorService): Future[A] = p(s)
+
+    // This is the simplest and most natural implementation of `fork`, but there are some problems with it--for one, the outer `Callable` will block waiting for the "inner" task to complete. Since this blocking occupies a thread in our thread pool, or whatever resource backs the `ExecutorService`, this implies that we're losing out on some potential parallelism. Essentially, we're using two threads when one should suffice. This is a symptom of a more serious problem with the implementation, and we will discuss this later in the chapter.
+    def fork: Par[A] = es => es.submit(new Callable[A] {
+      def call = p(es).get
+    })
+
+    def delay: Par[A] = es => p(es)
+
+    def equal(e: ExecutorService)(p2: Par[A]): Boolean =
+      p(e).get == p2(e).get
   }
 }
 
