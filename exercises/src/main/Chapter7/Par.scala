@@ -137,6 +137,13 @@ object Par {
 
     def map2[B, C](b: Par[B])(f: (A, B) => C): Par[C] = Par.map2(p, b)(f)
 
+    def map3[B, C, D](b: Par[B], c: Par[C])(f: (A, B, C) => D): Par[D] = Par.map3(p, b, c)(f)
+
+    def map4[B, C, D, E](b: Par[B], c: Par[C], d: Par[D])(f: (A, B, C, D) => E): Par[E] = Par.map4(p, b, c, d)(f)
+
+    def map5[B, C, D, E, F](b: Par[B], c: Par[C], d: Par[D], e: Par[E])(f: (A, B, C, D, E) => F): Par[F] =
+      Par.map5(p, b, c, d, e)(f)
+
     def run(s: ExecutorService): Future[A] = p(s)
 
     // This is the simplest and most natural implementation of `fork`, but there are some problems with it--for one, the outer `Callable` will block waiting for the "inner" task to complete. Since this blocking occupies a thread in our thread pool, or whatever resource backs the `ExecutorService`, this implies that we're losing out on some potential parallelism. Essentially, we're using two threads when one should suffice. This is a symptom of a more serious problem with the implementation, and we will discuss this later in the chapter.
