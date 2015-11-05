@@ -74,8 +74,15 @@ object Par {
       e
     )((abcd, e) => f(abcd._1, abcd._2, abcd._3, abcd._4, e))
 
-  def fork[A](a: => Par[A]): Par[A] = // This is the simplest and most natural implementation of `fork`, but there are some problems with it--for one, the outer `Callable` will block waiting for the "inner" task to complete. Since this blocking occupies a thread in our thread pool, or whatever resource backs the `ExecutorService`, this implies that we're losing out on some potential parallelism. Essentially, we're using two threads when one should suffice. This is a symptom of a more serious problem with the implementation, and we will discuss this later in the chapter.
-    es => es.submit(new Callable[A] {
+  // This is the simplest and most natural implementation of `fork`, but there are some problems with it--for one,
+  // the outer `Callable` will block waiting for the "inner" task to complete.
+  // Since this blocking occupies a thread in our thread pool, or whatever resource backs the `ExecutorService`,
+  // this implies that we're losing out on some potential parallelism.
+  // Essentially, we're using two threads when one should suffice.
+  // This is a symptom of a more serious problem with the implementation,
+  // and we will discuss this later in the chapter.
+  // If using a fixedThreadPool of 1, this could cause deadlocking
+  def fork[A](a: => Par[A]): Par[A] = es => es.submit(new Callable[A] {
       def call = a(es).get
     })
 
@@ -146,7 +153,6 @@ object Par {
 
     def run(s: ExecutorService): Future[A] = p(s)
 
-    // This is the simplest and most natural implementation of `fork`, but there are some problems with it--for one, the outer `Callable` will block waiting for the "inner" task to complete. Since this blocking occupies a thread in our thread pool, or whatever resource backs the `ExecutorService`, this implies that we're losing out on some potential parallelism. Essentially, we're using two threads when one should suffice. This is a symptom of a more serious problem with the implementation, and we will discuss this later in the chapter.
     def fork: Par[A] = es => es.submit(new Callable[A] {
       def call = p(es).get
     })
