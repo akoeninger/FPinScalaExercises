@@ -1,32 +1,13 @@
 package main.Chapter7
 
 import java.util.concurrent._
-import java.util.concurrent.atomic.AtomicReference
-
-sealed trait Future[A] {
-  private[Chapter7] def apply(k: A => Unit): Unit
-}
 
 object Par {
-  type Par[+A] = ExecutorService => Future[A]
+  type Par[A] = ExecutorService => Future[A]
 
-  def run[A](es: ExecutorService)(p: Par[A]): A = {
-    val ref = new AtomicReference[A]
-    val latch = new CountDownLatch(1)
+  def run[A](s: ExecutorService)(a: Par[A]): Future[A] = a(s)
 
-    p(es) { a =>
-      ref.set(a)
-      latch.countDown()
-    }
-
-    latch.await()
-    ref.get
-  }
-
-  def unit[A](a: A): Par[A] = es => new Future[A] {
-    override private[Chapter7] def apply(cb: A => Unit): Unit = cb(a)
-  }
-
+  def unit[A](a: A): Par[A] = (es: ExecutorService) => UnitFuture(a)
 
   def lazyUnit[A](a: => A): Par[A] = fork(unit(a))
 
@@ -101,14 +82,9 @@ object Par {
   // This is a symptom of a more serious problem with the implementation,
   // and we will discuss this later in the chapter.
   // If using a fixedThreadPool of 1, this could cause deadlocking
-  def fork[A](a: => Par[A]): Par[A] = es => new Future[A] {
-    override private[Chapter7] def apply(cb: (A) => Unit): Unit =
-      eval(es)(a(es)(cb))
-  }
-
-  def eval(es: ExecutorService)(r: => Unit): Unit =
-    es.submit(new Callable[Unit] { def call = r })
-
+  def fork[A](a: => Par[A]): Par[A] = es => es.submit(new Callable[A] {
+    def call = a(es).get
+  })
 
   def asyncF[A, B](f: A => B): A => Par[B] = (a: A) => lazyUnit(f(a))
 
