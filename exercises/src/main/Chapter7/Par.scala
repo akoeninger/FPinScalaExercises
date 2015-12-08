@@ -135,6 +135,17 @@ object Par {
       if (run(es)(cond).get) t(es) // Notice we are blocking on the result of `cond`.
       else f(es)
 
+  def choiceViaChoiceN[A](cond: Par[Boolean])(t: Par[A], f: Par[A]): Par[A] =
+    choiceN(cond.map(b => if (b) 0 else 1))(List(t, f))
+
+  def choiceN[A](n: Par[Int])(choices: List[Par[A]]): Par[A] = es =>
+    n.map(c => choices(c)(es).get)(es)
+
+  def choiceN_Book[A](n: Par[Int])(choices: List[Par[A]]): Par[A] = es => {
+    val ind = n.run(es).get
+    run(es)(choices(ind)) // IndexOutOfBoundsException potential
+  }
+
   /* Gives us infix syntax for `Par`. */
   implicit def toParOps[A](p: Par[A]): ParOps[A] = new ParOps(p)
 
