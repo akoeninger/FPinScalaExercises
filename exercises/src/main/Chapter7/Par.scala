@@ -131,22 +131,24 @@ object Par {
     es => fa(es)
 
   def choice[A](cond: Par[Boolean])(t: Par[A], f: Par[A]): Par[A] =
-    es =>
-      if (run(es)(cond).get) t(es) // Notice we are blocking on the result of `cond`.
-      else f(es)
+    chooser(cond)(bool => if (bool) t else f)
 
   def choiceViaChoiceN[A](cond: Par[Boolean])(t: Par[A], f: Par[A]): Par[A] =
     choiceN(cond.map(b => if (b) 0 else 1))(List(t, f))
 
-  def choiceN[A](n: Par[Int])(choices: List[Par[A]]): Par[A] = es =>
-    n.map(c => choices(c)(es).get)(es)
+  def choiceN[A](n: Par[Int])(choices: List[Par[A]]): Par[A] =
+    chooser(n)(choices)
 
   def choiceN_Book[A](n: Par[Int])(choices: List[Par[A]]): Par[A] = es => {
-    val ind = n.run(es).get
+    val ind = run(es)(n).get
     run(es)(choices(ind)) // IndexOutOfBoundsException potential
   }
 
-  /* Gives us infix syntax for `Par`. */
+  def choiceMap[K, V](key: Par[K])(choices: Map[K, Par[V]]): Par[V] = chooser(key)(choices)
+
+  def chooser[A, B](a: Par[A])(f: A => Par[B]): Par[B] = es => f(a.run(es).get).run(es)
+
+/* Gives us infix syntax for `Par`. */
   implicit def toParOps[A](p: Par[A]): ParOps[A] = new ParOps(p)
 
   class ParOps[A](p: Par[A]) {
