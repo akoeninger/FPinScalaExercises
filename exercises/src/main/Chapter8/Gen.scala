@@ -20,6 +20,14 @@ shell, which you can fill in and modify while working through the chapter.
   * 2) sum of list of same elements == element multiplied by length of list
   * 3) sum of list of sums of list of Ints == sum of flattened list of Ints
   */
+
+/** Exercise 8.2 Properties for max of List[Int]
+  *
+  * 1) Max for List of single element should be single element
+  * 2) Max of list of same value should be that value
+  * 3) max of list == max of list reverse
+  * 4) max of list that includes Int.MaxValue == Int.MaxValue
+  */
 trait Prop {
 }
 
