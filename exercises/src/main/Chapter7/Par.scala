@@ -56,9 +56,8 @@ object Par {
       Map2Future(af, bf, f)
     }
 
-  def flatUnit[A,B,C](a: Par[A], b: Par[B])(f: (A, B) => C): Par[C] = flatMap(a) { a1 =>
-    flatMap(b)( b1 => unit( f(a1, b1) ))
-  }
+  def flatUnit[A,B,C](a: Par[A], b: Par[B])(f: (A, B) => C): Par[C] =
+    a.zip(b).flatMap(p => unit(f(p._1, p._2)))
 
   def map3[A, B, C, D](a: Par[A], b: Par[B], c: Par[C])(f: (A, B, C) => D): Par[D] =
     map2(map2(a, b)((a, b) => (a, b)), c)((ab, c) => f(ab._1, ab._2, c))
@@ -166,6 +165,8 @@ object Par {
   implicit def toParOps[A](p: Par[A]): ParOps[A] = new ParOps(p)
 
   class ParOps[A](p: Par[A]) {
+
+    def zip[B](b: Par[B]): Par[(A,B)] = p.map2(b)((_, _))
 
     def map[B](f: (A => B)): Par[B] = Par.map(p)(f)
 
