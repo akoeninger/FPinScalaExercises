@@ -13,6 +13,13 @@ The library developed in this chapter goes through several iterations. This file
 shell, which you can fill in and modify while working through the chapter.
 */
 
+
+/** Exercise 8.1 Props for sum: List[Int] => Int
+  *
+  * 1) sum of list == sum of list.reverse
+  * 2) sum of list of same elements == element multiplied by length of list
+  * 3) sum of list of sums of list of Ints == sum of flattened list of Ints
+  */
 trait Prop {
 }
 
