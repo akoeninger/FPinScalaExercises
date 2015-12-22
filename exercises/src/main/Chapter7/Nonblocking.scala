@@ -155,8 +155,11 @@ object Nonblocking {
       }
     }
 
-    def flatMap[A,B](p: Par[A])(f: A => Par[B]): Par[B] =
-      ???
+    def flatMap[A,B](p: Par[A])(f: A => Par[B]): Par[B] = es => new Future[B] {
+      private[Chapter7] def apply(cb: (B) => Unit): Unit =
+        p(es)(a => f(a)(es)(cb))
+    }
+
 
     def choiceViaChooser[A](p: Par[Boolean])(t: Par[A], f: Par[A]): Par[A] =
       chooser(p)(bool => if (bool) t else f)
@@ -164,14 +167,16 @@ object Nonblocking {
     def choiceNChooser[A](p: Par[Int])(choices: List[Par[A]]): Par[A] =
       chooser(p)(choices)
 
-    def join[A](p: Par[Par[A]]): Par[A] =
-      ???
+    def join[A](p: Par[Par[A]]): Par[A] = es => new Future[A] {
+      override private[Chapter7] def apply(cb: (A) => Unit): Unit = p(es)(p2 => eval(es) {
+        p2(es)(cb)
+      })
+    }
 
-    def joinViaFlatMap[A](a: Par[Par[A]]): Par[A] =
-      ???
+    def joinViaFlatMap[A](a: Par[Par[A]]): Par[A] = flatMap(a)(x => x)
 
     def flatMapViaJoin[A,B](p: Par[A])(f: A => Par[B]): Par[B] =
-      ???
+      join(map(p)(f))
 
     /* Gives us infix syntax for `Par`. */
     implicit def toParOps[A](p: Par[A]): ParOps[A] = new ParOps(p)

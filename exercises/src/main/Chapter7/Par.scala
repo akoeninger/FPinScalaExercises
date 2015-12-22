@@ -56,6 +56,10 @@ object Par {
       Map2Future(af, bf, f)
     }
 
+  def flatUnit[A,B,C](a: Par[A], b: Par[B])(f: (A, B) => C): Par[C] = flatMap(a) { a1 =>
+    flatMap(b)( b1 => unit( f(a1, b1) ))
+  }
+
   def map3[A, B, C, D](a: Par[A], b: Par[B], c: Par[C])(f: (A, B, C) => D): Par[D] =
     map2(map2(a, b)((a, b) => (a, b)), c)((ab, c) => f(ab._1, ab._2, c))
 
@@ -148,12 +152,24 @@ object Par {
 
   def chooser[A, B](pa: Par[A])(choices: A => Par[B]): Par[B] = es => choices(pa.run(es).get).run(es)
 
+  def join[A](a: Par[Par[A]]): Par[A] = es => a(es).get.run(es)
+
+  def joinViaFlatMap[A](a: Par[Par[A]]): Par[A] =
+    a.flatMap(x => x)
+
+  def flatMap[A, B](pa: Par[A])(f: A => Par[B]): Par[B] =
+    join(pa.map(f))
+
+
+
 /* Gives us infix syntax for `Par`. */
   implicit def toParOps[A](p: Par[A]): ParOps[A] = new ParOps(p)
 
   class ParOps[A](p: Par[A]) {
 
     def map[B](f: (A => B)): Par[B] = Par.map(p)(f)
+
+    def flatMap[B](f: A => Par[B]): Par[B] = Par.flatMap(p)(f)
 
     def chooser[B](choices: A => Par[B]): Par[B] = Par.chooser(p)(choices)
 
