@@ -120,5 +120,9 @@ object Gen {
 
 }
 
-case class SGen[+A](forSize: Int => Gen[A])
+case class SGen[+A](forSize: Int => Gen[A]) {
+  def apply(a: Int): Gen[A] = forSize(a)
+  def map[B](f: A => B): SGen[B] = SGen(forSize andThen (_ map f))
+  def flatMap[B](f: A => Gen[B]): SGen[B] = SGen(forSize andThen (_ flatMap f))
+}
 
