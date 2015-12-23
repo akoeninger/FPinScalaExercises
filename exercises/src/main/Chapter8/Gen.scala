@@ -29,22 +29,22 @@ shell, which you can fill in and modify while working through the chapter.
   * 4) max of list that includes Int.MaxValue == Int.MaxValue
   */
 
-case class Prop(run: (TestCases, RNG) => Result) {
+case class Prop(run: (MaxSize, TestCases, RNG) => Result) {
   def &&(p: Prop): Prop = Prop {
-    (n, rng) => run(n, rng) match {
-      case Passed => p.run(n, rng)
+    (m, n, rng) => run(m, n, rng) match {
+      case Passed => p.run(m, n, rng)
       case x => x
     }
   }
   def ||(p: Prop): Prop = Prop {
-    (n ,rng) => run(n, rng) match {
-      case Falsified(f, s) => p.tag(f).run(n ,rng)
+    (m, n ,rng) => run(m, n, rng) match {
+      case Falsified(f, s) => p.tag(f).run(m, n ,rng)
       case x => x
     }
   }
 
   def tag(msg: String): Prop = Prop {
-    (n ,rng) => run(n, rng) match {
+    (m, n ,rng) => run(m, n, rng) match {
       case Falsified(f, s) => Falsified(s"$msg\n$f", s)
       case x => x
     }
@@ -55,6 +55,7 @@ object Prop {
   type SuccessCount = Int
   type FailedCase = String
   type TestCases = Int
+  type MaxSize = Int
 
   sealed trait Result {
     def isFalsified: Boolean
@@ -76,7 +77,7 @@ object Prop {
     s"stack trace:\n ${e.getStackTrace.mkString("\n")}"
 
   def forAll[A](as: Gen[A])(f: A => Boolean): Prop = Prop {
-    (n, rng) => randomStream(as)(rng).zip(Stream.from(0)).take(n) map { case (a, i) =>
+    (max, n, rng) => randomStream(as)(rng).zip(Stream.from(0)).take(n) map { case (a, i) =>
       try {
         if (f(a)) Passed else Falsified(a.toString, i)
       } catch {
@@ -85,7 +86,17 @@ object Prop {
     } find(_.isFalsified) getOrElse Passed
   }
 
+  def forAll[A](g: SGen[A])(f: A => Boolean): Prop = forAll(g(_))(f)
 
+  def forAll[A](g: Int => Gen[A])(f: A => Boolean): Prop = Prop {
+    (max, n, rng) =>
+      val casesPerSize = (n + (max - 1)) / max
+      val props: Stream[Prop] = Stream.from(0).take((n min max) + 1).map(i => forAll(g(i))(f))
+      val prop: Prop = props.map(p =>
+        Prop { (max, _, rng) => p.run(max, casesPerSize, rng) }
+      ).toList.reduce(_ && _)
+      prop.run(max, n, rng)
+  }
 }
 
 case class Gen[+A](sample: State[RNG, A]) {
@@ -118,6 +129,7 @@ object Gen {
   def chooser[A](g1: Gen[A], g2: Gen[A], bool: Gen[Boolean]): Gen[A] =
     bool.flatMap(b => if (b) g1 else g2)
 
+  def listOf[A](g: Gen[A]): SGen[List[A]] = SGen(n => listOfN(n, g))
 }
 
 case class SGen[+A](forSize: Int => Gen[A]) {
