@@ -55,6 +55,7 @@ object Gen {
   def listOfN[A](n: Int, g: Gen[A]): Gen[List[A]] = Gen(State.sequence(List.fill(n)(g.sample)))
   def unit[A](a: => A): Gen[A] = Gen(State.unit(a))
   def boolean: Gen[Boolean] = Gen(State(RNG.boolean))
+  def union[A](g1: Gen[A], g2: Gen[A]): Gen[A] = boolean.flatMap(b => if (b) g1 else g2)
 }
 
 trait SGen[+A] {
