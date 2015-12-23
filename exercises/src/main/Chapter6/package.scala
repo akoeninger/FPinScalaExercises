@@ -135,6 +135,14 @@ trait RNG {
   })
 }
 
+
+
+object RNG {
+  def nonNegativeInt(rng: RNG): (Int, RNG) = {
+    val (i, newRNG) = rng.nextInt
+    (if (i < 0) -(i + 1) else i, newRNG)
+  }
+}
 case class SimpleRNG(seed: Long) extends RNG {
   override def nextInt: (Int, RNG) = {
     val newSeed = (seed * 0x5DEECE66DL + 0xBL) & 0xFFFFFFFFFFFFL

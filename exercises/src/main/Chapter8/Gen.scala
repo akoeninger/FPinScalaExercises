@@ -29,23 +29,27 @@ shell, which you can fill in and modify while working through the chapter.
   * 4) max of list that includes Int.MaxValue == Int.MaxValue
   */
 trait Prop {
-  def check: Boolean
-  def &&(p: Prop): Prop = new Prop {
-    def check: Boolean = Prop.this.check && p.check
-  }
+  def check: Either[(FailedCase, SuccessCount), SuccessCount]
+  def &&(p: Prop): Prop = ???
 }
 
 object Prop {
+  type SuccessCount = Int
+  type FailedCase = String
+
   def forAll[A](gen: Gen[A])(f: A => Boolean): Prop = ???
 }
 
-object Gen {
-  def unit[A](a: => A): Gen[A] = ???
+case class Gen[A](sample: State[RNG, A]) {
+  def map[B](f: A => B): Gen[B] = ???
+  def flatMap[B](f: A => Gen[B]): Gen[B] = ???
 }
 
-trait Gen[A] {
-  def map[A,B](f: A => B): Gen[B] = ???
-  def flatMap[A,B](f: A => Gen[B]): Gen[B] = ???
+object Gen {
+  def choose(start: Int, stopExclusive: Int): Gen[Int] =
+    Gen(State(RNG.nonNegativeInt).map(n => start + n % (stopExclusive - start)))
+
+  def unit[A](a: => A): Gen[A] = ???
 }
 
 trait SGen[+A] {
