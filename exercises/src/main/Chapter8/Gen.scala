@@ -30,7 +30,25 @@ shell, which you can fill in and modify while working through the chapter.
   */
 
 case class Prop(run: (TestCases, RNG) => Result) {
-  def &&(p: Prop): Prop = ???
+  def &&(p: Prop): Prop = Prop {
+    (n, rng) => run(n, rng) match {
+      case Passed => p.run(n, rng)
+      case x => x
+    }
+  }
+  def ||(p: Prop): Prop = Prop {
+    (n ,rng) => run(n, rng) match {
+      case Falsified(f, s) => p.tag(f).run(n ,rng)
+      case x => x
+    }
+  }
+
+  def tag(msg: String): Prop = Prop {
+    (n ,rng) => run(n, rng) match {
+      case Falsified(f, s) => Falsified(s"$msg\n$f", s)
+      case x => x
+    }
+  }
 }
 
 object Prop {
