@@ -56,6 +56,18 @@ object Gen {
   def unit[A](a: => A): Gen[A] = Gen(State.unit(a))
   def boolean: Gen[Boolean] = Gen(State(RNG.boolean))
   def union[A](g1: Gen[A], g2: Gen[A]): Gen[A] = boolean.flatMap(b => if (b) g1 else g2)
+  def unionViaChooser[A](g1: Gen[A], g2: Gen[A]): Gen[A] = chooser(g1, g2, boolean)
+
+  def weightedViaChooser[A](g1: (Gen[A], Double), g2: (Gen[A], Double)): Gen[A] =
+    chooser(g1._1, g2._1, Gen(State(RNG._double).map(prob => prob < g1._2.abs / (g1._2.abs + g2._2.abs))))
+
+  def weighted[A](g1: (Gen[A], Double), g2: (Gen[A], Double)): Gen[A] = Gen(State(RNG._double).map(prob => prob < g1._2.abs / (g1._2.abs + g2._2.abs))).flatMap(bool =>
+    if (bool) g1._1 else g2._1
+  )
+
+  def chooser[A](g1: Gen[A], g2: Gen[A], bool: Gen[Boolean]): Gen[A] =
+    bool.flatMap(b => if (b) g1 else g2)
+
 }
 
 trait SGen[+A] {
