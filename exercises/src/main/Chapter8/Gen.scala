@@ -97,14 +97,27 @@ object Prop {
       ).toList.reduce(_ && _)
       prop.run(max, n, rng)
   }
+
+  def run(
+    p: Prop,
+    maxSize: MaxSize = 100,
+    testCases: TestCases = 100,
+    rNG: RNG = RNG.SimpleRNG(System.currentTimeMillis)
+  ): Unit = p.run(maxSize, testCases, rNG) match {
+    case Falsified(msg, n) => println(s"! Falsified after $n passed tests:\n $msg")
+    case Passed => println(s"+ OK, passed $testCases")
+  }
 }
 
 case class Gen[+A](sample: State[RNG, A]) {
   def map[B](f: A => B): Gen[B] = Gen(sample.map(a => f(a)))
   def flatMap[B](f: A => Gen[B]): Gen[B] = Gen(sample.flatMap(a => f(a).sample))
-  def listOfN(size: Gen[Int]): Gen[List[A]] = size.flatMap(n =>
-    Gen.listOfN(n, this)
-  )
+
+  def listOfN(size: Gen[Int]): Gen[List[A]] = size.flatMap(n => this.listOfN(n))
+
+  /* A method alias for the function we wrote earlier. */
+  def listOfN(size: Int): Gen[List[A]] =
+    Gen.listOfN(size, this)
 
   def unsized: SGen[A] = SGen(_ => this)
 }
@@ -130,6 +143,20 @@ object Gen {
     bool.flatMap(b => if (b) g1 else g2)
 
   def listOf[A](g: Gen[A]): SGen[List[A]] = SGen(n => listOfN(n, g))
+
+  val smallInt = Gen.choose(-10, 10)
+  val maxProp = forAll(listOf(smallInt)) { ns =>
+    val max = ns.max
+    !ns.exists(_ > max)
+  }
+
+  def listOf1[A](g: Gen[A]): SGen[List[A]] = SGen(n => g.listOfN(n max 1))
+
+  val maxProp1 = forAll(listOf1(smallInt)) { ns =>
+    val max = ns.max
+    !ns.exists(_ > max)
+  }
+
 }
 
 case class SGen[+A](forSize: Int => Gen[A]) {
