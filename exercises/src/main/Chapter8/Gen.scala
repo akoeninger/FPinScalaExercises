@@ -32,7 +32,7 @@ shell, which you can fill in and modify while working through the chapter.
 case class Prop(run: (MaxSize, TestCases, RNG) => Result) {
   def &&(p: Prop): Prop = Prop {
     (m, n, rng) => run(m, n, rng) match {
-      case Passed => p.run(m, n, rng)
+      case Passed | Proved => p.run(m, n, rng)
       case x => x
     }
   }
@@ -61,6 +61,9 @@ object Prop {
     def isFalsified: Boolean
   }
   case object Passed extends Result {
+    def isFalsified: Boolean = false
+  }
+  case object Proved extends Result {
     def isFalsified: Boolean = false
   }
   case class Falsified(failure: FailedCase, successes: SuccessCount) extends Result {
@@ -106,6 +109,11 @@ object Prop {
   ): Unit = p.run(maxSize, testCases, rNG) match {
     case Falsified(msg, n) => println(s"! Falsified after $n passed tests:\n $msg")
     case Passed => println(s"+ OK, passed $testCases")
+    case Proved => println("+ OK, proved property.")
+  }
+
+  def check(p: => Boolean): Prop = Prop { (_, _, _) =>
+    if (p) Proved else Falsified("()", 0)
   }
 }
 
@@ -163,6 +171,11 @@ object Gen {
     val ls = l.sorted
     l.isEmpty || ls.tail.isEmpty || !ls.zip(ls.tail).exists { case (a,b) => a > b }
   }
+
+  val ES: ExecutorService = Executors.newCachedThreadPool
+  val p1 = Prop.forAll(Gen.unit(Par.unit(1)))(i =>
+    Par.map(i)(_ + 1)(ES).get == Par.unit(2)(ES).get
+  )
 
 }
 
