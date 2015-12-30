@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="" />
+    <ignored path="FPiS Exercises.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="FPiS Exercises" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="exercises.iml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/exercises/exercises.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.39151713">
+              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Worksheet" />
+        <option value="Package Object" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/excercises/src/main/Chapter2/Excercise2_1.scala" />
+        <option value="$PROJECT_DIR$/excercises/src/main/Chapter2/Exercise2_1.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter2/Exercise2_2.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter2/Exercise2_1.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter2/Exercise1.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter2/exervise23.sc" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter2/exercise4.sc" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter2/Exercise2.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter3/package.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter3/Tree.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter3/Chapter3.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter3/Chapter4/Chapter4.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter4/Chapter4.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter5/package.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/package.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Actor.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Parsers.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/package.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter3/List.scala" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CollectionsScala</id>
+          </State>
+          <State>
+            <id>Code StyleScala</id>
+          </State>
+          <State>
+            <id>Comparing CollectionsScala</id>
+          </State>
+          <State>
+            <id>GeneralScala</id>
+          </State>
+          <State>
+            <id>Indices CollectionsScala</id>
+          </State>
+          <State>
+            <id>Maps CollectionsScala</id>
+          </State>
+          <State>
+            <id>Options CollectionsScala</id>
+          </State>
+          <State>
+            <id>Other CollectionsScala</id>
+          </State>
+          <State>
+            <id>Scala</id>
+          </State>
+          <State>
+            <id>Scala: General</id>
+          </State>
+          <State>
+            <id>Simplifications: filter and exists CollectionsScala</id>
+          </State>
+          <State>
+            <id>Simplifications: other CollectionsScala</id>
+          </State>
+          <State>
+            <id>Size CollectionsScala</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>GeneralScala</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages ProjectPane="true" />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chapter5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="package.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="87" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="121" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="128" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1026" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="98" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="118" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="124" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1022" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Scala Console.Scala Console">
+    <configuration default="false" name="Chapter3" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="main.Chapter3.Chapter3" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="exercises" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Chapter4" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="main.Chapter4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="main.Chapter4.Chapter4" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="exercises" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
+      <module name="exercises" />
+      <setting name="vmparams4" value="-Djline.terminal=NONE" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="consoleArgs" value="-usejavacp" />
+      <method />
+    </configuration>
+    <configuration default="false" name="package (2)" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="main.Chapter6.Chapter6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="main.Chapter6.Chapter6.package" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="exercises" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Examples" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="main.Chapter7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="main.Chapter7.Examples" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="exercises" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="exercises" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console">
+      <module name="" />
+      <setting name="vmparams4" value="-Djline.terminal=NONE" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="consoleArgs" value="-usejavacp" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="package (1)" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="main.Chapter5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="main.Chapter5.package" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="exercises" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Application.package (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Chapter3" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Chapter4" />
+      <item index="3" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+      <item index="4" class="java.lang.String" itemvalue="Application.package (2)" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Examples" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Examples" />
+        <item index="2" class="java.lang.String" itemvalue="Application.package (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Chapter4" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Chapter3" />
+      </list>
+    </recent_temporary>
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="" />
+      <created>1440772934845</created>
+      <option name="number" value="Default" />
+      <updated>1440772934845</updated>
+      <workItem from="1440772935580" duration="1987000" />
+      <workItem from="1441029720986" duration="1584000" />
+      <workItem from="1441113828852" duration="3646000" />
+      <workItem from="1441295148976" duration="1046000" />
+      <workItem from="1441296362215" duration="710000" />
+      <workItem from="1441298012892" duration="309000" />
+      <workItem from="1441376658271" duration="1881000" />
+      <workItem from="1441717967651" duration="2528000" />
+      <workItem from="1441804219601" duration="1459000" />
+      <workItem from="1441890406502" duration="1170000" />
+      <workItem from="1441894629593" duration="556000" />
+      <workItem from="1441986218704" duration="1742000" />
+      <workItem from="1442238698273" duration="2276000" />
+      <workItem from="1442329438416" duration="686000" />
+      <workItem from="1442842864924" duration="1680000" />
+      <workItem from="1442931680399" duration="1350000" />
+      <workItem from="1442933655377" duration="282000" />
+      <workItem from="1443043245799" duration="1061000" />
+      <workItem from="1443103304242" duration="602000" />
+      <workItem from="1443109539816" duration="338000" />
+      <workItem from="1443109995453" duration="245000" />
+      <workItem from="1443112029526" duration="2930000" />
+      <workItem from="1443185330403" duration="2767000" />
+      <workItem from="1443452236695" duration="864000" />
+      <workItem from="1443533679024" duration="987000" />
+      <workItem from="1443536047231" duration="538000" />
+      <workItem from="1443621678271" duration="1125000" />
+      <workItem from="1443624135158" duration="690000" />
+      <workItem from="1443627135049" duration="282000" />
+      <workItem from="1444225831265" duration="147000" />
+      <workItem from="1444226748648" duration="1493000" />
+      <workItem from="1444311496771" duration="2188000" />
+      <workItem from="1444662863180" duration="133000" />
+      <workItem from="1444664113209" duration="1428000" />
+      <workItem from="1444854339061" duration="633000" />
+      <workItem from="1444856602804" duration="2484000" />
+      <workItem from="1444915928431" duration="3240000" />
+      <workItem from="1444921548377" duration="11481000" />
+      <workItem from="1445002877550" duration="1790000" />
+      <workItem from="1445007390567" duration="2414000" />
+      <workItem from="1445010874134" duration="2016000" />
+      <workItem from="1445016210342" duration="6690000" />
+      <workItem from="1445263132581" duration="602000" />
+      <workItem from="1445266722142" duration="1169000" />
+      <workItem from="1445267992334" duration="90000" />
+      <workItem from="1445268605597" duration="12349000" />
+      <workItem from="1445348884518" duration="933000" />
+      <workItem from="1445357496667" duration="11000" />
+      <workItem from="1445519843061" duration="3096000" />
+      <workItem from="1446124686979" duration="411000" />
+      <workItem from="1446154598740" duration="2163000" />
+      <workItem from="1446209998435" duration="4579000" />
+      <workItem from="1446220982913" duration="1378000" />
+      <workItem from="1446646202918" duration="5929000" />
+      <workItem from="1446733890188" duration="761000" />
+      <workItem from="1446821914937" duration="585000" />
+      <workItem from="1447080114251" duration="484000" />
+      <workItem from="1447081212477" duration="365000" />
+      <workItem from="1447169407057" duration="943000" />
+      <workItem from="1447170742576" duration="44000" />
+      <workItem from="1449516927955" duration="1072000" />
+      <workItem from="1449586694836" duration="2660000" />
+      <workItem from="1449673761965" duration="2528000" />
+      <workItem from="1449678455197" duration="69000" />
+      <workItem from="1449759114653" duration="538000" />
+      <workItem from="1449759841740" duration="480000" />
+      <workItem from="1449773734110" duration="55000" />
+      <workItem from="1449853854430" duration="303000" />
+      <workItem from="1449854296096" duration="392000" />
+      <workItem from="1450801380388" duration="5419000" />
+      <workItem from="1450820690672" duration="2819000" />
+      <workItem from="1450880815977" duration="4467000" />
+      <workItem from="1450885440140" duration="807000" />
+      <workItem from="1450888182661" duration="10000" />
+      <workItem from="1450890445863" duration="9186000" />
+      <workItem from="1450904390376" duration="2385000" />
+      <workItem from="1451330566058" duration="1395000" />
+      <workItem from="1451336752648" duration="2274000" />
+      <workItem from="1451487610121" duration="899000" />
+      <workItem from="1451488528487" duration="79000" />
+      <workItem from="1451488616777" duration="361000" />
+      <workItem from="1451489954694" duration="40000" />
+    </task>
+    <task id="LOCAL-00037" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.1">
+      <created>1445010731153</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1445010731154</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.2">
+      <created>1445011607736</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1445011607736</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.3">
+      <created>1445012848472</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1445012848472</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.4">
+      <created>1445019268348</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1445019268348</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.5">
+      <created>1445021751015</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1445021751015</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.6">
+      <created>1445023266929</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1445023266929</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.7">
+      <created>1445027473176</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1445027473176</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.8">
+      <created>1445268077243</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1445268077243</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.9">
+      <created>1445269247137</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1445269247137</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.10 With help from book">
+      <created>1445274246668</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1445274246668</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.11With a little help&#10;&#10;Wow that for-comprehension is difficult to read what's going on. So used to reading it the normal way, which looks like there's a missing context of some initial Machine, but that's because the fact that&#10;the whole thing is really a (Machine) =&gt; for { _ &lt;- sequence.... s &lt;- get } yield (s..., s...) is contained in the return type of State[Machine, (Int, Int)].&#10; So that there means its def sim(inputs: List[Inputs]): (Machine) =&gt; funct: (Int, Int)">
+      <created>1445281838051</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1445281838051</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Chapter 7: Purely functional parallelism">
+      <created>1445284708755</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1445284708755</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.1">
+      <created>1445521589524</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1445521589524</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.3 Had to use book answer">
+      <created>1446156179750</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1446156179780</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.3 Optimised">
+      <created>1446156527274</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1446156527275</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.4">
+      <created>1446211988645</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1446211988645</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.5">
+      <created>1446213752923</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1446213752923</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.5 book solutions">
+      <created>1446215290046</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1446215290046</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.5 book solutions">
+      <created>1446215369185</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1446215369185</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.6 book solutions">
+      <created>1446222323746</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1446222323746</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Chapter 7: Purely functional parallelism&#10;&#10;adding infix methods">
+      <created>1446648871326</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1446648871327</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Chapter 7: Purely functional parallelism&#10;&#10;adding infix methods">
+      <created>1446649053210</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1446649053210</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.7">
+      <created>1446652032688</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1446652032688</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.8&#10;&#10;Fork in its current implemention is prone to deadlock when fixed size Thread Pools are used. The fork submits a Callable and block waits for another Callable to be submitted and executed. They easily end up waiting for each other to finish. Deadlock">
+      <created>1446734634459</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1446734634459</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Chapter 7: Purely functional parallelism&#10;&#10;Implementing a fully non-blocking Par">
+      <created>1447080496243</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1447080496244</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Chapter 7: Purely functional parallelism&#10;&#10;Implementing a fully non-blocking Par">
+      <created>1447170357154</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1447170357155</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.10">
+      <created>1449517992240</created>
+      <option name="number" value="00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1449517992240</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.11">
+      <created>1449589386008</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1449589386009</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.12 Implemented my own chooser">
+      <created>1449677898133</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1449677898134</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.13 Implemented my own chooser">
+      <created>1449759486375</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1449759486376</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.13 Do chooser for Nonblocking">
+      <created>1449760316972</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1449760316972</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.14">
+      <created>1450803848561</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1450803848562</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Chapter 8: Property-based testing&#10;&#10;Inital set up">
+      <created>1450805036457</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1450805036457</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Chapter 8: Property-based testing&#10;             &#10;8.1 properties of sum function">
+      <created>1450805793438</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1450805793438</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Chapter 8: Property-based testing&#10;             &#10;8.2 properties of max function">
+      <created>1450806714991</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1450806714992</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Chapter 8: Property-based testing&#10;             &#10;8.3">
+      <created>1450822642748</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1450822642749</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Chapter 8: Property-based testing&#10;             &#10;8.4">
+      <created>1450882602585</created>
+      <option name="number" value="00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1450882602585</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Chapter 8: Property-based testing&#10;             &#10;8.5">
+      <created>1450885093281</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1450885093281</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Chapter 8: Property-based testing&#10;             &#10;8.6">
+      <created>1450885679854</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1450885679855</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Chapter 8: Property-based testing&#10;             &#10;8.7">
+      <created>1450891671022</created>
+      <option name="number" value="00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1450891671023</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Chapter 8: Property-based testing&#10;             &#10;8.8&#10;Factored out a chooser primative that chooses between 2 Gens based on a Gen[bool] result">
+      <created>1450896307894</created>
+      <option name="number" value="00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1450896307894</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Chapter 8: Property-based testing&#10;             &#10;8.8&#10;Factored out a chooser primative that chooses between 2 Gens based on a Gen[bool] result">
+      <created>1450901829244</created>
+      <option name="number" value="00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1450901829244</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Chapter 8: Property-based testing&#10;             &#10;8.9">
+      <created>1450902788154</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1450902788154</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Chapter 8: Property-based testing&#10;             &#10;8.10">
+      <created>1450903885486</created>
+      <option name="number" value="00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1450903885486</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Chapter 8: Property-based testing&#10;             &#10;8.11">
+      <created>1450905090523</created>
+      <option name="number" value="00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1450905090523</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Chapter 8: Property-based testing&#10;             &#10;8.12">
+      <created>1450906169599</created>
+      <option name="number" value="00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1450906169599</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Chapter 8: Property-based testing&#10;             &#10;8.13">
+      <created>1451331958021</created>
+      <option name="number" value="00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1451331958023</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Chapter 8: Property-based testing&#10;             &#10;8.14 Helped from book">
+      <created>1451336963638</created>
+      <option name="number" value="00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1451336963638</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Chapter 8: Property-based testing&#10;             &#10;">
+      <created>1451339224655</created>
+      <option name="number" value="00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1451339224655</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="147588000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2233278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.508185" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295099" sideWeight="0.49181494" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892057" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.7" />
+    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.8&#10;&#10;Fork in its current implemention is prone to deadlock when fixed size Thread Pools are used. The fork submits a Callable and block waits for another Callable to be submitted and executed. They easily end up waiting for each other to finish. Deadlock" />
+    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;Implementing a fully non-blocking Par" />
+    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.10" />
+    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.11" />
+    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.12 Implemented my own chooser" />
+    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.13 Implemented my own chooser" />
+    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.13 Do chooser for Nonblocking" />
+    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.14" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;&#10;Inital set up" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.1 properties of sum function" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.2 properties of max function" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.3" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.4" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.5" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.6" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.7" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.8&#10;Factored out a chooser primative that chooses between 2 Gens based on a Gen[bool] result" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.9" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.10" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.11" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.12" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.13" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.14 Helped from book" />
+    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 8: Property-based testing&#10;             &#10;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/concurrent/Future.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/lang/Runnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8319328">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/concurrent/Future.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5588235">
+          <caret line="598" column="10" selection-start-line="598" selection-start-column="10" selection-end-line="598" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar!/scala/concurrent/impl/Future.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.084033616">
+          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/exercises.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39151713">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>exercises</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
