@@ -56,7 +56,7 @@ object Prop {
   type FailedCase = String
   type TestCases = Int
   type MaxSize = Int
-type Test = Int
+
   sealed trait Result {
     def isFalsified: Boolean
   }
