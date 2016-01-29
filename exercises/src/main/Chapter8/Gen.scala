@@ -105,7 +105,7 @@ object Prop {
     p: Prop,
     maxSize: MaxSize = 100,
     testCases: TestCases = 100,
-    rNG: RNG = RNG.SimpleRNG(System.currentTimeMillis)
+    rNG: RNG = RNG.Simple(System.currentTimeMillis)
   ): Unit = p.run(maxSize, testCases, rNG) match {
     case Falsified(msg, n) => println(s"! Falsified after $n passed tests:\n $msg")
     case Passed => println(s"+ OK, passed $testCases")

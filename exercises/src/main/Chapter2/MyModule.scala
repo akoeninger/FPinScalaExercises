@@ -1,9 +1,8 @@
-package main
+package main.Chapter2
 
 import scala.annotation.tailrec
 
-
-package object Chapter2 {
+object MyModule {
 
   // Exercise 2.1
   def fib(n: Int): Int = {
