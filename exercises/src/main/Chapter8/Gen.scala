@@ -4,8 +4,11 @@ import main.Chapter5.Stream
 import main.Chapter6._
 import main.Chapter7._
 import main.Chapter7.Par.Par
+import main.Chapter7.Par.toParOps
 import Gen._
 import Prop._
+import language.postfixOps
+import language.implicitConversions
 import java.util.concurrent.{Executors,ExecutorService}
 
 /*
@@ -70,14 +73,16 @@ object Prop {
     def isFalsified: Boolean = true
   }
 
-  def check: Either[(FailedCase, SuccessCount), SuccessCount] = ???
-
   def randomStream[A](g: Gen[A])(rng: RNG) = Stream.unfold(rng)(rng => Some(g.sample.run(rng)))
 
   def buildMsg[A](s: A, e: Exception): FailedCase =
     s"test case: $s\n" +
     s"generated an exception: ${e.getMessage}\n" +
     s"stack trace:\n ${e.getStackTrace.mkString("\n")}"
+
+  def apply(f: (TestCases, RNG) => Result): Prop = Prop {
+    (_, n, rng) => f(n, rng)
+  }
 
   def forAll[A](as: Gen[A])(f: A => Boolean): Prop = Prop {
     (max, n, rng) => randomStream(as)(rng).zip(Stream.from(0)).take(n) map { case (a, i) =>
@@ -112,13 +117,59 @@ object Prop {
     case Proved => println("+ OK, proved property.")
   }
 
+  val ES: ExecutorService = Executors.newCachedThreadPool
+  val p1 = Prop.forAll(Gen.unit(Par.unit(1)))(i =>
+    Par.map(i)(_ + 1)(ES).get == Par.unit(2)(ES).get
+  )
+
   def check(p: => Boolean): Prop = Prop { (_, _, _) =>
     if (p) Proved else Falsified("()", 0)
   }
+
+  // Forcing code to beware of internal impl. details of Par just to compare two values
+  val p2 = Prop.check {
+    val p = Par.map(Par.unit(1))(_ + 1)
+    val p2 = Par.unit(2)
+    p(ES).get == p2(ES).get
+  }
+
+  // Added infix syntax for equal to Par
+  val p2Alt = checkPar {
+    Par.map(Par.unit(1))(_ + 1) equal Par.unit(2)
+  }
+
+  // Improve by lifting the equality comparison into Par using map2 meaning we only have
+  // to run a single Par at the end to get the result
+  def equal[A](p: Par[A], p2: Par[A]): Par[Boolean] = Par.map2(p, p2)(_ == _)
+
+  val p3 = check {
+    equal(
+      Par.map(Par.unit(1))(_ + 1),
+      Par.unit(2)
+    )(ES).get
+  }
+
+  val S = weighted(
+    choose(1, 4).map(Executors.newFixedThreadPool) → 0.75,
+    unit(Executors.newCachedThreadPool) → 0.25
+  )
+
+  // Was  forAll(S.map2(g)((_,_))) { case (s,a) => f(a)(s).get }
+  // Then created introduced ** as a combinator and created custom pattern extractor for it
+  def forAllPar[A](g: Gen[A])(f: A => Par[Boolean]): Prop =
+    forAll(S ** g) { case s ** a => f(a)(s).get }
+
+  def checkPar(p: Par[Boolean]): Prop = forAllPar(Gen.unit(()))(_ => p)
+
+  val pint = Gen.choose(0, 10) map Par.unit
+  val p4 = forAllPar(pint)(n => equal(Par.map(n)(identity), n))
 }
 
 case class Gen[+A](sample: State[RNG, A]) {
   def map[B](f: A => B): Gen[B] = Gen(sample.map(a => f(a)))
+
+  def map2[B, C](g: Gen[B])(f: (A, B) => C): Gen[C] = Gen(sample.map2(g.sample)(f))
+
   def flatMap[B](f: A => Gen[B]): Gen[B] = Gen(sample.flatMap(a => f(a).sample))
 
   def listOfN(size: Gen[Int]): Gen[List[A]] = size.flatMap(n => this.listOfN(n))
@@ -128,6 +179,8 @@ case class Gen[+A](sample: State[RNG, A]) {
     Gen.listOfN(size, this)
 
   def unsized: SGen[A] = SGen(_ => this)
+
+  def **[B](g: Gen[B]): Gen[(A, B)] = (this map2 g)((_, _))
 }
 
 object Gen {
@@ -172,11 +225,6 @@ object Gen {
     l.isEmpty || ls.tail.isEmpty || !ls.zip(ls.tail).exists { case (a,b) => a > b }
   }
 
-  val ES: ExecutorService = Executors.newCachedThreadPool
-  val p1 = Prop.forAll(Gen.unit(Par.unit(1)))(i =>
-    Par.map(i)(_ + 1)(ES).get == Par.unit(2)(ES).get
-  )
-
 }
 
 case class SGen[+A](forSize: Int => Gen[A]) {
@@ -185,3 +233,6 @@ case class SGen[+A](forSize: Int => Gen[A]) {
   def flatMap[B](f: A => Gen[B]): SGen[B] = SGen(forSize andThen (_ flatMap f))
 }
 
+object ** {
+  def unapply[A, B](p: (A, B)) = Some(p)
+}

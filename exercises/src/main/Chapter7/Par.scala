@@ -193,6 +193,8 @@ object Par {
 
     def equal(e: ExecutorService)(p2: Par[A]): Boolean =
       p(e).get == p2(e).get
+
+    def equal(p2: Par[A]): Par[Boolean] = map2(p2)(_ == _)
   }
 }
 

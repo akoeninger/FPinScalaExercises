@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="Clean up project chapter structure">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter2/MyModule.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter3/List.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter3/Tree.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter4/Either.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter4/Option.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter5/Stream.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala" afterPath="" />
+    <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter3/Chapter3.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter3/Chapter3.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter4/Chapter4.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter4/Chapter4.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter5/package.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter5/package.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter6/package.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter6/package.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" />
     </list>
     <ignored path="FPiS Exercises.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,61 +28,19 @@
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Exhaustive.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47478992">
-              <caret line="399" column="16" selection-start-line="399" selection-start-column="16" selection-end-line="399" selection-end-column="16" />
+              <caret line="146" column="34" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
               <folding>
-                <element signature="e#34#90#0" expanded="true" />
+                <element signature="e#23#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/package.scala">
+      <file leaf-file-name="Par.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stream.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/Stream.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-              <folding>
-                <element signature="e#23#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="State.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="136" column="19" selection-start-line="136" selection-start-column="19" selection-end-line="136" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/package.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.27310926">
+              <caret line="166" column="6" selection-start-line="166" selection-start-column="6" selection-end-line="166" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -132,9 +76,7 @@
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/package.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Actor.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" />
-        <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Parsers.scala" />
-        <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter2/MyModule.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter3/Tree.scala" />
@@ -149,6 +91,8 @@
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/package.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" />
       </list>
     </option>
   </component>
@@ -613,6 +557,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -1035,19 +993,7 @@
       <workItem from="1451488616777" duration="361000" />
       <workItem from="1451489954694" duration="531000" />
       <workItem from="1454079134678" duration="2000" />
-      <workItem from="1454079148237" duration="2219000" />
-    </task>
-    <task id="LOCAL-00040" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.4">
-      <created>1445019268348</created>
-      <option name="number" value="00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1445019268348</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.5">
-      <created>1445021751015</created>
-      <option name="number" value="00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1445021751015</updated>
+      <workItem from="1454079148237" duration="6541000" />
     </task>
     <task id="LOCAL-00042" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.6">
       <created>1445023266929</created>
@@ -1331,15 +1277,27 @@
       <option name="project" value="LOCAL" />
       <updated>1454079193817</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Clean up project chapter structure">
+      <created>1454081379905</created>
+      <option name="number" value="00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1454081379905</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Exercise 8.15 &#10;&#10;">
+      <created>1454089173817</created>
+      <option name="number" value="00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1454089173817</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150300000" />
+    <option name="totallyTimeSpent" value="154622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892057" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1348,7 +1306,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22291666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22291666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892057" sideWeight="0.51340485" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892057" sideWeight="0.48659518" order="7" side_tool="false" content_ui="tabs" />
@@ -1376,7 +1334,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;Implementing a fully non-blocking Par" />
     <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.10" />
     <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.11" />
     <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.12 Implemented my own chooser" />
@@ -1401,7 +1358,8 @@
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;ts t" />
     <MESSAGE value="Clean up project chapter structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean up project chapter structure" />
+    <MESSAGE value="Exercise 8.15 &#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 8.15 &#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1412,7 +1370,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#23#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1420,7 +1380,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#23#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1452,25 +1414,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/exercises.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22838499">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45356372">
           <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1575,11 +1522,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47478992">
-          <caret line="399" column="16" selection-start-line="399" selection-start-column="16" selection-end-line="399" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.8739496">
+          <caret line="418" column="0" selection-start-line="418" selection-start-column="0" selection-end-line="418" selection-end-column="0" />
           <folding>
             <element signature="e#34#90#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="146" column="34" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
+          <folding>
+            <element signature="e#23#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/exercises.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14705883">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27310926">
+          <caret line="166" column="6" selection-start-line="166" selection-start-column="6" selection-end-line="166" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
