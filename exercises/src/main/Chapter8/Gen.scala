@@ -225,6 +225,14 @@ object Gen {
     l.isEmpty || ls.tail.isEmpty || !ls.zip(ls.tail).exists { case (a,b) => a > b }
   }
 
+  val pInt2 = choose(-100, 100).listOfN(choose(0, 20)).map(l =>
+    l.foldLeft(Par.unit(0))((p, i ) =>
+      Par.fork {
+        Par.map2(p, Par.unit(i))(_ + _)
+      }
+    )
+  )
+
 }
 
 case class SGen[+A](forSize: Int => Gen[A]) {
