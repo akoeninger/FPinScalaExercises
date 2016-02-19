@@ -28,8 +28,8 @@
       <file leaf-file-name="Gen.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3092243">
-              <caret line="166" column="80" selection-start-line="166" selection-start-column="80" selection-end-line="166" selection-end-column="80" />
+            <state vertical-scroll-proportion="0.11949685">
+              <caret line="170" column="58" selection-start-line="170" selection-start-column="58" selection-end-line="170" selection-end-column="58" />
               <folding>
                 <element signature="e#23#50#0" expanded="true" />
               </folding>
@@ -51,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+              <caret line="98" column="24" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="24" />
               <folding>
                 <element signature="e#34#90#0" expanded="true" />
               </folding>
@@ -909,13 +909,7 @@
       <workItem from="1454079148237" duration="6570000" />
       <workItem from="1454365893607" duration="31000" />
       <workItem from="1454596743168" duration="409000" />
-      <workItem from="1455893019825" duration="1353000" />
-    </task>
-    <task id="LOCAL-00043" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.7">
-      <created>1445027473176</created>
-      <option name="number" value="00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1445027473176</updated>
+      <workItem from="1455893019825" duration="1951000" />
     </task>
     <task id="LOCAL-00044" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.8">
       <created>1445268077243</created>
@@ -1205,11 +1199,17 @@
       <option name="project" value="LOCAL" />
       <updated>1455894110351</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Exercise 8.17&#10;&#10;Express property about fork that fork(x) == x&#10;&#10;&#10;&#10;">
+      <created>1455894429945</created>
+      <option name="number" value="00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1455894429945</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156444000" />
+    <option name="totallyTimeSpent" value="157042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
@@ -1250,7 +1250,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.11" />
     <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.12 Implemented my own chooser" />
     <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.13 Implemented my own chooser" />
     <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.13 Do chooser for Nonblocking" />
@@ -1275,7 +1274,8 @@
     <MESSAGE value="Clean up project chapter structure" />
     <MESSAGE value="Exercise 8.15 &#10;&#10;" />
     <MESSAGE value="Exercise 8.16&#10;&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 8.16&#10;&#10;&#10;&#10;" />
+    <MESSAGE value="Exercise 8.17&#10;&#10;Express property about fork that fork(x) == x&#10;&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 8.17&#10;&#10;Express property about fork that fork(x) == x&#10;&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1483,6 +1483,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="24" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="24" />
+          <folding>
+            <element signature="e#34#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1491,20 +1501,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-          <folding>
-            <element signature="e#34#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3092243">
-          <caret line="166" column="80" selection-start-line="166" selection-start-column="80" selection-end-line="166" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.11949685">
+          <caret line="170" column="58" selection-start-line="170" selection-start-column="58" selection-end-line="170" selection-end-column="58" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
           </folding>

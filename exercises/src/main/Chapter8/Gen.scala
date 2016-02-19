@@ -165,6 +165,11 @@ object Prop {
   val p4 = forAllPar(pint)(n => equal(Par.map(n)(identity), n))
 
   val forkPar = forAllPar(pInt2)(i => equal(Par.fork(i), Par.unit(i))) tag "fork"
+  val isEven = (i: Int) => i % 2 == 0
+  val takeWhileProp =
+    forAll(Gen.listOf(Gen.smallInt))(ns => ns.takeWhile(isEven).forall(isEven) &&
+      (ns.takeWhile(isEven) ++ ns.dropWhile(isEven)) == ns
+    )
 }
 
 case class Gen[+A](sample: State[RNG, A]) {
