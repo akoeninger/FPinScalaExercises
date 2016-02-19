@@ -163,6 +163,8 @@ object Prop {
 
   val pint = Gen.choose(0, 10) map Par.unit
   val p4 = forAllPar(pint)(n => equal(Par.map(n)(identity), n))
+
+  val forkPar = forAllPar(pInt2)(i => equal(Par.fork(i), Par.unit(i))) tag "fork"
 }
 
 case class Gen[+A](sample: State[RNG, A]) {
