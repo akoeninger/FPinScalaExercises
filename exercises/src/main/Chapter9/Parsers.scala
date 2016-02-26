@@ -1,16 +1,36 @@
 package main.Chapter9
 
-
 import language.higherKinds
+import language.implicitConversions
 
-trait Parsers[Parser[+_]] { self => // so inner classes may call methods of trait
+trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call methods of trait
+
+  def char(c: Char): Parser[Char]
+  def run[A](p: Parser[A])(input: String): Either[ParseError, A]
+
+  def orString(s1: String, s2: String): Parser[String]
+  def or[A](s1: Parser[A], s2: Parser[A]): Parser[A]
+
+  def listOfN[A](n: Int, p: Parser[A]): Parser[List[A]]
+
+  run(listOfN(3, "ab" | "cad"))("ababcad") == Right("ababcad")
+
+  implicit def string(s: String): Parser[String]
+  implicit def operators[A](p: Parser[A]): ParserOps[A] = ParserOps[A](p)
+  implicit def asStringParser[A](a: A)(implicit f: A => Parser[String]): ParserOps[String] =
+    ParserOps(f(a))
 
   case class ParserOps[A](p: Parser[A]) {
+    def |[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2)
+    def or[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2)
 
-
+    def run(input: String): Either[ParseError, A] = self.run(p)(input)
   }
 
   object Laws {
+    def charIdentity(c: Char): Boolean = char(c).run(c.toString) == Right(c)
+    def stringId(s: String): Boolean = run(string(s))(s) == Right(s)
+
   }
 }
 
