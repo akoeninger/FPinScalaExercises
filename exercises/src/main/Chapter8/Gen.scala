@@ -240,7 +240,21 @@ object Gen {
     )
   )
 
+  def genStringFn[A](g: Gen[A]): Gen[String => A] = Gen {
+    State { (rng: RNG) =>
+      val (seed, rng2) = rng.nextInt
+      val f = (s: String) => g.sample.run(RNG.Simple(seed.toLong ^ s.hashCode.toLong))._1
+      (f, rng2)
+    }
+  }
+
+  trait Cogen[-A] {
+    def sample(a: A, rng: RNG): RNG
+  }
+
 }
+
+
 
 case class SGen[+A](forSize: Int => Gen[A]) {
   def apply(a: Int): Gen[A] = forSize(a)
