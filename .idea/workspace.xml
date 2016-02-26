@@ -28,8 +28,8 @@
       <file leaf-file-name="Parsers.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33542976">
-              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.25157234">
+              <caret line="24" column="61" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
               <folding>
                 <element signature="e#23#50#0" expanded="true" />
               </folding>
@@ -788,13 +788,7 @@
       <workItem from="1454365893607" duration="31000" />
       <workItem from="1454596743168" duration="409000" />
       <workItem from="1455893019825" duration="2098000" />
-      <workItem from="1456518293734" duration="6009000" />
-    </task>
-    <task id="LOCAL-00047" summary="Chapter 6: Purely functional state&#10;&#10;Exercise 6.11With a little help&#10;&#10;Wow that for-comprehension is difficult to read what's going on. So used to reading it the normal way, which looks like there's a missing context of some initial Machine, but that's because the fact that&#10;the whole thing is really a (Machine) =&gt; for { _ &lt;- sequence.... s &lt;- get } yield (s..., s...) is contained in the return type of State[Machine, (Int, Int)].&#10; So that there means its def sim(inputs: List[Inputs]): (Machine) =&gt; funct: (Int, Int)">
-      <created>1445281838051</created>
-      <option name="number" value="00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1445281838051</updated>
+      <workItem from="1456518293734" duration="6147000" />
     </task>
     <task id="LOCAL-00048" summary="Chapter 7: Purely functional parallelism">
       <created>1445284708755</created>
@@ -1084,11 +1078,17 @@
       <option name="project" value="LOCAL" />
       <updated>1456521278617</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Initial combinators for strings and chars&#10;&#10;&#10;&#10;">
+      <created>1456524394750</created>
+      <option name="number" value="00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1456524394750</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163198000" />
+    <option name="totallyTimeSpent" value="163336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
@@ -1129,7 +1129,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chapter 7: Purely functional parallelism&#10;&#10;7.14" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;&#10;Inital set up" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.1 properties of sum function" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.2 properties of max function" />
@@ -1154,7 +1153,8 @@
     <MESSAGE value="Exercise 8.18&#10;&#10;Given a f: A =&gt; Boolean Concatenating the results of takeWhile(f) and dropWhile(f) will produce the original list &#10;&#10;&#10;&#10;" />
     <MESSAGE value="Exercise 8.19&#10;&#10;&#10;&#10;&#10;" />
     <MESSAGE value="Initial commit of Chapter 9: Parser combinators&#10;&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit of Chapter 9: Parser combinators&#10;&#10;&#10;&#10;" />
+    <MESSAGE value="Initial combinators for strings and chars&#10;&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial combinators for strings and chars&#10;&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1420,8 +1420,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33542976">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.25157234">
+          <caret line="24" column="61" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
           </folding>

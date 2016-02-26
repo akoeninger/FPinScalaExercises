@@ -23,6 +23,7 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
   case class ParserOps[A](p: Parser[A]) {
     def |[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2)
     def or[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2)
+    def listOfN(n: Int): Parser[List[A]] = self.listOfN(n, p)
 
     def run(input: String): Either[ParseError, A] = self.run(p)(input)
   }
