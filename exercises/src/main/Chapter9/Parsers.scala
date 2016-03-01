@@ -69,6 +69,12 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
     def equal[A](p1: Parser[A], p2: Parser[A])(in: Gen[String]): Prop =
       Prop.forAll(in)(s => run(p1)(s) == run(p2)(s))
+
+    def unbiasL[A,B,C](p: ((A,B), C)): (A,B,C) = (p._1._1, p._1._2, p._2)
+    def unbiasR[A,B,C](p: (A, (B,C))): (A,B,C) = (p._1, p._2._1, p._2._2)
+
+    def productLaw[A,B,C](a: Parser[A], b: Parser[B], c: Parser[C])(in: Gen[String]): Prop =
+      equal(((a ** b) ** c).map(unbiasL), (a ** (b ** c)).map(unbiasR))(in)
   }
 }
 
