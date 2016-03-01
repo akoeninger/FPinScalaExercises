@@ -28,8 +28,8 @@
       <file leaf-file-name="Parsers.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7966457">
-              <caret line="75" column="55" selection-start-line="75" selection-start-column="55" selection-end-line="75" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.18972747">
+              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
               <folding>
                 <element signature="e#23#50#0" expanded="true" />
               </folding>
@@ -211,34 +211,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -400,6 +372,34 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -830,13 +830,8 @@
       <workItem from="1455893019825" duration="2098000" />
       <workItem from="1456518293734" duration="6658000" />
       <workItem from="1456754750964" duration="3134000" />
-      <workItem from="1456846746192" duration="1400000" />
-    </task>
-    <task id="LOCAL-00050" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.3 Had to use book answer">
-      <created>1446156179750</created>
-      <option name="number" value="00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1446156179780</updated>
+      <workItem from="1456846746192" duration="1695000" />
+      <workItem from="1456849858471" duration="625000" />
     </task>
     <task id="LOCAL-00051" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.3 Optimised">
       <created>1446156527274</created>
@@ -1126,11 +1121,17 @@
       <option name="project" value="LOCAL" />
       <updated>1456757874807</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="Exercise 9.2&#10; &#10;'product' is ~= associative property. Created law to represent that. Product and map are also interesting together, in that, the result of either mapping first or mapping over he product doesn't matter&#10; a.map(f) ** b.map(g) == (a ** b) map { case (a,b) =&gt; (f(a), g(b)) }&#10;&#10;&#10;">
+      <created>1456848300039</created>
+      <option name="number" value="00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1456848300040</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168381000" />
+    <option name="totallyTimeSpent" value="169301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
@@ -1171,7 +1172,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.1 properties of sum function" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.2 properties of max function" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.3" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.4" />
@@ -1196,13 +1196,44 @@
     <MESSAGE value="Initial commit of Chapter 9: Parser combinators&#10;&#10;&#10;&#10;" />
     <MESSAGE value="Initial combinators for strings and chars&#10;&#10;&#10;&#10;" />
     <MESSAGE value="Exercise 9.1&#10; &#10; Implement monoid functions for Parser&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 9.1&#10; &#10; Implement monoid functions for Parser&#10;&#10;" />
+    <MESSAGE value="Exercise 9.2&#10; &#10;'product' is ~= associative property. Created law to represent that. Product and map are also interesting together, in that, the result of either mapping first or mapping over he product doesn't matter&#10; a.map(f) ** b.map(g) == (a ** b) map { case (a,b) =&gt; (f(a), g(b)) }&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 9.2&#10; &#10;'product' is ~= associative property. Created law to represent that. Product and map are also interesting together, in that, the result of either mapping first or mapping over he product doesn't matter&#10; a.map(f) ** b.map(g) == (a ** b) map { case (a,b) =&gt; (f(a), g(b)) }&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="174" column="11" selection-start-line="174" selection-start-column="11" selection-end-line="174" selection-end-column="11" />
+          <folding>
+            <element signature="e#23#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/Function2.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1490,8 +1521,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7966457">
-          <caret line="75" column="55" selection-start-line="75" selection-start-column="55" selection-end-line="75" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.18972747">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
           </folding>

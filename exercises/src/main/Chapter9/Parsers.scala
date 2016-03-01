@@ -75,6 +75,18 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
     def productLaw[A,B,C](a: Parser[A], b: Parser[B], c: Parser[C])(in: Gen[String]): Prop =
       equal(((a ** b) ** c).map(unbiasL), (a ** (b ** c)).map(unbiasR))(in)
+
+    def productMapLaw[A,B,C,D](
+      a: Parser[A],
+      b: Parser[B],
+      f: A => C,
+      g: B => D
+    )(
+      in: Gen[String]
+    ): Prop = equal(
+      product(a map f, b map g),
+      product(a, b).map(ab => (f(ab._1), g(ab._2)))
+    )(in)
   }
 }
 
