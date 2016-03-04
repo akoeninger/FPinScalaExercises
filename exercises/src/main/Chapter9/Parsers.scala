@@ -20,7 +20,9 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
   def listOfN[A](n: Int, p: Parser[A]): Parser[List[A]]
   run(listOfN(3, "ab" | "cad"))("ababcad") == Right("ababcad")
 
-  def many[A](p: Parser[A]): Parser[List[A]]
+  def many[A](p: Parser[A]): Parser[List[A]] =
+    p.map2(many(p) or succeed(Nil))(_ :: _)
+
   def many1[A](p: Parser[A]): Parser[List[A]] = p.map2(many(p))(_ :: _)
 
   def map[A, B](a: Parser[A])(f: A => B): Parser[B]
