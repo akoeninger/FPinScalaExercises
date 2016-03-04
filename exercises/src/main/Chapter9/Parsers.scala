@@ -9,7 +9,7 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
   val numA: Parser[Int] = charCount('a')
 
   def orString(s1: String, s2: String): Parser[String]
-  def or[A](s1: Parser[A], s2: Parser[A]): Parser[A]
+  def or[A](s1: Parser[A], s2: => Parser[A]): Parser[A]
 
   def succeed[A](a: A): Parser[A] = string("") map (_ => a)
 
@@ -23,20 +23,19 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
     else
       p.map2(listOfN(n - 1, p))(_ :: _)
 
-
   run(listOfN(3, "ab" | "cad"))("ababcad") == Right("ababcad")
 
   def many[A](p: Parser[A]): Parser[List[A]] =
-    p.map2(many(p))(_ :: _) or succeed(Nil)
+    p.map2(wrap(many(p)))(_ :: _) or succeed(Nil)
 
-  def many1[A](p: Parser[A]): Parser[List[A]] = p.map2(many(p))(_ :: _)
+  def many1[A](p: Parser[A]): Parser[List[A]] = p.map2(wrap(many(p)))(_ :: _)
 
   def map[A, B](a: Parser[A])(f: A => B): Parser[B]
   def flatMap[A, B](a: Parser[A])(f: A => Parser[B]): Parser[B]
   def product[A, B](p: Parser[A], p2: => Parser[B]): Parser[(A, B)]
 
   def map2[A,B,C](p: Parser[A], p2: => Parser[B])(f: (A,B) => C): Parser[C] =
-    product(p, p2) map f.tupled
+    product(p, wrap(p2)) map f.tupled
 
   def charCount(c: Char): Parser[Int] = char('a').many.map(_.size)
   run(charCount('a'))("") == Right(0)
@@ -45,26 +44,28 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   def char(c: Char): Parser[Char] = string(c.toString) map (_.charAt(0))
 
+  def wrap[A](p: => Parser[A]): Parser[A]
+
   implicit def string(s: String): Parser[String]
   implicit def operators[A](p: Parser[A]): ParserOps[A] = ParserOps[A](p)
   implicit def asStringParser[A](a: A)(implicit f: A => Parser[String]): ParserOps[String] =
     ParserOps(f(a))
 
   case class ParserOps[A](p: Parser[A]) {
-    def |[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2)
-    def or[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2)
+    def |[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2.wrap)
+    def or[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2.wrap)
     def listOfN(n: Int): Parser[List[A]] = self.listOfN(n, p)
     def many: Parser[List[A]] = self.many(p)
     def many1: Parser[List[A]] = self.many1(p)
     def slice: Parser[String] = self.slice(p)
 
-    def product[B](p2: => Parser[B]): Parser[(A,B)] = self.product(p, p2)
-    def **[B](p2: Parser[B]): Parser[(A,B)] = self.product(p, p2)
+    def product[B](p2: => Parser[B]): Parser[(A,B)] = self.product(p, p2.wrap)
+    def **[B](p2: Parser[B]): Parser[(A,B)] = self.product(p, p2.wrap)
 
     def map[B](f: A => B): Parser[B] = self.map(p)(f)
     def flatMap[B](f: A => Parser[B]): Parser[B] = self.flatMap(p)(f)
-    def map2[B,C](p2: => Parser[B])(f: (A,B) => C): Parser[C] = self.map2(p, p2)(f)
-
+    def map2[B,C](p2: => Parser[B])(f: (A,B) => C): Parser[C] = self.map2(p, p2.wrap)(f)
+    def wrap: Parser[A] = self.wrap(p)
     def run(input: String): Either[ParseError, A] = self.run(p)(input)
   }
 
