@@ -33,10 +33,10 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   def map[A, B](a: Parser[A])(f: A => B): Parser[B]
   def flatMap[A, B](a: Parser[A])(f: A => Parser[B]): Parser[B]
-  def product[A, B](p: Parser[A], p2: Parser[B]): Parser[(A, B)]
+  def product[A, B](p: Parser[A], p2: => Parser[B]): Parser[(A, B)]
 
-  def map2[A,B,C](p: Parser[A], p2: Parser[B])(f: (A,B) => C): Parser[C] =
-    product(p, p2).map(a => f.tupled(a))
+  def map2[A,B,C](p: Parser[A], p2: => Parser[B])(f: (A,B) => C): Parser[C] =
+    product(p, p2) map f.tupled
 
   def charCount(c: Char): Parser[Int] = char('a').many.map(_.size)
   run(charCount('a'))("") == Right(0)
@@ -58,12 +58,12 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
     def many1: Parser[List[A]] = self.many1(p)
     def slice: Parser[String] = self.slice(p)
 
-    def product[B](p2: Parser[B]): Parser[(A,B)] = self.product(p, p2)
+    def product[B](p2: => Parser[B]): Parser[(A,B)] = self.product(p, p2)
     def **[B](p2: Parser[B]): Parser[(A,B)] = self.product(p, p2)
 
     def map[B](f: A => B): Parser[B] = self.map(p)(f)
     def flatMap[B](f: A => Parser[B]): Parser[B] = self.flatMap(p)(f)
-    def map2[B,C](p2: Parser[B])(f: (A,B) => C): Parser[C] = self.map2(p, p2)(f)
+    def map2[B,C](p2: => Parser[B])(f: (A,B) => C): Parser[C] = self.map2(p, p2)(f)
 
     def run(input: String): Either[ParseError, A] = self.run(p)(input)
   }
