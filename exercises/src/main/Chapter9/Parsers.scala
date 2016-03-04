@@ -17,11 +17,17 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   def slice[A](p: Parser[A]): Parser[String]
 
-  def listOfN[A](n: Int, p: Parser[A]): Parser[List[A]]
+  def listOfN[A](n: Int, p: Parser[A]): Parser[List[A]] =
+    if (n <= 0)
+      succeed(List())
+    else
+      p.map2(listOfN(n - 1, p))(_ :: _)
+
+
   run(listOfN(3, "ab" | "cad"))("ababcad") == Right("ababcad")
 
   def many[A](p: Parser[A]): Parser[List[A]] =
-    p.map2(many(p) or succeed(Nil))(_ :: _)
+    p.map2(many(p))(_ :: _) or succeed(Nil)
 
   def many1[A](p: Parser[A]): Parser[List[A]] = p.map2(many(p))(_ :: _)
 
