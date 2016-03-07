@@ -33,10 +33,16 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   def map[A, B](a: Parser[A])(f: A => B): Parser[B]
   def flatMap[A, B](a: Parser[A])(f: A => Parser[B]): Parser[B]
-  def product[A, B](p: Parser[A], p2: => Parser[B]): Parser[(A, B)]
+  def product[A, B](p: Parser[A], p2: => Parser[B]): Parser[(A, B)] =
+    for (a ← p; b ← p2) yield (a, b)
 
-  def map2[A,B,C](p: Parser[A], p2: => Parser[B])(f: (A,B) => C): Parser[C] =
+  def map2ViaProduct[A,B,C](p: Parser[A], p2: => Parser[B])(f: (A,B) => C): Parser[C] =
     product(p, wrap(p2)) map f.tupled
+
+  def map2[A,B,C](p: Parser[A], p2: => Parser[B])(f: (A,B) => C): Parser[C] = // for (a ← p; b ← p2) yield f(a, b)
+    p.flatMap(a =>
+      p2.map(b => f(a, b))
+    )
 
   def charCount(c: Char): Parser[Int] = char('a').many.map(_.size)
   run(charCount('a'))("") == Right(0)
