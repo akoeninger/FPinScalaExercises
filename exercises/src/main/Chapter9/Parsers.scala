@@ -31,8 +31,11 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   def many1[A](p: Parser[A]): Parser[List[A]] = p.map2(wrap(many(p)))(_ :: _)
 
-  def map[A, B](a: Parser[A])(f: A => B): Parser[B]
+  def map[A, B](pa: Parser[A])(f: A => B): Parser[B] = // for (a <- pa) yield f(a)
+    pa.flatMap(a => succeed(f(a)))
+
   def flatMap[A, B](a: Parser[A])(f: A => Parser[B]): Parser[B]
+
   def product[A, B](p: Parser[A], p2: => Parser[B]): Parser[(A, B)] =
     for (a ← p; b ← p2) yield (a, b)
 
