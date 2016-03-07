@@ -2,6 +2,7 @@ package main.Chapter9
 
 import language.higherKinds
 import language.implicitConversions
+import scala.util.matching.Regex
 
 import main.Chapter8._
 
@@ -44,9 +45,17 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   def char(c: Char): Parser[Char] = string(c.toString) map (_.charAt(0))
 
+  // Return number of 'a'
+  def regexParser: Parser[Int] = for {
+    digit ← "[0-9]+".r
+    n = digit.toInt
+    _ ← listOfN(n, char('a'))
+  } yield n
+
   def wrap[A](p: => Parser[A]): Parser[A]
 
   implicit def string(s: String): Parser[String]
+  implicit def regex(r: Regex): Parser[String]
   implicit def operators[A](p: Parser[A]): ParserOps[A] = ParserOps[A](p)
   implicit def asStringParser[A](a: A)(implicit f: A => Parser[String]): ParserOps[String] =
     ParserOps(f(a))
