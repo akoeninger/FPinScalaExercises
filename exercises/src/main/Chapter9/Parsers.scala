@@ -63,6 +63,13 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   def wrap[A](p: => Parser[A]): Parser[A]
 
+  def whitespace: Parser[String] = "//s*".r
+  def digits: Parser[String] = "//d*".r
+  def word: Parser[String] = "//w*".r
+  def letter: Parser[String] = "[A-Z]|[a-z]".r
+
+
+
   implicit def string(s: String): Parser[String]
   implicit def regex(r: Regex): Parser[String]
   implicit def operators[A](p: Parser[A]): ParserOps[A] = ParserOps[A](p)
