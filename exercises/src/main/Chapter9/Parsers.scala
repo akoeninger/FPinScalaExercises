@@ -12,7 +12,9 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
   def orString(s1: String, s2: String): Parser[String]
   def or[A](s1: Parser[A], s2: => Parser[A]): Parser[A]
 
-  def succeed[A](a: A): Parser[A] = string("") map (_ => a)
+  // Leave succeed abstract, to avoid circular definition with map which uses flatMap and succeed
+  def succeed[A](a: A): Parser[A]
+  def defaultSucceed[A](a: A): Parser[A] = string("") map (_ => a)
 
   def run[A](p: Parser[A])(input: String): Either[ParseError, A]
 
@@ -36,11 +38,11 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   def flatMap[A, B](a: Parser[A])(f: A => Parser[B]): Parser[B]
 
-  def product[A, B](p: Parser[A], p2: => Parser[B]): Parser[(A, B)] =
-    for (a ← p; b ← p2) yield (a, b)
-
   def map2ViaProduct[A,B,C](p: Parser[A], p2: => Parser[B])(f: (A,B) => C): Parser[C] =
     product(p, wrap(p2)) map f.tupled
+
+  def product[A, B](p: Parser[A], p2: => Parser[B]): Parser[(A, B)] =
+    for (a ← p; b ← p2) yield (a, b)
 
   def map2[A,B,C](p: Parser[A], p2: => Parser[B])(f: (A,B) => C): Parser[C] = // for (a ← p; b ← p2) yield f(a, b)
     p.flatMap(a =>
@@ -68,7 +70,15 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
   def word: Parser[String] = "//w*".r
   def letter: Parser[String] = "[A-Z]|[a-z]".r
 
+  def leftBrace: Parser[Char] = char('{')
+  def rightBrace: Parser[Char] = char('}')
+  def thru(s: String): Parser[String] = s".*?${Regex.quote(s)}".r
 
+  def skipL[A](p: => Parser[Any], p2: Parser[A]): Parser[A] =
+    map2(slice(p), p2)((_, b) => b)
+
+  def skipR[A](p: Parser[A], p2: => Parser[Any]): Parser[A] =
+    map2(p, slice(p2))((a, _) => a)
 
   implicit def string(s: String): Parser[String]
   implicit def regex(r: Regex): Parser[String]
@@ -83,6 +93,9 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
     def many: Parser[List[A]] = self.many(p)
     def many1: Parser[List[A]] = self.many1(p)
     def slice: Parser[String] = self.slice(p)
+
+    def skipL(p2: => Parser[Any]): Parser[A] = self.skipL(p2, p)
+    def skipR(p2: => Parser[Any]): Parser[A] = self.skipR(p, p2)
 
     def product[B](p2: => Parser[B]): Parser[(A,B)] = self.product(p, p2.wrap)
     def **[B](p2: Parser[B]): Parser[(A,B)] = self.product(p, p2.wrap)
@@ -104,11 +117,12 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
     def equal[A](p1: Parser[A], p2: Parser[A])(in: Gen[String]): Prop =
       Prop.forAll(in)(s => run(p1)(s) == run(p2)(s))
 
-    def unbiasL[A,B,C](p: ((A,B), C)): (A,B,C) = (p._1._1, p._1._2, p._2)
-    def unbiasR[A,B,C](p: (A, (B,C))): (A,B,C) = (p._1, p._2._1, p._2._2)
-
     def productLaw[A,B,C](a: Parser[A], b: Parser[B], c: Parser[C])(in: Gen[String]): Prop =
       equal(((a ** b) ** c).map(unbiasL), (a ** (b ** c)).map(unbiasR))(in)
+
+    def unbiasL[A,B,C](p: ((A,B), C)): (A,B,C) = (p._1._1, p._1._2, p._2)
+
+    def unbiasR[A,B,C](p: (A, (B,C))): (A,B,C) = (p._1, p._2._1, p._2._2)
 
     def productMapLaw[A,B,C,D](
       a: Parser[A],
