@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter6/package.scala" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" />
     </list>
     <ignored path="FPiS Exercises.iws" />
@@ -28,8 +32,8 @@
       <file leaf-file-name="Parsers.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.754717">
-              <caret line="96" column="64" selection-start-line="96" selection-start-column="64" selection-end-line="96" selection-end-column="64" />
+            <state relative-caret-position="399">
+              <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
               <folding>
                 <element signature="e#23#50#0" expanded="true" />
               </folding>
@@ -40,8 +44,70 @@
       <file leaf-file-name="JSON.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state relative-caret-position="252">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Exhaustive.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4914">
+              <caret line="244" column="84" selection-start-line="244" selection-start-column="84" selection-end-line="244" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stream.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/Stream.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3276">
+              <caret line="157" column="6" selection-start-line="157" selection-start-column="6" selection-end-line="157" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gen.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3318">
+              <caret line="167" column="33" selection-start-line="167" selection-start-column="33" selection-end-line="167" selection-end-column="33" />
+              <folding>
+                <element signature="e#23#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Nonblocking.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Par.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4179">
+              <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/package.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -89,12 +155,12 @@
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter5/Stream.java" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter5/Stream.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter5/package.scala" />
-        <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/package.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/package.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" />
-        <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" />
       </list>
     </option>
@@ -113,9 +179,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1920" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1920" />
-    <option name="height" value="1056" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -197,36 +263,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -241,24 +277,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="scala-sdk-2.11.7 (2)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala-sdk-2.11.7 (2)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala-library-2.11.7.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -426,9 +444,121 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chapter6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chapter5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chapter5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="package.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -672,6 +802,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
@@ -683,6 +814,7 @@
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
+      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
@@ -759,12 +891,24 @@
       <projects_view />
     </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ScalaProjectSettings">
+    <option name="collectionTypeHighlightingLevel" value="1" />
+    <option name="implicitParametersSearchDepth" value="3" />
+    <option name="intInjectionMapping">
+      <map>
+        <entry key="xml" value="XML" />
+      </map>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="" />
       <created>1440772934845</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1440772934845</updated>
       <workItem from="1440772935580" duration="1987000" />
       <workItem from="1441029720986" duration="1584000" />
@@ -865,310 +1009,361 @@
       <workItem from="1457445980840" duration="1107000" />
       <workItem from="1457961724183" duration="1342000" />
       <workItem from="1458132990942" duration="1344000" />
-      <workItem from="1458221289122" duration="770000" />
-    </task>
-    <task id="LOCAL-00060" summary="Chapter 7: Purely functional parallelism&#10;&#10;Exercise 7.8&#10;&#10;Fork in its current implemention is prone to deadlock when fixed size Thread Pools are used. The fork submits a Callable and block waits for another Callable to be submitted and executed. They easily end up waiting for each other to finish. Deadlock">
-      <created>1446734634459</created>
-      <option name="number" value="00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1446734634459</updated>
+      <workItem from="1458221289122" duration="3154000" />
+      <workItem from="1458661202167" duration="625000" />
+      <workItem from="1458744153684" duration="199000" />
     </task>
     <task id="LOCAL-00061" summary="Chapter 7: Purely functional parallelism&#10;&#10;Implementing a fully non-blocking Par">
       <created>1447080496243</created>
       <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
       <option name="project" value="LOCAL" />
       <updated>1447080496244</updated>
     </task>
     <task id="LOCAL-00062" summary="Chapter 7: Purely functional parallelism&#10;&#10;Implementing a fully non-blocking Par">
       <created>1447170357154</created>
       <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
       <option name="project" value="LOCAL" />
       <updated>1447170357155</updated>
     </task>
     <task id="LOCAL-00063" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.10">
       <created>1449517992240</created>
       <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
       <option name="project" value="LOCAL" />
       <updated>1449517992240</updated>
     </task>
     <task id="LOCAL-00064" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.11">
       <created>1449589386008</created>
       <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
       <option name="project" value="LOCAL" />
       <updated>1449589386009</updated>
     </task>
     <task id="LOCAL-00065" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.12 Implemented my own chooser">
       <created>1449677898133</created>
       <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
       <option name="project" value="LOCAL" />
       <updated>1449677898134</updated>
     </task>
     <task id="LOCAL-00066" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.13 Implemented my own chooser">
       <created>1449759486375</created>
       <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
       <option name="project" value="LOCAL" />
       <updated>1449759486376</updated>
     </task>
     <task id="LOCAL-00067" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.13 Do chooser for Nonblocking">
       <created>1449760316972</created>
       <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
       <option name="project" value="LOCAL" />
       <updated>1449760316972</updated>
     </task>
     <task id="LOCAL-00068" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.14">
       <created>1450803848561</created>
       <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
       <option name="project" value="LOCAL" />
       <updated>1450803848562</updated>
     </task>
     <task id="LOCAL-00069" summary="Chapter 8: Property-based testing&#10;&#10;Inital set up">
       <created>1450805036457</created>
       <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
       <option name="project" value="LOCAL" />
       <updated>1450805036457</updated>
     </task>
     <task id="LOCAL-00070" summary="Chapter 8: Property-based testing&#10;             &#10;8.1 properties of sum function">
       <created>1450805793438</created>
       <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
       <option name="project" value="LOCAL" />
       <updated>1450805793438</updated>
     </task>
     <task id="LOCAL-00071" summary="Chapter 8: Property-based testing&#10;             &#10;8.2 properties of max function">
       <created>1450806714991</created>
       <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
       <option name="project" value="LOCAL" />
       <updated>1450806714992</updated>
     </task>
     <task id="LOCAL-00072" summary="Chapter 8: Property-based testing&#10;             &#10;8.3">
       <created>1450822642748</created>
       <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
       <option name="project" value="LOCAL" />
       <updated>1450822642749</updated>
     </task>
     <task id="LOCAL-00073" summary="Chapter 8: Property-based testing&#10;             &#10;8.4">
       <created>1450882602585</created>
       <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
       <option name="project" value="LOCAL" />
       <updated>1450882602585</updated>
     </task>
     <task id="LOCAL-00074" summary="Chapter 8: Property-based testing&#10;             &#10;8.5">
       <created>1450885093281</created>
       <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
       <option name="project" value="LOCAL" />
       <updated>1450885093281</updated>
     </task>
     <task id="LOCAL-00075" summary="Chapter 8: Property-based testing&#10;             &#10;8.6">
       <created>1450885679854</created>
       <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
       <option name="project" value="LOCAL" />
       <updated>1450885679855</updated>
     </task>
     <task id="LOCAL-00076" summary="Chapter 8: Property-based testing&#10;             &#10;8.7">
       <created>1450891671022</created>
       <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
       <option name="project" value="LOCAL" />
       <updated>1450891671023</updated>
     </task>
     <task id="LOCAL-00077" summary="Chapter 8: Property-based testing&#10;             &#10;8.8&#10;Factored out a chooser primative that chooses between 2 Gens based on a Gen[bool] result">
       <created>1450896307894</created>
       <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
       <option name="project" value="LOCAL" />
       <updated>1450896307894</updated>
     </task>
     <task id="LOCAL-00078" summary="Chapter 8: Property-based testing&#10;             &#10;8.8&#10;Factored out a chooser primative that chooses between 2 Gens based on a Gen[bool] result">
       <created>1450901829244</created>
       <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
       <option name="project" value="LOCAL" />
       <updated>1450901829244</updated>
     </task>
     <task id="LOCAL-00079" summary="Chapter 8: Property-based testing&#10;             &#10;8.9">
       <created>1450902788154</created>
       <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
       <option name="project" value="LOCAL" />
       <updated>1450902788154</updated>
     </task>
     <task id="LOCAL-00080" summary="Chapter 8: Property-based testing&#10;             &#10;8.10">
       <created>1450903885486</created>
       <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
       <option name="project" value="LOCAL" />
       <updated>1450903885486</updated>
     </task>
     <task id="LOCAL-00081" summary="Chapter 8: Property-based testing&#10;             &#10;8.11">
       <created>1450905090523</created>
       <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
       <option name="project" value="LOCAL" />
       <updated>1450905090523</updated>
     </task>
     <task id="LOCAL-00082" summary="Chapter 8: Property-based testing&#10;             &#10;8.12">
       <created>1450906169599</created>
       <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
       <option name="project" value="LOCAL" />
       <updated>1450906169599</updated>
     </task>
     <task id="LOCAL-00083" summary="Chapter 8: Property-based testing&#10;             &#10;8.13">
       <created>1451331958021</created>
       <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
       <option name="project" value="LOCAL" />
       <updated>1451331958023</updated>
     </task>
     <task id="LOCAL-00084" summary="Chapter 8: Property-based testing&#10;             &#10;8.14 Helped from book">
       <created>1451336963638</created>
       <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
       <option name="project" value="LOCAL" />
       <updated>1451336963638</updated>
     </task>
     <task id="LOCAL-00085" summary="Chapter 8: Property-based testing&#10;             &#10;">
       <created>1451339224655</created>
       <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
       <option name="project" value="LOCAL" />
       <updated>1451339224655</updated>
     </task>
     <task id="LOCAL-00086" summary="Chapter 8: Property-based testing&#10;             &#10;ts t">
       <created>1451490390782</created>
       <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
       <option name="project" value="LOCAL" />
       <updated>1451490390783</updated>
     </task>
     <task id="LOCAL-00087" summary="Chapter 8: Property-based testing&#10;             &#10;ts t">
       <created>1451490476106</created>
       <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
       <option name="project" value="LOCAL" />
       <updated>1451490476106</updated>
     </task>
     <task id="LOCAL-00088" summary="Chapter 8: Property-based testing&#10;             &#10;ts t">
       <created>1454079193816</created>
       <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
       <option name="project" value="LOCAL" />
       <updated>1454079193817</updated>
     </task>
     <task id="LOCAL-00089" summary="Clean up project chapter structure">
       <created>1454081379905</created>
       <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
       <option name="project" value="LOCAL" />
       <updated>1454081379905</updated>
     </task>
     <task id="LOCAL-00090" summary="Exercise 8.15 &#10;&#10;">
       <created>1454089173817</created>
       <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
       <option name="project" value="LOCAL" />
       <updated>1454089173817</updated>
     </task>
     <task id="LOCAL-00091" summary="Exercise 8.16&#10;&#10;&#10;&#10;">
       <created>1455894110350</created>
       <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
       <option name="project" value="LOCAL" />
       <updated>1455894110351</updated>
     </task>
     <task id="LOCAL-00092" summary="Exercise 8.17&#10;&#10;Express property about fork that fork(x) == x&#10;&#10;&#10;&#10;">
       <created>1455894429945</created>
       <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
       <option name="project" value="LOCAL" />
       <updated>1455894429945</updated>
     </task>
     <task id="LOCAL-00093" summary="Exercise 8.18&#10;&#10;Given a f: A =&gt; Boolean Concatenating the results of takeWhile(f) and dropWhile(f) will produce the original list &#10;&#10;&#10;&#10;">
       <created>1455895075551</created>
       <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
       <option name="project" value="LOCAL" />
       <updated>1455895075551</updated>
     </task>
     <task id="LOCAL-00094" summary="Exercise 8.19&#10;&#10;&#10;&#10;&#10;">
       <created>1456521023706</created>
       <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
       <option name="project" value="LOCAL" />
       <updated>1456521023707</updated>
     </task>
     <task id="LOCAL-00095" summary="Initial commit of Chapter 9: Parser combinators&#10;&#10;&#10;&#10;">
       <created>1456521278617</created>
       <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
       <option name="project" value="LOCAL" />
       <updated>1456521278617</updated>
     </task>
     <task id="LOCAL-00096" summary="Initial combinators for strings and chars&#10;&#10;&#10;&#10;">
       <created>1456524394750</created>
       <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
       <option name="project" value="LOCAL" />
       <updated>1456524394750</updated>
     </task>
     <task id="LOCAL-00097" summary="Initial combinators for strings and chars&#10;&#10;&#10;&#10;">
       <created>1456524510277</created>
       <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
       <option name="project" value="LOCAL" />
       <updated>1456524510277</updated>
     </task>
     <task id="LOCAL-00098" summary="Exercise 9.1&#10; &#10; Implement monoid functions for Parser&#10;&#10;">
       <created>1456757874807</created>
       <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
       <option name="project" value="LOCAL" />
       <updated>1456757874807</updated>
     </task>
     <task id="LOCAL-00099" summary="Exercise 9.2&#10; &#10;'product' is ~= associative property. Created law to represent that. Product and map are also interesting together, in that, the result of either mapping first or mapping over he product doesn't matter&#10; a.map(f) ** b.map(g) == (a ** b) map { case (a,b) =&gt; (f(a), g(b)) }&#10;&#10;&#10;">
       <created>1456848300039</created>
       <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
       <option name="project" value="LOCAL" />
       <updated>1456848300040</updated>
     </task>
     <task id="LOCAL-00100" summary="Exercise 9.2&#10;&#10;Added second 'product' and 'map' law&#10;&#10;&#10;">
       <created>1456850505436</created>
       <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
       <option name="project" value="LOCAL" />
       <updated>1456850505436</updated>
     </task>
     <task id="LOCAL-00101" summary="Exercise 9.3&#10;&#10;Many is no longer a primitive. Defined it using map2, or, and succeed. &#10;&#10;&#10;">
       <created>1457111565047</created>
       <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
       <option name="project" value="LOCAL" />
       <updated>1457111565047</updated>
     </task>
     <task id="LOCAL-00102" summary="Exercise 9.4&#10;&#10;Implemented listOfN using map2 and succeed&#10;&#10;&#10;">
       <created>1457112467705</created>
       <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
       <option name="project" value="LOCAL" />
       <updated>1457112467706</updated>
     </task>
     <task id="LOCAL-00103" summary="Make product and map2 non-strict in their second arguments&#10;&#10;&#10;">
       <created>1457112628900</created>
       <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
       <option name="project" value="LOCAL" />
       <updated>1457112628900</updated>
     </task>
     <task id="LOCAL-00104" summary="Exercise 9.5&#10;&#10;Added the wrap combinator for non-strictness&#10;&#10;&#10;">
       <created>1457118836034</created>
       <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
       <option name="project" value="LOCAL" />
       <updated>1457118836035</updated>
     </task>
     <task id="LOCAL-00105" summary="Exercise 9.6&#10;&#10;&#10;">
       <created>1457383012962</created>
       <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
       <option name="project" value="LOCAL" />
       <updated>1457383012963</updated>
     </task>
     <task id="LOCAL-00106" summary="Exercise 9.7&#10;&#10;Implement map2 and product with flatMap. This indicates that map2 and product are not primitives as they can be implemented with flatMap&#10;&#10;&#10;">
       <created>1457383594264</created>
       <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
       <option name="project" value="LOCAL" />
       <updated>1457383594264</updated>
     </task>
     <task id="LOCAL-00107" summary="Exercise 9.8&#10;&#10;Implement map with flatMap. flatMap is more powerful and primitive than map&#10;&#10;&#10;">
       <created>1457384124610</created>
       <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
       <option name="project" value="LOCAL" />
       <updated>1457384124610</updated>
     </task>
     <task id="LOCAL-00108" summary="Exercise 9.9&#10;&#10;Implement JSON parser. &#10;&#10;">
       <created>1457963671325</created>
       <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
       <option name="project" value="LOCAL" />
       <updated>1457963671326</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Exercise 9.9&#10;&#10;Add combinator for parsing string until some character, 'thru'&#10;Add combinators for skipping everything before or after another parser&#10;&#10;">
+      <created>1458222378240</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1458222378240</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181867000" />
+    <option name="totallyTimeSpent" value="185075000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
+    <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1206,7 +1401,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.11" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.12" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.13" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.14 Helped from book" />
@@ -1231,24 +1425,25 @@
     <MESSAGE value="Exercise 9.7&#10;&#10;Implement map2 and product with flatMap. This indicates that map2 and product are not primitives as they can be implemented with flatMap&#10;&#10;&#10;" />
     <MESSAGE value="Exercise 9.8&#10;&#10;Implement map with flatMap. flatMap is more powerful and primitive than map&#10;&#10;&#10;" />
     <MESSAGE value="Exercise 9.9&#10;&#10;Implement JSON parser. &#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 9.9&#10;&#10;Implement JSON parser. &#10;&#10;" />
+    <MESSAGE value="Exercise 9.9&#10;&#10;Add combinator for parsing string until some character, 'thru'&#10;Add combinators for skipping everything before or after another parser&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 9.9&#10;&#10;Add combinator for parsing string until some character, 'thru'&#10;Add combinators for skipping everything before or after another parser&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala">
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/package.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="42">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
@@ -1258,7 +1453,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
@@ -1268,7 +1463,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
@@ -1278,7 +1473,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
@@ -1288,7 +1483,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
@@ -1298,7 +1493,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
@@ -1308,21 +1503,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="174" column="11" selection-start-line="174" selection-start-column="11" selection-end-line="174" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/Function2.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
@@ -1332,21 +1527,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="174" column="11" selection-start-line="174" selection-start-column="11" selection-end-line="174" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/Function2.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
@@ -1356,259 +1551,267 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="174" column="11" selection-start-line="174" selection-start-column="11" selection-end-line="174" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/Function2.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="166" column="6" selection-start-line="166" selection-start-column="6" selection-end-line="166" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="98" column="24" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="166" column="6" selection-start-line="166" selection-start-column="6" selection-end-line="166" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="146" column="34" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="146" column="34" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/util/concurrent/Future.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/lang/Runnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8319328">
+        <state relative-caret-position="0">
           <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/concurrent/Future.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5588235">
+        <state relative-caret-position="0">
           <caret line="598" column="10" selection-start-line="598" selection-start-column="10" selection-end-line="598" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar!/scala/concurrent/impl/Future.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.084033616">
+        <state relative-caret-position="0">
           <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45356372">
+        <state relative-caret-position="0">
           <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter2/MyModule.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8739496">
+        <state relative-caret-position="0">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter3/List.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="169" column="1" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter3/Tree.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter3/Chapter3.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter4/Either.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6451613">
+        <state relative-caret-position="0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/math/package.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3329832">
+        <state relative-caret-position="0">
           <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter4/Option.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter4/Chapter4.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.084033616">
+        <state relative-caret-position="0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/package.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/package.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/Stream.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="136" column="19" selection-start-line="136" selection-start-column="19" selection-end-line="136" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/exercises.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14705883">
+        <state relative-caret-position="0">
           <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02096436">
-          <caret line="166" column="6" selection-start-line="166" selection-start-column="6" selection-end-line="166" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="174" column="11" selection-start-line="174" selection-start-column="11" selection-end-line="174" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/Function2.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.981132">
-          <caret line="244" column="73" selection-start-line="244" selection-start-column="73" selection-end-line="244" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/util/matching/Regex.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86764705">
+        <state relative-caret-position="0">
           <caret line="827" column="1" selection-start-line="827" selection-start-column="1" selection-end-line="827" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/Stream.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3276">
+          <caret line="157" column="6" selection-start-line="157" selection-start-column="6" selection-end-line="157" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4179">
+          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3318">
+          <caret line="167" column="33" selection-start-line="167" selection-start-column="33" selection-end-line="167" selection-end-column="33" />
+          <folding>
+            <element signature="e#23#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4914">
+          <caret line="244" column="84" selection-start-line="244" selection-start-column="84" selection-end-line="244" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="252">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
@@ -1616,8 +1819,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.754717">
-          <caret line="96" column="64" selection-start-line="96" selection-start-column="64" selection-end-line="96" selection-end-column="64" />
+        <state relative-caret-position="399">
+          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
           </folding>

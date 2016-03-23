@@ -242,7 +242,7 @@ object Gen {
    *    Stream(Stream(1,3,4), Stream(1,3,5), Stream(2,3,4), Stream(2,3,5))
   */
   def cartesian[A](s: Stream[Stream[A]]): Stream[Stream[A]] =
-    s.foldRight(Stream(Stream[A]()))((hs,ts) => map2Stream(hs,ts)(Stream.cons))
+    s.foldRight(Stream(Stream[A]()))((hs,ts) => map2Stream(hs,ts)((h, tl) => Stream.cons(h, tl)))
 
   /* `map2Option` and `map2Stream`. Notice the duplication! */
   def map2Option[A,B,C](oa: Option[A], ob: Option[B])(f: (A,B) => C): Option[C] =

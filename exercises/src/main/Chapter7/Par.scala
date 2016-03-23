@@ -197,39 +197,3 @@ object Par {
     def equal(p2: Par[A]): Par[Boolean] = map2(p2)(_ == _)
   }
 }
-
-object Examples {
-  import Par._
-  def sum(ints: IndexedSeq[Int]): Par[Int] = // `IndexedSeq` is a superclass of random-access sequences like `Vector` in the standard library. Unlike lists, these sequences provide an efficient `splitAt` method for dividing them into two parts at a particular index.
-    if (ints.size <= 1)
-      Par.unit(ints.headOption getOrElse 0) // `headOption` is a method defined on all collections in Scala. We saw this function in chapter 3.
-    else {
-      val (l,r) = ints.splitAt(ints.length/2) // Divide the sequence in half using the `splitAt` function.
-      sum(l).map2(sum(r))(_ + _)
-    }
-
-  def main(args: Array[String]) {
-    Par.parFilter(List(1, 2, 3, 4, -1, 0, 1, 6, 7, 8, 9, 10))(a => {
-      println(a)
-      a > 0 && a < 10
-    })
-
-
-    /* Exercise 7.7
-      map(y)(id) == y
-      Given f compose g = p compose q =>
-         map(y)(f) compose map(y)(g) = map(y)(p) compose map(y)(q)
-      let p = id and q = f compose g
-
-      map(y)(f) compose map(y)(g)
-        = map(y)(id) compose map(y)( f compose g)
-        = id(y) compose map(y)(f compose g)
-        = map(y)(f compose g)
-
-
-
-     */
-
-
-  }
-}

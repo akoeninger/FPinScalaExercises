@@ -96,6 +96,8 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
     def skipL(p2: => Parser[Any]): Parser[A] = self.skipL(p2, p)
     def skipR(p2: => Parser[Any]): Parser[A] = self.skipR(p, p2)
+    def *>(p2: => Parser[Any]): Parser[A] = skipR(p2)
+    def <*(p2: => Parser[Any]): Parser[A] = skipL(p2)
 
     def product[B](p2: => Parser[B]): Parser[(A,B)] = self.product(p, p2.wrap)
     def **[B](p2: Parser[B]): Parser[(A,B)] = self.product(p, p2.wrap)
