@@ -74,6 +74,15 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
   def rightBrace: Parser[Char] = char('}')
   def thru(s: String): Parser[String] = s".*?${Regex.quote(s)}".r
 
+  def surround[A](left: Parser[Any], right: Parser[Any])(p: => Parser[A]): Parser[Any] =
+    skipR(skipL(left, p), right)
+
+  def deliminate1[A](p: Parser[A], p2: Parser[Any]): Parser[List[A]] =
+    map2(p, many1(skipL(p2, p)))(_ :: _)
+
+  def deliminate[A](p: Parser[A], p2: Parser[Any]): Parser[List[A]] =
+    deliminate1(p, p2) | succeed[List[A]](Nil)
+
   def skipL[A](p: => Parser[Any], p2: Parser[A]): Parser[A] =
     map2(slice(p), p2)((_, b) => b)
 
@@ -96,8 +105,11 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
     def skipL(p2: => Parser[Any]): Parser[A] = self.skipL(p2, p)
     def skipR(p2: => Parser[Any]): Parser[A] = self.skipR(p, p2)
-    def *>(p2: => Parser[Any]): Parser[A] = skipR(p2)
-    def <*(p2: => Parser[Any]): Parser[A] = skipL(p2)
+    def *>(p2: => Parser[Any]): Parser[A] = skipL(p2)
+    def <*(p2: => Parser[Any]): Parser[A] = skipR(p2)
+
+    def surround(start: Parser[Any], stop: Parser[Any]): Parser[Any] =
+      self.surround(start, stop)(p)
 
     def product[B](p2: => Parser[B]): Parser[(A,B)] = self.product(p, p2.wrap)
     def **[B](p2: Parser[B]): Parser[(A,B)] = self.product(p, p2.wrap)
