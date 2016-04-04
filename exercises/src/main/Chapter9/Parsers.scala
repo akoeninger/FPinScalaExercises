@@ -74,6 +74,9 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
   def rightBrace: Parser[Char] = char('}')
   def thru(s: String): Parser[String] = s".*?${Regex.quote(s)}".r
 
+  // Parses everything upto, but not including the given string
+  def thruExclusive(s: String): Parser[String] = thru(s).map(_.init)
+
   def surround[A](left: Parser[Any], right: Parser[Any])(p: => Parser[A]): Parser[Any] =
     skipR(skipL(left, p), right)
 
@@ -88,6 +91,13 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   def skipR[A](p: Parser[A], p2: => Parser[Any]): Parser[A] =
     map2(p, slice(p2))((a, _) => a)
+
+  def quoted: Parser[String] = string("\"") *> thruExclusive("\"")
+
+  def doubleString: Parser[String] =
+    "[-+]?([0-9]*\\.)?[0-9]+([eE][-+]?[0-9]+)?".r
+
+  def double: Parser[Double] = doubleString map (_.toDouble)
 
   implicit def string(s: String): Parser[String]
   implicit def regex(r: Regex): Parser[String]
