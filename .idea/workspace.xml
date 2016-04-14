@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" />
     </list>
     <ignored path="FPiS Exercises.iws" />
@@ -26,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Parsers.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Parsers.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="99" column="60" selection-start-line="99" selection-start-column="60" selection-end-line="99" selection-end-column="60" />
+            <state relative-caret-position="585">
+              <caret line="78" column="2" selection-start-line="78" selection-start-column="2" selection-end-line="78" selection-end-column="2" />
               <folding>
                 <element signature="e#23#50#0" expanded="true" />
               </folding>
@@ -38,14 +37,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSON.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JSON.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-              <folding>
-                <element signature="e#23#50#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="705">
+              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,9 +50,11 @@
       <file leaf-file-name="Exhaustive.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3978">
+            <state relative-caret-position="3510">
               <caret line="244" column="84" selection-start-line="244" selection-start-column="84" selection-end-line="244" selection-end-column="84" />
-              <folding />
+              <folding>
+                <element signature="e#34#90#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,7 +62,7 @@
       <file leaf-file-name="Stream.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/Stream.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2652">
+            <state relative-caret-position="2340">
               <caret line="157" column="6" selection-start-line="157" selection-start-column="6" selection-end-line="157" selection-end-column="6" />
               <folding>
                 <element signature="e#23#54#0" expanded="false" />
@@ -75,11 +74,9 @@
       <file leaf-file-name="Gen.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2686">
+            <state relative-caret-position="2370">
               <caret line="167" column="33" selection-start-line="167" selection-start-column="33" selection-end-line="167" selection-end-column="33" />
-              <folding>
-                <element signature="e#23#50#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,9 +84,11 @@
       <file leaf-file-name="Nonblocking.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="60">
               <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-              <folding />
+              <folding>
+                <element signature="e#23#94#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,7 +96,7 @@
       <file leaf-file-name="Par.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3383">
+            <state relative-caret-position="2985">
               <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
               <folding />
             </state>
@@ -107,7 +106,7 @@
       <file leaf-file-name="package.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/package.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="30">
               <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
               <folding />
             </state>
@@ -162,8 +161,8 @@
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/package.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2" />
-        <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" />
       </list>
     </option>
   </component>
@@ -196,31 +195,10 @@
             <id>CollectionsScala</id>
           </State>
           <State>
-            <id>Code StyleScala</id>
-          </State>
-          <State>
-            <id>Comparing CollectionsScala</id>
-          </State>
-          <State>
-            <id>GeneralScala</id>
-          </State>
-          <State>
-            <id>Indices CollectionsScala</id>
-          </State>
-          <State>
-            <id>Maps CollectionsScala</id>
-          </State>
-          <State>
-            <id>Options CollectionsScala</id>
-          </State>
-          <State>
             <id>Other CollectionsScala</id>
           </State>
           <State>
             <id>Scala</id>
-          </State>
-          <State>
-            <id>Scala: General</id>
           </State>
           <State>
             <id>Simplifications: filter and exists CollectionsScala</id>
@@ -231,13 +209,10 @@
           <State>
             <id>Size CollectionsScala</id>
           </State>
-          <State>
-            <id>Spelling</id>
-          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>SpellCheckingInspection</id>
+            <id>SideEffectsInMonadicTransformation</id>
           </State>
         </selected-state>
       </profile-state>
@@ -282,6 +257,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="scala-sdk-2.11.7 (2)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-sdk-2.11.7 (2)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala-library-2.11.7.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -504,8 +497,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -543,7 +536,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -1017,14 +1010,13 @@
       <workItem from="1458744153684" duration="246000" />
       <workItem from="1458744503234" duration="496000" />
       <workItem from="1459343208842" duration="1965000" />
-      <workItem from="1459784365333" duration="2037000" />
-    </task>
-    <task id="LOCAL-00063" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.10">
-      <created>1449517992240</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1449517992240</updated>
+      <workItem from="1459784365333" duration="2717000" />
+      <workItem from="1460137717821" duration="1228000" />
+      <workItem from="1460139822492" duration="25000" />
+      <workItem from="1460141251016" duration="602000" />
+      <workItem from="1460144902689" duration="169000" />
+      <workItem from="1460148106732" duration="418000" />
+      <workItem from="1460638963518" duration="1392000" />
     </task>
     <task id="LOCAL-00064" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.11">
       <created>1449589386008</created>
@@ -1362,14 +1354,21 @@
       <option name="project" value="LOCAL" />
       <updated>1459345163597</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Exercise 9.9&#10;&#10;Added double&#10;&#10;Need to add combinator to attempt a parser, a token parser for keywords, root etc&#10;">
+      <created>1459786472835</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1459786472866</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189620000" />
+    <option name="totallyTimeSpent" value="194134000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="24" width="1920" height="1056" extended-state="0" />
+    <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1407,7 +1406,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.13" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;8.14 Helped from book" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;ts t" />
@@ -1432,7 +1430,8 @@
     <MESSAGE value="Exercise 9.9&#10;&#10;Implement JSON parser. &#10;&#10;" />
     <MESSAGE value="Exercise 9.9&#10;&#10;Add combinator for parsing string until some character, 'thru'&#10;Add combinators for skipping everything before or after another parser&#10;&#10;" />
     <MESSAGE value="Exercise 9.9&#10;&#10;more work&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 9.9&#10;&#10;more work&#10;" />
+    <MESSAGE value="Exercise 9.9&#10;&#10;Added double&#10;&#10;Need to add combinator to attempt a parser, a token parser for keywords, root etc&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 9.9&#10;&#10;Added double&#10;&#10;Need to add combinator to attempt a parser, a token parser for keywords, root etc&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1759,7 +1758,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/Stream.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2652">
+        <state relative-caret-position="2340">
           <caret line="157" column="6" selection-start-line="157" selection-start-column="6" selection-end-line="157" selection-end-column="6" />
           <folding>
             <element signature="e#23#54#0" expanded="false" />
@@ -1769,15 +1768,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="60">
           <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#23#94#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3383">
+        <state relative-caret-position="2985">
           <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
           <folding />
         </state>
@@ -1785,19 +1786,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2686">
+        <state relative-caret-position="2370">
           <caret line="167" column="33" selection-start-line="167" selection-start-column="33" selection-end-line="167" selection-end-column="33" />
-          <folding>
-            <element signature="e#23#50#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Exhaustive.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3978">
+        <state relative-caret-position="3510">
           <caret line="244" column="84" selection-start-line="244" selection-start-column="84" selection-end-line="244" selection-end-column="84" />
-          <folding />
+          <folding>
+            <element signature="e#34#90#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1805,32 +1806,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter5/package.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="30">
           <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="99" column="60" selection-start-line="99" selection-start-column="60" selection-end-line="99" selection-end-column="60" />
-          <folding>
-            <element signature="e#23#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="585">
+          <caret line="78" column="2" selection-start-line="78" selection-start-column="2" selection-end-line="78" selection-end-column="2" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
           </folding>

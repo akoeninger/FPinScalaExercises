@@ -77,6 +77,8 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
   // Parses everything upto, but not including the given string
   def thruExclusive(s: String): Parser[String] = thru(s).map(_.init)
 
+  def opt[A](p: Parser[A]): Parser[Option[A]] = p.map(Some(_)) | succeed(None)
+
   def surround[A](left: Parser[Any], right: Parser[Any])(p: => Parser[A]): Parser[Any] =
     skipR(skipL(left, p), right)
 
@@ -98,6 +100,10 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
     "[-+]?([0-9]*\\.)?[0-9]+([eE][-+]?[0-9]+)?".r
 
   def double: Parser[Double] = doubleString map (_.toDouble)
+
+  def escapedQuoted: Parser[String] = {
+
+  }
 
   implicit def string(s: String): Parser[String]
   implicit def regex(r: Regex): Parser[String]
