@@ -33,21 +33,22 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   def many1[A](p: Parser[A]): Parser[List[A]] = p.map2(wrap(many(p)))(_ :: _)
 
-  def map[A, B](pa: Parser[A])(f: A => B): Parser[B] = // for (a <- pa) yield f(a)
-    pa.flatMap(a => succeed(f(a)))
+  def map[A, B](pa: Parser[A])(f: A => B): Parser[B] = for (a <- pa) yield f(a)
 
   def flatMap[A, B](a: Parser[A])(f: A => Parser[B]): Parser[B]
 
   def map2ViaProduct[A,B,C](p: Parser[A], p2: => Parser[B])(f: (A,B) => C): Parser[C] =
     product(p, wrap(p2)) map f.tupled
 
-  def product[A, B](p: Parser[A], p2: => Parser[B]): Parser[(A, B)] =
-    for (a ← p; b ← p2) yield (a, b)
+  def product[A, B](p: Parser[A], p2: => Parser[B]): Parser[(A, B)] = for {
+    a ← p
+    b ← p2
+  } yield (a, b)
 
-  def map2[A,B,C](p: Parser[A], p2: => Parser[B])(f: (A,B) => C): Parser[C] = // for (a ← p; b ← p2) yield f(a, b)
-    p.flatMap(a =>
-      p2.map(b => f(a, b))
-    )
+  def map2[A,B,C](p: Parser[A], p2: => Parser[B])(f: (A,B) => C): Parser[C] = for {
+    a ← p
+    b ← p2
+  } yield f(a, b)
 
   def charCount(c: Char): Parser[Int] = char('a').many.map(_.size)
   run(charCount('a'))("") == Right(0)
