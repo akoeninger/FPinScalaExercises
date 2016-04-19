@@ -103,8 +103,14 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
   def double: Parser[Double] = doubleString map (_.toDouble)
 
   def escapedQuoted: Parser[String] = {
-
+    // TODO: Figure out implementation, need error handling
+    quoted
   }
+
+  def attempt[A](p: Parser[A]): Parser[A]
+
+  def token[A](p: Parser[A]): Parser[A] =
+    attempt(p) <* whitespace
 
   implicit def string(s: String): Parser[String]
   implicit def regex(r: Regex): Parser[String]

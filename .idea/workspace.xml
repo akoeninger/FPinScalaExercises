@@ -28,8 +28,8 @@
       <file leaf-file-name="Parsers.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+            <state relative-caret-position="317">
+              <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
               <folding>
                 <element signature="e#23#50#0" expanded="true" />
               </folding>
@@ -40,11 +40,9 @@
       <file leaf-file-name="JSON.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-              <folding>
-                <element signature="e#23#50#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,9 +76,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2370">
               <caret line="167" column="33" selection-start-line="167" selection-start-column="33" selection-end-line="167" selection-end-column="33" />
-              <folding>
-                <element signature="e#23#50#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -184,9 +180,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1920" />
-    <option name="y" value="-28" />
+    <option name="y" value="24" />
     <option name="width" value="1920" />
-    <option name="height" value="1108" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -247,7 +243,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -359,6 +354,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -849,14 +845,8 @@
       <workItem from="1460144902689" duration="169000" />
       <workItem from="1460148106732" duration="418000" />
       <workItem from="1460638963518" duration="1472000" />
-      <workItem from="1460730760028" duration="680000" />
-    </task>
-    <task id="LOCAL-00065" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.12 Implemented my own chooser">
-      <created>1449677898133</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1449677898134</updated>
+      <workItem from="1460730760028" duration="954000" />
+      <workItem from="1461071587876" duration="1541000" />
     </task>
     <task id="LOCAL-00066" summary="Chapter 7: Purely functional parallelism&#10;&#10;7.13 Implemented my own chooser">
       <created>1449759486375</created>
@@ -1194,14 +1184,21 @@
       <option name="project" value="LOCAL" />
       <updated>1460641229821</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Exercise 9.9&#10;&#10;Use for-comprehensions where possible&#10;No need to explicitly show how flatMap and map are used. &#10;Any type class that defines flatMap and map can make use of the for-comprehensions">
+      <created>1460731538295</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1460731538296</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194894000" />
+    <option name="totallyTimeSpent" value="196709000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="-28" width="1920" height="1108" extended-state="0" />
+    <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1239,7 +1236,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;" />
     <MESSAGE value="Chapter 8: Property-based testing&#10;             &#10;ts t" />
     <MESSAGE value="Clean up project chapter structure" />
     <MESSAGE value="Exercise 8.15 &#10;&#10;" />
@@ -1264,7 +1260,8 @@
     <MESSAGE value="Exercise 9.9&#10;&#10;more work&#10;" />
     <MESSAGE value="Exercise 9.9&#10;&#10;Added double&#10;&#10;Need to add combinator to attempt a parser, a token parser for keywords, root etc&#10;" />
     <MESSAGE value="Exercise 9.9&#10;&#10;Added lift to Option&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 9.9&#10;&#10;Added lift to Option&#10;" />
+    <MESSAGE value="Exercise 9.9&#10;&#10;Use for-comprehensions where possible&#10;No need to explicitly show how flatMap and map are used. &#10;Any type class that defines flatMap and map can make use of the for-comprehensions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 9.9&#10;&#10;Use for-comprehensions where possible&#10;No need to explicitly show how flatMap and map are used. &#10;Any type class that defines flatMap and map can make use of the for-comprehensions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1621,9 +1618,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2370">
           <caret line="167" column="33" selection-start-line="167" selection-start-column="33" selection-end-line="167" selection-end-column="33" />
-          <folding>
-            <element signature="e#23#50#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1654,18 +1649,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-          <folding>
-            <element signature="e#23#50#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+        <state relative-caret-position="317">
+          <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
           <folding>
             <element signature="e#23#50#0" expanded="true" />
           </folding>
