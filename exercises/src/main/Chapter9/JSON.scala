@@ -12,20 +12,24 @@ object JSON {
   case class JArray(get: IndexedSeq[JSON]) extends JSON
   case class JObject(get: Map[String, JSON]) extends JSON
 
-  def jsonParser[Parser[+_]](P: Parsers[Parser]): Parser[JSON] = {
+  def jsonParser[Parser[+_]](P: Parsers[ParseError, Parser]): Parser[JSON] = {
     // we'll hide the string implicit conversion and promote strings to tokens instead
     // this is a bit nicer than having to write token everywhere
     import P._
-//    implicit def tok(s: String) = token(P.string(s))
+    implicit def tok(s: String): Parser[String] = token[String](P.string(s))
 
-    def array: Parser[JSON] = surround("[","]")(
-      value deliminate "," map (vs => JArray(vs.toIndexedSeq))) //scope "array"
+
+    def array: Parser[JSON] = P.surround(string("["), string("]"))(
+      value deliminate tok(",") map (vs => JArray(vs.toIndexedSeq))
+    ) //scope "array"
     def obj: Parser[JSON] = surround("{","}")(
-      keyval deliminate "," map (kvs => JObject(kvs.toMap)))// scope "object"
+      keyval deliminate tok(",") map (kvs => JObject(kvs.toMap))
+    ) // scope "object"
+
     def keyval: Parser[JSON] = escapedQuoted ** (":" *> value)
     def lit = "null".as(JNull) |
         double.map(JNumber(_)) |
-        quoted.map(JString(_)) |
+        escapedQuoted.map(JString(_)) |
         "true".as(JBool(true)) |
         "false".as(JBool(false))
 

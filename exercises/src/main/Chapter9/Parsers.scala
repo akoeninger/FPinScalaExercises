@@ -109,8 +109,7 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   def attempt[A](p: Parser[A]): Parser[A]
 
-  def token[A](p: Parser[A]): Parser[A] =
-    attempt(p) <* whitespace
+  def token[A](p: Parser[A]): Parser[A] = attempt(p) <* whitespace
 
   implicit def string(s: String): Parser[String]
   implicit def regex(r: Regex): Parser[String]
@@ -120,27 +119,48 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
   case class ParserOps[A](p: Parser[A]) {
     def |[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2.wrap)
+
+    def wrap: Parser[A] = self.wrap(p)
+
     def or[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2.wrap)
+
     def listOfN(n: Int): Parser[List[A]] = self.listOfN(n, p)
+
     def many: Parser[List[A]] = self.many(p)
+
     def many1: Parser[List[A]] = self.many1(p)
+
     def slice: Parser[String] = self.slice(p)
 
     def skipL(p2: => Parser[Any]): Parser[A] = self.skipL(p2, p)
+
     def skipR(p2: => Parser[Any]): Parser[A] = self.skipR(p, p2)
-    def *>(p2: => Parser[Any]): Parser[A] = skipL(p2)
-    def <*(p2: => Parser[Any]): Parser[A] = skipR(p2)
+
+    def *>(p2: => Parser[Any]): Parser[A] = self.skipL(p2, p)
+
+    def <*(p2: => Parser[Any]): Parser[A] = self.skipR(p, p2)
 
     def surround(start: Parser[Any], stop: Parser[Any]): Parser[Any] =
       self.surround(start, stop)(p)
 
+    def deliminate(p2: Parser[Any]): Parser[List[A]] = self.deliminate(p, p2)
+
+    def deliminate1(p2: Parser[Any]): Parser[List[A]] = self.deliminate1(p, p2)
+
+    def token: Parser[A] = self.token(p)
+
+    def attempt: Parser[A] = self.attempt(p)
+
     def product[B](p2: => Parser[B]): Parser[(A,B)] = self.product(p, p2.wrap)
+
     def **[B](p2: Parser[B]): Parser[(A,B)] = self.product(p, p2.wrap)
 
     def map[B](f: A => B): Parser[B] = self.map(p)(f)
+
     def flatMap[B](f: A => Parser[B]): Parser[B] = self.flatMap(p)(f)
+
     def map2[B,C](p2: => Parser[B])(f: (A,B) => C): Parser[C] = self.map2(p, p2.wrap)(f)
-    def wrap: Parser[A] = self.wrap(p)
+
     def run(input: String): Either[ParseError, A] = self.run(p)(input)
   }
 
@@ -180,8 +200,7 @@ case class Location(input: String, offset: Int = 0) {
   lazy val line = input.slice(0,offset+1).count(_ == '\n') + 1
   lazy val col = input.slice(0,offset+1).reverse.indexOf('\n')
 
-  def toError(msg: String): ParseError =
-    ParseError(List((this, msg)))
+  def toError(msg: String): ParseError = ParseError(List((this, msg)))
 
   def advanceBy(n: Int) = copy(offset = offset+n)
 
@@ -191,6 +210,7 @@ case class Location(input: String, offset: Int = 0) {
     else ""
 }
 
-case class ParseError(stack: List[(Location,String)] = List(),
-  otherFailures: List[ParseError] = List()) {
-}
+case class ParseError(
+  stack: List[(Location,String)] = Nil,
+  otherFailures: List[ParseError] = Nil
+)
