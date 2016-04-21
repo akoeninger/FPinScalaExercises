@@ -98,7 +98,7 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
   def quoted: Parser[String] = string("\"") *> thruExclusive("\"")
 
   def doubleString: Parser[String] =
-    "[-+]?([0-9]*\\.)?[0-9]+([eE][-+]?[0-9]+)?".r
+    token("[-+]?([0-9]*\\.)?[0-9]+([eE][-+]?[0-9]+)?".r)
 
   def double: Parser[Double] = doubleString map (_.toDouble)
 
@@ -110,6 +110,10 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
   def attempt[A](p: Parser[A]): Parser[A]
 
   def token[A](p: Parser[A]): Parser[A] = attempt(p) <* whitespace
+
+  def opL[A](p: Parser[A])(op: Parser[(A, A) => A]): Parser[A] = map2(p, many(op ** p))((h, t) =>
+    t.foldLeft(h)((a, b) => b._1(a, b._2 ))
+  )
 
   implicit def string(s: String): Parser[String]
   implicit def regex(r: Regex): Parser[String]
@@ -132,11 +136,7 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
 
     def slice: Parser[String] = self.slice(p)
 
-    def skipL(p2: => Parser[Any]): Parser[A] = self.skipL(p2, p)
-
-    def skipR(p2: => Parser[Any]): Parser[A] = self.skipR(p, p2)
-
-    def *>(p2: => Parser[Any]): Parser[A] = self.skipL(p2, p)
+    def *>[B](p2: => Parser[B]): Parser[B] = self.skipL(p, p2)
 
     def <*(p2: => Parser[Any]): Parser[A] = self.skipR(p, p2)
 

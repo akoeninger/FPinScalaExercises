@@ -22,11 +22,12 @@ object JSON {
     def array: Parser[JSON] = P.surround(string("["), string("]"))(
       value deliminate tok(",") map (vs => JArray(vs.toIndexedSeq))
     ) //scope "array"
+
     def obj: Parser[JSON] = surround("{","}")(
-      keyval deliminate tok(",") map (kvs => JObject(kvs.toMap))
+      keyValue deliminate tok(",") map (kvs => JObject(kvs.toMap))
     ) // scope "object"
 
-    def keyval: Parser[JSON] = escapedQuoted ** (":" *> value)
+    def keyValue: Parser[JSON] = escapedQuoted ** (P.string(":") *> value)
     def lit = "null".as(JNull) |
         double.map(JNumber(_)) |
         escapedQuoted.map(JString(_)) |
