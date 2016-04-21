@@ -19,7 +19,7 @@ object JSON {
     implicit def tok(s: String): Parser[String] = token[String](P.string(s))
 
 
-    def array: Parser[JSON] = P.surround(string("["), string("]"))(
+    def array: Parser[JSON] = surround(string("["), string("]"))(
       value deliminate tok(",") map (vs => JArray(vs.toIndexedSeq))
     ) //scope "array"
 
@@ -27,7 +27,8 @@ object JSON {
       keyValue deliminate tok(",") map (kvs => JObject(kvs.toMap))
     ) // scope "object"
 
-    def keyValue: Parser[JSON] = escapedQuoted ** (P.string(":") *> value)
+    def keyValue: Parser[(String, JSON)] = escapedQuoted ** (P.string(":") *> value)
+
     def lit = "null".as(JNull) |
         double.map(JNumber(_)) |
         escapedQuoted.map(JString(_)) |
@@ -35,9 +36,8 @@ object JSON {
         "false".as(JBool(false))
 
     def value: Parser[JSON] = lit | obj | array
-//    root(whitespace *> (obj | array))
 
-value
+    root(whitespace *> (obj | array))
   }
 }
 

@@ -115,6 +115,10 @@ trait Parsers[ParserError, Parser[+_]] { self => // so inner classes may call me
     t.foldLeft(h)((a, b) => b._1(a, b._2 ))
   )
 
+  def eof: Parser[String] = regex("\\z".r)
+
+  def root[A](p: Parser[A]): Parser[A] = p <* eof
+
   implicit def string(s: String): Parser[String]
   implicit def regex(r: Regex): Parser[String]
   implicit def operators[A](p: Parser[A]): ParserOps[A] = ParserOps[A](p)
