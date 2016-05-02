@@ -256,8 +256,17 @@ object Gen {
 
 case class SGen[+A](forSize: Int => Gen[A]) {
   def apply(a: Int): Gen[A] = forSize(a)
-  def map[B](f: A => B): SGen[B] = SGen(forSize andThen (_ map f))
-  def flatMap[B](f: A => Gen[B]): SGen[B] = SGen(forSize andThen (_ flatMap f))
+
+  def map[B](f: A => B): SGen[B] = SGen {
+    forSize(_) map f
+  }
+
+  def flatMap[B](f: A => SGen[B]): SGen[B] = {
+    val forSize2: Int ⇒ Gen[B] = n ⇒ {
+      forSize(n).flatMap(f(_).forSize(n))
+    }
+    SGen(forSize2)
+  }
 }
 
 object ** {
