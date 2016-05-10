@@ -191,6 +191,8 @@ case class Gen[+A](sample: State[RNG, A]) {
 }
 
 object Gen {
+  val string: SGen[String] = SGen(stringN)
+
   def choose(start: Int, stopExclusive: Int): Gen[Int] =
     Gen(State(RNG.nonNegativeInt).map(n => start + n % (stopExclusive - start)))
 
@@ -217,6 +219,8 @@ object Gen {
     val max = ns.max
     !ns.exists(_ > max)
   }
+
+  def stringN(n: Int): Gen[String] = listOfN(n, choose(0, 127)).map(_.map(_.toChar).mkString)
 
   def listOf1[A](g: Gen[A]): SGen[List[A]] = SGen(n => g.listOfN(n max 1))
 
@@ -267,6 +271,8 @@ case class SGen[+A](forSize: Int => Gen[A]) {
     }
     SGen(forSize2)
   }
+
+  def **[B](s2: SGen[B]): SGen[(A, B)] = SGen(n ⇒ apply(n) ** s2(n))
 }
 
 object ** {

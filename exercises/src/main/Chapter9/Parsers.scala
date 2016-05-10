@@ -6,10 +6,15 @@ import scala.util.matching.Regex
 
 import main.Chapter8._
 
-trait Parsers[Parser[+ _]] {
+trait Parsers[ParseError, Parser[+ _]] {
   self => // so inner classes may call methods of trait
 
   val numA: Parser[Int] = charCount('a')
+
+  def errorLocation(e: ParseError): Location
+
+  def errorMessage(e: ParseError): String
+
 
   def orString(s1: String, s2: String): Parser[String]
 
@@ -222,6 +227,13 @@ trait Parsers[Parser[+ _]] {
     )(in)
   }
 
+  def labelLaw[A](p: Parser[A], inputs: SGen[String]): Prop =
+    Prop.forAll(inputs ** Gen.string) { case (input, msg) ⇒
+      label(msg)(p).run(input) match {
+        case Left(e) ⇒ errorMessage(e) == msg
+        case _ ⇒ true
+      }
+    }
 }
 
 case class Location(input: String, offset: Int = 0) {
