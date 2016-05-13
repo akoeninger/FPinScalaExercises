@@ -15,6 +15,6 @@ object MyParsers extends Parsers[Parser] {
     if (loc.input.startsWith(s, loc.offset))
       Success(s, s.length)
     else
-      Failure(loc.toError((s"Expected: $s")))
+      Failure(loc.toError(s"Expected: $s"))
   
 }
