@@ -25,7 +25,8 @@ object MyParserTypes {
 
 }
 
-object MyParsers extends Parsers[Parser] {
+object MyParsers extends Parsers[ParseError, Parser] {
+
   override def string(s: String): Parser[String] = (loc: Location) =>
     if (loc.input.startsWith(s, loc.offset))
       Success(s, s.length)
@@ -34,7 +35,6 @@ object MyParsers extends Parsers[Parser] {
 
   override def succeed[A](a: A): Parser[A] = (loc: Location) =>
     Success(a, 0) // Not sure what charsConsumed should be
-
 
   override def slice[A](p: Parser[A]): Parser[String] = (loc: Location) => p(loc) match {
     case Success(get, charsConsumed) => Success(loc.input.substring(loc.offset, loc.offset + charsConsumed), charsConsumed)
