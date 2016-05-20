@@ -6,7 +6,13 @@ import MyParserTypes._
 object MyParserTypes {
   type Parser[+A] = Location => Result[A]
 
-  sealed trait Result[+A]
+  sealed trait Result[+A] {
+    def mapError(f: ParseError => ParseError): Result[A] = this match {
+      case Success(get, charsConsumed) => this
+      case Failure(e) => Failure(f(e))
+    }
+  }
+
   case class Success[+A](get: A, charsConsumed: Int) extends Result[A]
   case class Failure(get: ParseError) extends Result[Nothing]
 
@@ -46,4 +52,10 @@ object MyParsers extends Parsers[ParseError, Parser] {
       case Some(x) => Success(x, x.length)
       case None => Failure(loc.toError(s"regex $r"))
     }
+
+  override def scope[A](msg: String)(p: Parser[A]): Parser[A] = loc =>
+    p(loc).mapError(_.push(loc, msg))
+
+  override def label[A](msg: String)(p: Parser[A]): Parser[A] = loc =>
+    p(loc).mapError(_.label(msg))
 }

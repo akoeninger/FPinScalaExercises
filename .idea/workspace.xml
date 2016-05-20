@@ -4,6 +4,7 @@
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" />
     </list>
     <ignored path="FPiS Exercises.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Parsers.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Parsers.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="761">
+              <caret line="260" column="34" selection-start-line="260" selection-start-column="34" selection-end-line="260" selection-end-column="34" />
               <folding>
                 <element signature="e#23#50#0" expanded="true" />
               </folding>
@@ -37,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyParser.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyParser.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="880">
+              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
               <folding>
                 <element signature="e#22#54#0" expanded="true" />
               </folding>
@@ -99,8 +100,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" />
-        <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" />
       </list>
     </option>
   </component>
@@ -806,14 +807,7 @@
       <workItem from="1463148392617" duration="2023000" />
       <workItem from="1463153048859" duration="491000" />
       <workItem from="1463662584111" duration="2047000" />
-      <workItem from="1463750239086" duration="1001000" />
-    </task>
-    <task id="LOCAL-00076" summary="Chapter 8: Property-based testing&#10;             &#10;8.7">
-      <created>1450891671022</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1450891671023</updated>
+      <workItem from="1463750239086" duration="2221000" />
     </task>
     <task id="LOCAL-00077" summary="Chapter 8: Property-based testing&#10;             &#10;8.8&#10;Factored out a chooser primative that chooses between 2 Gens based on a Gen[bool] result">
       <created>1450896307894</created>
@@ -1151,11 +1145,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463665428162</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Exercise 9.13&#10;&#10;">
+      <created>1463751250640</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1463751250641</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218143000" />
+    <option name="totallyTimeSpent" value="219363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
@@ -1196,7 +1197,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial combinators for strings and chars&#10;&#10;&#10;&#10;" />
     <MESSAGE value="Exercise 9.1&#10; &#10; Implement monoid functions for Parser&#10;&#10;" />
     <MESSAGE value="Exercise 9.2&#10; &#10;'product' is ~= associative property. Created law to represent that. Product and map are also interesting together, in that, the result of either mapping first or mapping over he product doesn't matter&#10; a.map(f) ** b.map(g) == (a ** b) map { case (a,b) =&gt; (f(a), g(b)) }&#10;&#10;&#10;" />
     <MESSAGE value="Exercise 9.2&#10;&#10;Added second 'product' and 'map' law&#10;&#10;&#10;" />
@@ -1221,7 +1221,8 @@
     <MESSAGE value="Exercise 9.9&#10;Adding Error reporting" />
     <MESSAGE value="Exercise 9.13&#10;&#10;implement string" />
     <MESSAGE value="Exercise 9.13&#10;&#10;implement regex and slice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 9.13&#10;&#10;implement regex and slice" />
+    <MESSAGE value="Exercise 9.13&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 9.13&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1499,22 +1500,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state relative-caret-position="880">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
           <folding>
-            <element signature="e#23#50#0" expanded="true" />
+            <element signature="e#22#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala">
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="761">
+          <caret line="260" column="34" selection-start-line="260" selection-start-column="34" selection-end-line="260" selection-end-column="34" />
           <folding>
-            <element signature="e#22#54#0" expanded="true" />
+            <element signature="e#23#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
