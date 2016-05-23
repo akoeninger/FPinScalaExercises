@@ -33,11 +33,13 @@ object MyParserTypes {
 
 object MyParsers extends Parsers[ParseError, Parser] {
 
-  override def string(s: String): Parser[String] = (loc: Location) =>
-    if (loc.input.startsWith(s, loc.offset))
+  override def string(s: String): Parser[String] = (loc: Location) => {
+    val pointOfDiff = firstNonMatchingIndex(loc.input, s, loc.offset)
+    if (pointOfDiff == -1)
       Success(s, s.length)
     else
-      Failure(loc.toError(s"Expected: $s"))
+      Failure(loc.toError(s"Expected: $s, point of diff: $pointOfDiff"))
+  } mapError(_.label(s"Failed to match $s"))
 
   override def succeed[A](a: A): Parser[A] = (loc: Location) =>
     Success(a, 0) // Not sure what charsConsumed should be
