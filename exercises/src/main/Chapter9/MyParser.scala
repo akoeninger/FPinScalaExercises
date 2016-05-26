@@ -7,6 +7,16 @@ object MyParserTypes {
   type Parser[+A] = Location => Result[A]
 
   sealed trait Result[+A] {
+    def advanceSuccess(n: Int): Result[A] = this match {
+      case Success(a, charsConsumed) => Success(a, charsConsumed + n)
+      case _ => this
+    }
+
+    def addCommit(b: Boolean) = this match {
+      case Failure(e, isCommitted) => Failure(e, isCommitted || b)
+      case _ => this
+    }
+
     def uncommit: Result[A] = this match {
       case Failure(get, true) => Failure(get, isCommitted = false)
       case _ => this
@@ -38,6 +48,14 @@ object MyParserTypes {
 
 object MyParsers extends Parsers[ParseError, Parser] {
 
+  override def flatMap[A, B](a: Parser[A])(f: A => Parser[B]): Parser[B] = s => a(s) match {
+    case Success(get, charsConsumed) =>
+      f(get)(s.advanceBy(charsConsumed))
+        .addCommit(charsConsumed != 0)
+        .advanceSuccess(charsConsumed)
+    case e@Failure(_, _) => e
+  }
+
   override def attempt[A](p: Parser[A]): Parser[A] = loc => p(loc).uncommit
 
   override def or[A](s1: Parser[A], s2: => Parser[A]): Parser[A] = s => s1(s) match {
@@ -58,7 +76,7 @@ object MyParsers extends Parsers[ParseError, Parser] {
 
   override def slice[A](p: Parser[A]): Parser[String] = (loc: Location) => p(loc) match {
     case Success(get, charsConsumed) => Success(loc.input.substring(loc.offset, loc.offset + charsConsumed), charsConsumed)
-    case f@Failure(get, isCommitted) => f
+    case f@Failure(_, _) => f
   }
 
   override implicit def regex(r: Regex): Parser[String] = (loc: Location) =>
