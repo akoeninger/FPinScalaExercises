@@ -40,8 +40,8 @@
       <file leaf-file-name="MyParser.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+            <state relative-caret-position="713">
+              <caret line="66" column="71" selection-start-line="66" selection-start-column="71" selection-end-line="66" selection-end-column="71" />
               <folding>
                 <element signature="e#22#54#0" expanded="true" />
               </folding>
@@ -810,14 +810,7 @@
       <workItem from="1464008360593" duration="76000" />
       <workItem from="1464008448218" duration="604000" />
       <workItem from="1464010127391" duration="916000" />
-      <workItem from="1464266518380" duration="447000" />
-    </task>
-    <task id="LOCAL-00079" summary="Chapter 8: Property-based testing&#10;             &#10;8.9">
-      <created>1450902788154</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1450902788154</updated>
+      <workItem from="1464266518380" duration="897000" />
     </task>
     <task id="LOCAL-00080" summary="Chapter 8: Property-based testing&#10;             &#10;8.10">
       <created>1450903885486</created>
@@ -1155,11 +1148,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464010442306</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Finishe up section 9.6.4">
+      <created>1464266983478</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1464266983487</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223899000" />
+    <option name="totallyTimeSpent" value="224349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
@@ -1200,7 +1200,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 9.2&#10;&#10;Added second 'product' and 'map' law&#10;&#10;&#10;" />
     <MESSAGE value="Exercise 9.3&#10;&#10;Many is no longer a primitive. Defined it using map2, or, and succeed. &#10;&#10;&#10;" />
     <MESSAGE value="Exercise 9.4&#10;&#10;Implemented listOfN using map2 and succeed&#10;&#10;&#10;" />
     <MESSAGE value="Make product and map2 non-strict in their second arguments&#10;&#10;&#10;" />
@@ -1225,7 +1224,8 @@
     <MESSAGE value="Exercise 9.13&#10;&#10;" />
     <MESSAGE value="Implement scope and label&#10;&#10;" />
     <MESSAGE value="Exercise 9.14" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 9.14" />
+    <MESSAGE value="Finishe up section 9.6.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishe up section 9.6.4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1587,8 +1587,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+        <state relative-caret-position="713">
+          <caret line="66" column="71" selection-start-line="66" selection-start-column="71" selection-end-line="66" selection-end-column="71" />
           <folding>
             <element signature="e#22#54#0" expanded="true" />
           </folding>

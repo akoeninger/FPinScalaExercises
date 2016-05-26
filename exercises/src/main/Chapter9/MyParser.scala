@@ -8,13 +8,13 @@ object MyParserTypes {
 
   sealed trait Result[+A] {
     def uncommit: Result[A] = this match {
-      case Failure(get, true) => Failure(get, false)
+      case Failure(get, true) => Failure(get, isCommitted = false)
       case _ => this
     }
 
     def mapError(f: ParseError => ParseError): Result[A] = this match {
       case Success(get, charsConsumed) => this
-      case Failure(e) => Failure(f(e))
+      case Failure(e, isCommitted) => Failure(f(e), isCommitted)
     }
   }
 
@@ -50,7 +50,7 @@ object MyParsers extends Parsers[ParseError, Parser] {
     if (pointOfDiff == -1)
       Success(s, s.length)
     else
-      Failure(loc.toError(s"Expected: $s, point of diff: $pointOfDiff"))
+      Failure(loc.toError(s"Expected: $s, point of diff: $pointOfDiff"), isCommitted = true)
   } mapError(_.label(s"Failed to match $s"))
 
   override def succeed[A](a: A): Parser[A] = (loc: Location) =>
@@ -58,13 +58,13 @@ object MyParsers extends Parsers[ParseError, Parser] {
 
   override def slice[A](p: Parser[A]): Parser[String] = (loc: Location) => p(loc) match {
     case Success(get, charsConsumed) => Success(loc.input.substring(loc.offset, loc.offset + charsConsumed), charsConsumed)
-    case f@Failure(get) => f
+    case f@Failure(get, isCommitted) => f
   }
 
   override implicit def regex(r: Regex): Parser[String] = (loc: Location) =>
     r.findPrefixOf(loc.input) match {
       case Some(x) => Success(x, x.length)
-      case None => Failure(loc.toError(s"regex $r"))
+      case None => Failure(loc.toError(s"regex $r"), isCommitted = true)
     }
 
   override def scope[A](msg: String)(p: Parser[A]): Parser[A] = loc =>
