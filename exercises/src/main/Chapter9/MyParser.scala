@@ -7,6 +7,11 @@ object MyParserTypes {
   type Parser[+A] = Location => Result[A]
 
   sealed trait Result[+A] {
+    def uncommit: Result[A] = this match {
+      case Failure(get, true) => Failure(get, false)
+      case _ => this
+    }
+
     def mapError(f: ParseError => ParseError): Result[A] = this match {
       case Success(get, charsConsumed) => this
       case Failure(e) => Failure(f(e))
@@ -14,7 +19,7 @@ object MyParserTypes {
   }
 
   case class Success[+A](get: A, charsConsumed: Int) extends Result[A]
-  case class Failure(get: ParseError) extends Result[Nothing]
+  case class Failure(get: ParseError, isCommitted: Boolean) extends Result[Nothing]
 
   /** Returns -1 if s1.startsWith(s2), otherwise returns the
       * first index where the two strings differed. If s2 is
@@ -32,6 +37,13 @@ object MyParserTypes {
 }
 
 object MyParsers extends Parsers[ParseError, Parser] {
+
+  override def attempt[A](p: Parser[A]): Parser[A] = loc => p(loc).uncommit
+
+  override def or[A](s1: Parser[A], s2: => Parser[A]): Parser[A] = s => s1(s) match {
+    case Failure(get, false) => s2(s)
+    case r => r
+  }
 
   override def string(s: String): Parser[String] = (loc: Location) => {
     val pointOfDiff = firstNonMatchingIndex(loc.input, s, loc.offset)
