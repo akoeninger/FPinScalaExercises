@@ -2,6 +2,7 @@ package main.Chapter10
 
 import language.higherKinds
 
+import main.Chapter7.Par.Par
 import main.Chapter7._
 import main.Chapter8._
 
@@ -76,11 +77,10 @@ object Monoid {
 
   def trimMonoid(s: String): Monoid[String] = sys.error("todo")
 
-  def concatenate[A](as: List[A], m: Monoid[A]): A =
-    sys.error("todo")
+  def concatenate[A](as: List[A], m: Monoid[A]): A = as.foldLeft(m.zero)(m.op)
 
   def foldMap[A, B](as: List[A], m: Monoid[B])(f: A => B): B =
-    sys.error("todo")
+    as.foldLeft(m.zero)((acc, b) => m.op(acc, f(b)))
 
   def foldRight[A, B](as: List[A])(z: B)(f: (A, B) => B): B =
     sys.error("todo")
