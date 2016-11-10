@@ -16,7 +16,8 @@ trait Parsers[ParseError, Parser[+ _]] {
   def errorMessage(e: ParseError): String
 
 
-  def orString(s1: String, s2: String): Parser[String]
+  def orString(s1: String, s2: String): Parser[String] =
+    s1 | s2
 
   def or[A](s1: Parser[A], s2: => Parser[A]): Parser[A]
 

@@ -48,6 +48,15 @@ object MyParserTypes {
 
 object MyParsers extends Parsers[ParseError, Parser] {
 
+  override def errorLocation(e: ParseError): Location = e.latestLoc.get
+
+  override def errorMessage(e: ParseError): String = e.latest.map(_._2).getOrElse("Unknown")
+
+  override def run[A](p: Parser[A])
+    (input: String): Either[ParseError, A] = ???
+
+  override def wrap[A](p: => Parser[A]): Parser[A] = ???
+
   override def flatMap[A, B](a: Parser[A])(f: A => Parser[B]): Parser[B] = s => a(s) match {
     case Success(get, charsConsumed) =>
       f(get)(s.advanceBy(charsConsumed))
