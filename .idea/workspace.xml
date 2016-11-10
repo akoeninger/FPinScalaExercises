@@ -27,8 +27,8 @@
       <file leaf-file-name="Monoid.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="85" column="21" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="21" />
+            <state relative-caret-position="560">
+              <caret line="84" column="61" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
               </folding>
@@ -1066,14 +1066,7 @@
       <workItem from="1467810698206" duration="871000" />
       <workItem from="1471872602445" duration="575000" />
       <workItem from="1478792634235" duration="506000" />
-      <workItem from="1478793279903" duration="4204000" />
-    </task>
-    <task id="LOCAL-00087" summary="Chapter 8: Property-based testing&#10;             &#10;ts t">
-      <created>1451490476106</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1451490476106</updated>
+      <workItem from="1478793279903" duration="4737000" />
     </task>
     <task id="LOCAL-00088" summary="Chapter 8: Property-based testing&#10;             &#10;ts t">
       <created>1454079193816</created>
@@ -1411,11 +1404,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478797165156</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="Exercise 10.5">
+      <created>1478797816260</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1478797816260</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231948000" />
+    <option name="totallyTimeSpent" value="232481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
@@ -1474,7 +1474,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 9.8&#10;&#10;Implement map with flatMap. flatMap is more powerful and primitive than map&#10;&#10;&#10;" />
     <MESSAGE value="Exercise 9.9&#10;&#10;Implement JSON parser. &#10;&#10;" />
     <MESSAGE value="Exercise 9.9&#10;&#10;Add combinator for parsing string until some character, 'thru'&#10;Add combinators for skipping everything before or after another parser&#10;&#10;" />
     <MESSAGE value="Exercise 9.9&#10;&#10;more work&#10;" />
@@ -1499,7 +1498,8 @@
     <MESSAGE value="Add dual construct for Monoids. The dual construct arises from the fact that you have a choice between the order that you combine things in op. a1 then a2 or a2 then a1, both satisfy the monoid laws. The dual method constructs the dual of a given monoid by by flipping the 'op'." />
     <MESSAGE value="Exercise 10.3" />
     <MESSAGE value="Exercise 10.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 10.4" />
+    <MESSAGE value="Exercise 10.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 10.5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1856,8 +1856,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="85" column="21" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="21" />
+        <state relative-caret-position="560">
+          <caret line="84" column="61" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
           <folding>
             <element signature="e#24#51#0" expanded="true" />
           </folding>
