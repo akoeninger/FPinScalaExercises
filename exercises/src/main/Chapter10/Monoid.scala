@@ -47,12 +47,20 @@ object Monoid {
     override def op(a1: Boolean, a2: Boolean) = a1 && a2
   }
 
-  def optionMonoid[A]: Monoid[Option[A]] = new Monoid[Option[A]] {
+  def dual[A](monoid: Monoid[A]): Monoid[A] = new Monoid[A] {
+    override def op(a1: A, a2: A): A = monoid.op(a2, a1)
 
+    override def zero = monoid.zero
+  }
+
+  def optionMonoid[A]: Monoid[Option[A]] = new Monoid[Option[A]] {
     override def zero = None
 
     override def op(a1: Option[A], a2: Option[A]) = a1 orElse a2
   }
+
+  private def firstOptionMonoid[A]: Monoid[Option[A]] = optionMonoid[A]
+  private def lastOptionMonoid[A]: Monoid[Option[A]] = dual(optionMonoid[A])
 
   def endoMonoid[A]: Monoid[A => A] = sys.error("todo")
 
