@@ -70,7 +70,9 @@ object Monoid {
 
   def composeEndoMonoid[A]: Monoid[A => A] = dual(endoMonoid)
 
-  def monoidLaws[A](m: Monoid[A], gen: Gen[A]): Prop = sys.error("todo")
+  def monoidLaws[A](m: Monoid[A], gen: Gen[A]): Prop = Prop.forAll(gen) { a =>
+    (m.op(a, m.zero) == m.op(m.zero, a)) && (m.op(m.op(a, a), m.zero) == m.op(a, m.op(a, m.zero)))
+  }
 
   def trimMonoid(s: String): Monoid[String] = sys.error("todo")
 
