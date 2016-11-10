@@ -60,9 +60,15 @@ object Monoid {
   }
 
   private def firstOptionMonoid[A]: Monoid[Option[A]] = optionMonoid[A]
-  private def lastOptionMonoid[A]: Monoid[Option[A]] = dual(optionMonoid[A])
+  private def lastOptionMonoid[A]: Monoid[Option[A]] = dual(optionMonoid)
 
-  def endoMonoid[A]: Monoid[A => A] = sys.error("todo")
+  def endoMonoid[A]: Monoid[A => A] = new Monoid[(A) => A] {
+    override def op(a1: (A) => A, a2: (A) => A): (A) => A = a1 andThen a2
+
+    override def zero = identity
+  }
+
+  def composeEndoMonoid[A]: Monoid[A => A] = dual(endoMonoid)
 
   def monoidLaws[A](m: Monoid[A], gen: Gen[A]): Prop = sys.error("todo")
 
