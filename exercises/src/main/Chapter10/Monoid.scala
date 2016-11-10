@@ -1,8 +1,9 @@
 package main.Chapter10
 
-import fpinscala.parallelism.Nonblocking._
-import fpinscala.parallelism.Nonblocking.Par.toParOps // infix syntax for `Par.map`, `Par.flatMap`, etc
 import language.higherKinds
+
+import main.Chapter7._
+import main.Chapter8._
 
 trait Monoid[A] {
   def op(a1: A, a2: A): A
@@ -21,13 +22,30 @@ object Monoid {
     val zero = Nil
   }
 
-  val intAddition: Monoid[Int] = sys.error("todo")
+  val intAddition: Monoid[Int] = new Monoid[Int] {
+    override val zero = 0
 
-  val intMultiplication: Monoid[Int] = sys.error("todo")
+    override def op(a1: Int, a2: Int) = a1 + a2
+  }
 
-  val booleanOr: Monoid[Boolean] = sys.error("todo")
+  val intMultiplication: Monoid[Int] = new Monoid[Int] {
+    override val zero = 1
 
-  val booleanAnd: Monoid[Boolean] = sys.error("todo")
+    override def op(a1: Int, a2: Int) = a1 * a2
+  }
+
+  val booleanOr: Monoid[Boolean] = new Monoid[Boolean] {
+    override val zero = false
+
+    override def op(a1: Boolean, a2: Boolean) = a1 || a2
+  }
+    
+
+  val booleanAnd: Monoid[Boolean] = new Monoid[Boolean] {
+    override val zero = true
+
+    override def op(a1: Boolean, a2: Boolean) = a1 && a2
+  }
 
   def optionMonoid[A]: Monoid[Option[A]] = sys.error("todo")
 
