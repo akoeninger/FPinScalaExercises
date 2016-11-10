@@ -39,7 +39,7 @@ object Monoid {
 
     override def op(a1: Boolean, a2: Boolean) = a1 || a2
   }
-    
+
 
   val booleanAnd: Monoid[Boolean] = new Monoid[Boolean] {
     override val zero = true
@@ -47,19 +47,15 @@ object Monoid {
     override def op(a1: Boolean, a2: Boolean) = a1 && a2
   }
 
-  def optionMonoid[A]: Monoid[Option[A]] = sys.error("todo")
+  def optionMonoid[A]: Monoid[Option[A]] = new Monoid[Option[A]] {
+
+    override def zero = None
+
+    override def op(a1: Option[A], a2: Option[A]) = a1 orElse a2
+  }
 
   def endoMonoid[A]: Monoid[A => A] = sys.error("todo")
 
-  // TODO: Placeholder for `Prop`. Remove once you have implemented the `Prop`
-  // data type from Part 2.
-  trait Prop {}
-
-  // TODO: Placeholder for `Gen`. Remove once you have implemented the `Gen`
-  // data type from Part 2.
-
-  import fpinscala.testing._
-  import Prop._
   def monoidLaws[A](m: Monoid[A], gen: Gen[A]): Prop = sys.error("todo")
 
   def trimMonoid(s: String): Monoid[String] = sys.error("todo")
