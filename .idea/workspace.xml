@@ -4,6 +4,7 @@
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" />
     </list>
     <ignored path="FPiS Exercises.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +28,8 @@
       <file leaf-file-name="Monoid.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+            <state relative-caret-position="456">
+              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
               </folding>
@@ -39,9 +40,21 @@
       <file leaf-file-name="Nonblocking.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-210">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="830">
+              <caret line="196" column="64" selection-start-line="196" selection-start-column="64" selection-end-line="196" selection-end-column="64" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Par.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1810">
+              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding>
+                <element signature="e#627#1546#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,7 +88,6 @@
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter3/Chapter4/Chapter4.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/package.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Actor.scala" />
-        <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Parsers.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter2/package.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter2/MyModule.scala" />
@@ -100,6 +112,7 @@
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/pkmn/Type.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" />
       </list>
     </option>
   </component>
@@ -169,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -531,6 +543,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1066,14 +1079,9 @@
       <workItem from="1467810698206" duration="871000" />
       <workItem from="1471872602445" duration="575000" />
       <workItem from="1478792634235" duration="506000" />
-      <workItem from="1478793279903" duration="7629000" />
-    </task>
-    <task id="LOCAL-00089" summary="Clean up project chapter structure">
-      <created>1454081379905</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1454081379905</updated>
+      <workItem from="1478793279903" duration="7649000" />
+      <workItem from="1478875996421" duration="1968000" />
+      <workItem from="1478879079948" duration="824000" />
     </task>
     <task id="LOCAL-00090" summary="Exercise 8.15 &#10;&#10;">
       <created>1454089173817</created>
@@ -1411,11 +1419,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478798349799</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="Exercise 10.7">
+      <created>1478806310273</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1478806310273</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235373000" />
+    <option name="totallyTimeSpent" value="238185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
@@ -1474,7 +1489,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 9.9&#10;&#10;Add combinator for parsing string until some character, 'thru'&#10;Add combinators for skipping everything before or after another parser&#10;&#10;" />
     <MESSAGE value="Exercise 9.9&#10;&#10;more work&#10;" />
     <MESSAGE value="Exercise 9.9&#10;&#10;Added double&#10;&#10;Need to add combinator to attempt a parser, a token parser for keywords, root etc&#10;" />
     <MESSAGE value="Exercise 9.9&#10;&#10;Added lift to Option&#10;" />
@@ -1499,7 +1513,8 @@
     <MESSAGE value="Exercise 10.4" />
     <MESSAGE value="Exercise 10.5" />
     <MESSAGE value="Exercise 10.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 10.6" />
+    <MESSAGE value="Exercise 10.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 10.7" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1765,13 +1780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2062">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/App.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1812,7 +1820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3186">
           <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1820,7 +1827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1828,7 +1834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="916">
           <caret line="216" column="13" selection-start-line="216" selection-start-column="13" selection-end-line="216" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1836,7 +1841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-640">
           <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1844,25 +1848,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="568" column="30" selection-start-line="568" selection-start-column="30" selection-end-line="568" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1810">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#560#576#0" expanded="false" />
+            <element signature="e#627#1546#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="830">
+          <caret line="196" column="64" selection-start-line="196" selection-start-column="64" selection-end-line="196" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+        <state relative-caret-position="456">
+          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding>
             <element signature="e#24#51#0" expanded="true" />
           </folding>

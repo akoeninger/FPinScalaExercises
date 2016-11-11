@@ -83,6 +83,9 @@ object Nonblocking {
           p(es)(a => eval(es) { cb(f(a)) })
       }
 
+
+
+
     def lazyUnit[A](a: => A): Par[A] =
       fork(unit(a))
 
@@ -138,6 +141,9 @@ object Nonblocking {
       }
     }
 
+    def parMap[A,B](as: IndexedSeq[A])(f: A => B): Par[IndexedSeq[B]] =
+      sequenceBalanced(as.map(asyncF(f)))
+
     def choiceViaChoiceN[A](a: Par[Boolean])(ifTrue: Par[A], ifFalse: Par[A]): Par[A] =
       choiceN(a.map(bool => if (bool) 0 else 1))(List(ifTrue, ifFalse))
 
@@ -155,10 +161,12 @@ object Nonblocking {
       }
     }
 
-    def flatMap[A,B](p: Par[A])(f: A => Par[B]): Par[B] = es => new Future[B] {
-      private[Chapter7] def apply(cb: (B) => Unit): Unit =
-        p(es)(a => f(a)(es)(cb))
-    }
+    def flatMap[A,B](p: Par[A])(f: A => Par[B]): Par[B] =
+      es => new Future[B] {
+        def apply(cb: B => Unit): Unit =
+          p(es)(a => f(a)(es)(cb))
+      }
+
 
 
     def choiceViaChooser[A](p: Par[Boolean])(t: Par[A], f: Par[A]): Par[A] =
@@ -186,6 +194,7 @@ object Nonblocking {
       def map[B](f: A => B): Par[B] = Par.map(p)(f)
       def map2[B,C](b: Par[B])(f: (A,B) => C): Par[C] = Par.map2(p,b)(f)
       def zip[B](b: Par[B]): Par[(A,B)] = p.map2(b)((_,_))
+      def flatMap[B](f: A => Par[B]): Par[B] = Par.flatMap(p)(f)
     }
   }
 }
