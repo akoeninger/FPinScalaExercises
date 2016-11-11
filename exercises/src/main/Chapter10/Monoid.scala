@@ -100,8 +100,19 @@ object Monoid {
     }
   }
 
-  def ordered(ints: IndexedSeq[Int]): Boolean =
-    sys.error("todo")
+  def ordered(ints: IndexedSeq[Int]): Boolean = {
+    val orderMonoid = new Monoid[Option[(Int, Int, Boolean)]] {
+      override def op(a1: Option[(Int, Int, Boolean)], a2: Option[(Int, Int, Boolean)]) = (a1, a2) match {
+        case (Some((x1, y1, p1)), Some((x2, y2, p2))) =>
+          Some(x1 min x2, y1 max y2, p1 && p2 && y1 <= x2)
+        case (x, None) => x
+        case (None, x) => x
+      }
+
+      override def zero = None
+    }
+    foldMapV(ints, orderMonoid)(i => Some(i, i, true)).forall(_._3)
+  }
 
   sealed trait WC
   case class Stub(chars: String) extends WC
