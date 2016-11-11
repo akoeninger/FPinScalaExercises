@@ -134,13 +134,26 @@ object Monoid {
       case (Part(l, wc, r), Stub(a)) => Part(l, wc, r + a)
       case (Part(l1, wc1, r1), Part(l2, wc2, r2)) =>
         val hasNewWord = (r1 + l2).nonEmpty
-        Part(r2, wc1 + (if (hasNewWord) 1 else 0) + wc2, r2)
+        Part(l1, wc1 + (if (hasNewWord) 1 else 0) + wc2, r2)
     }
 
     override def zero = Stub("")
   }
 
-  def count(s: String): Int = sys.error("todo")
+  def count(s: String): Int = {
+    def wc(c: Char): WC =
+      if (c.isWhitespace)
+        Part("", 0, "")
+      else
+        Stub(c.toString)
+
+    def unstub(s: String): Int = s.length min 1
+
+    foldMapV(s.toIndexedSeq, wcMonoid)(wc) match {
+      case Stub(chars) => unstub(chars)
+      case Part(lStub, words, rStub) => unstub(lStub) + words + unstub(rStub)
+    }
+  }
 
   def productMonoid[A,B](A: Monoid[A], B: Monoid[B]): Monoid[(A, B)] =
     sys.error("todo")
