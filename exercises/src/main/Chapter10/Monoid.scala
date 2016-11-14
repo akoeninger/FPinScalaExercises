@@ -75,7 +75,11 @@ object Monoid {
     (m.op(a, m.zero) == m.op(m.zero, a)) && (m.op(m.op(a, a), m.zero) == m.op(a, m.op(a, m.zero)))
   }
 
-  def trimMonoid(s: String): Monoid[String] = sys.error("todo")
+  def trimMonoid(s: String): Monoid[String] = new Monoid[String] {
+    override def op(a1: String, a2: String) = (a1 ++ a2).trim
+
+    override def zero = ""
+  }
 
   def concatenate[A](as: List[A], m: Monoid[A]): A = as.foldLeft(m.zero)(m.op)
 
