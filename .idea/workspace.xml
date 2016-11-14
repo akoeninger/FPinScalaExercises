@@ -27,8 +27,8 @@
       <file leaf-file-name="Monoid.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="185" column="36" selection-start-line="185" selection-start-column="36" selection-end-line="185" selection-end-column="36" />
+            <state relative-caret-position="414">
+              <caret line="158" column="84" selection-start-line="158" selection-start-column="84" selection-end-line="158" selection-end-column="84" />
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
               </folding>
@@ -1125,14 +1125,7 @@
       <workItem from="1478881997921" duration="2113000" />
       <workItem from="1478886593092" duration="3232000" />
       <workItem from="1478889918175" duration="79000" />
-      <workItem from="1479136265762" duration="1937000" />
-    </task>
-    <task id="LOCAL-00096" summary="Initial combinators for strings and chars&#10;&#10;&#10;&#10;">
-      <created>1456524394750</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1456524394750</updated>
+      <workItem from="1479136265762" duration="2155000" />
     </task>
     <task id="LOCAL-00097" summary="Initial combinators for strings and chars&#10;&#10;&#10;&#10;">
       <created>1456524510277</created>
@@ -1470,11 +1463,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479137813653</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="Exercise 10.15">
+      <created>1479138211787</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1479138211787</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246725000" />
+    <option name="totallyTimeSpent" value="246943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -1533,7 +1533,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 9.9&#10;&#10;Add end of file token, root" />
     <MESSAGE value="Exercise 9.9&#10;&#10;Updates from git" />
     <MESSAGE value="Exercise 9.9&#10;&#10;Finished 9.9" />
     <MESSAGE value="Exercise 9.9&#10;Adding Error reporting" />
@@ -1558,7 +1557,8 @@
     <MESSAGE value="Exercise 10.11" />
     <MESSAGE value="Exercise 10.12" />
     <MESSAGE value="Exercise 10.13 and 14&#10;&#10;The OptionFoldable could have been implemented using only matches but I wanted to try variety" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 10.13 and 14&#10;&#10;The OptionFoldable could have been implemented using only matches but I wanted to try variety" />
+    <MESSAGE value="Exercise 10.15" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 10.15" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1916,8 +1916,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="185" column="36" selection-start-line="185" selection-start-column="36" selection-end-line="185" selection-end-column="36" />
+        <state relative-caret-position="414">
+          <caret line="158" column="84" selection-start-line="158" selection-start-column="84" selection-end-line="158" selection-end-column="84" />
           <folding>
             <element signature="e#24#51#0" expanded="true" />
           </folding>
