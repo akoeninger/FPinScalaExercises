@@ -217,20 +217,28 @@ case class Leaf[A](value: A) extends Tree[A]
 case class Branch[A](left: Tree[A], right: Tree[A]) extends Tree[A]
 
 object TreeFoldable extends Foldable[Tree] {
-  override def foldMap[A, B](as: Tree[A])(f: A => B)(mb: Monoid[B]): B =
-    sys.error("todo")
-  override def foldLeft[A, B](as: Tree[A])(z: B)(f: (B, A) => B) =
-    sys.error("todo")
-  override def foldRight[A, B](as: Tree[A])(z: B)(f: (A, B) => B) =
-    sys.error("todo")
+  override def foldMap[A, B](as: Tree[A])(f: A => B)(mb: Monoid[B]): B = as match {
+    case Leaf(value) => f(value)
+    case Branch(left, right) => mb.op(foldMap(left)(f)(mb), foldMap(right)(f)(mb))
+  }
+  override def foldLeft[A, B](as: Tree[A])(z: B)(f: (B, A) => B): B = as match {
+    case Leaf(value) => f(z, value)
+    case Branch(left, right) => foldLeft(right)(foldLeft(left)(z)(f))(f)
+  }
+  override def foldRight[A, B](as: Tree[A])(z: B)(f: (A, B) => B): B = as match {
+    case Leaf(value) => f(value, z)
+    case Branch(left, right) => foldRight(left)(foldRight(right)(z)(f))(f)
+  }
 }
 
 object OptionFoldable extends Foldable[Option] {
   override def foldMap[A, B](as: Option[A])(f: A => B)(mb: Monoid[B]): B =
-    sys.error("todo")
-  override def foldLeft[A, B](as: Option[A])(z: B)(f: (B, A) => B) =
-    sys.error("todo")
-  override def foldRight[A, B](as: Option[A])(z: B)(f: (A, B) => B) =
-    sys.error("todo")
+    as.foldLeft(mb.zero)((b, a) => mb.op(b, f(a)))
+  override def foldLeft[A, B](as: Option[A])(z: B)(f: (B, A) => B): B = as match {
+    case Some(x) => f(z, x)
+    case None => z
+  }
+  override def foldRight[A, B](as: Option[A])(z: B)(f: (A, B) => B): B =
+    as.foldRight(z)(f)
 }
 
