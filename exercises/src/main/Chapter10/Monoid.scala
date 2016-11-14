@@ -162,11 +162,20 @@ object Monoid {
   }
 
 
-  def functionMonoid[A,B](B: Monoid[B]): Monoid[A => B] =
-    sys.error("todo")
+  def functionMonoid[A,B](B: Monoid[B]): Monoid[A => B] = new Monoid[A => B] {
+    override def op(a1: A => B, a2: A => B) = a => B.op(a1(a), a2(a))
 
-  def mapMergeMonoid[K,V](V: Monoid[V]): Monoid[Map[K, V]] =
-    sys.error("todo")
+    override def zero = a => B.zero
+  }
+
+  def mapMergeMonoid[K,V](V: Monoid[V]): Monoid[Map[K, V]] = new Monoid[Map[K, V]] {
+    override def op(a1: Map[K, V], a2: Map[K, V]) =
+      (a1.keySet ++ a2.keySet).foldLeft(zero) { (acc, k) =>
+        acc.updated(k, V.op(a1.getOrElse(k, V.zero), a2.getOrElse(k, V.zero)))
+      }
+
+    override def zero = Map.empty[K, V]
+  }
 
   def bag[A](as: IndexedSeq[A]): Map[A, Int] =
     sys.error("todo")
@@ -188,7 +197,7 @@ trait Foldable[F[_]] {
     foldLeft(as)(m.zero)(m.op)
 
   def toList[A](as: F[A]): List[A] =
-    foldRight(as)(List[A]())(_ :: _)
+    foldRight(as)(List.empty[A])(_ :: _)
 }
 
 object ListFoldable extends Foldable[List] {
