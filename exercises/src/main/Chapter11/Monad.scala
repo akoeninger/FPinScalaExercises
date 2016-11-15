@@ -5,8 +5,7 @@ import main.Chapter8._
 import main.Chapter7._
 import main.Chapter7.Par._
 import main.Chapter6._
-import language.higherKinds
-import language.implicitConversions
+import language.{higherKinds, implicitConversions, reflectiveCalls}
 
 
 trait Functor[F[_]] {
@@ -98,7 +97,11 @@ object Monad {
     override def unit[A](a: => A) = List.apply(a)
   }
 
-  def stateMonad[S] = ???
+  def stateMonad[S] = new Monad[({type f[x] = State[S, x]})#f] {
+    override def unit[A](a: => A) = State(s => (a, s))
+
+    override def flatMap[A, B](ma: State[S, A])(f: (A) => State[S, B]) = ma.flatMap(f)
+  }
 
   val idMonad: Monad[Id] = ???
 
