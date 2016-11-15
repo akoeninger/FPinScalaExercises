@@ -5,8 +5,9 @@ import language.implicitConversions
 import scala.util.matching.Regex
 
 import main.Chapter8._
+import main.Chapter8.Prop._
 
-trait Parsers[ParseError, Parser[+ _]] {
+trait Parsers[Parser[+_]] {
   self => // so inner classes may call methods of trait
 
   val numA: Parser[Int] = charCount('a')
@@ -14,10 +15,6 @@ trait Parsers[ParseError, Parser[+ _]] {
   def errorLocation(e: ParseError): Location
 
   def errorMessage(e: ParseError): String
-
-
-  def orString(s1: String, s2: String): Parser[String] =
-    s1 | s2
 
   def or[A](s1: Parser[A], s2: => Parser[A]): Parser[A]
 
@@ -36,7 +33,6 @@ trait Parsers[ParseError, Parser[+ _]] {
     else
       p.map2(listOfN(n - 1, p))(_ :: _)
 
-  run(listOfN(3, "ab" | "cad"))("ababcad") == Right("ababcad")
 
   def many[A](p: Parser[A]): Parser[List[A]] =
     p.map2(wrap(many(p)))(_ :: _) or succeed(Nil)
@@ -148,6 +144,8 @@ trait Parsers[ParseError, Parser[+ _]] {
   implicit def asStringParser[A](a: A)(implicit f: A => Parser[String]): ParserOps[String] =
     ParserOps(f(a))
 
+  implicit def toParserOps[A](a: A)(implicit f: A => Parser[A]): ParserOps[A] = ParserOps(f(a))
+
   case class ParserOps[A](p: Parser[A]) {
     def |[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2)
 
@@ -239,29 +237,73 @@ trait Parsers[ParseError, Parser[+ _]] {
 
 case class Location(input: String, offset: Int = 0) {
 
-  lazy val line = input.slice(0, offset + 1).count(_ == '\n') + 1
-  lazy val col  = input.slice(0, offset + 1).reverse.indexOf('\n')
+  lazy val line = input.slice(0,offset+1).count(_ == '\n') + 1
+  lazy val col = input.slice(0,offset+1).lastIndexOf('\n') match {
+    case -1 => offset + 1
+    case lineStart => offset - lineStart
+  }
 
-  def toError(msg: String): ParseError = ParseError(List((this, msg)))
+  def toError(msg: String): ParseError =
+    ParseError(List((this, msg)))
 
-  def advanceBy(n: Int) = copy(offset = offset + n)
+  def advanceBy(n: Int) = copy(offset = offset+n)
 
   /* Returns the line corresponding to this location */
   def currentLine: String =
-    if (input.length > 1) input.lines.drop(line - 1).next
+    if (input.length > 1) input.lines.drop(line-1).next
     else ""
+
+  def columnCaret = (" " * (col-1)) + "^"
 }
 
-case class ParseError(
-  stack: List[(Location, String)] = Nil,
-  otherFailures: List[ParseError] = Nil
-) {
+case class ParseError(stack: List[(Location,String)] = List()) {
+  def push(loc: Location, msg: String): ParseError =
+    copy(stack = (loc,msg) :: stack)
 
-  def latest: Option[(Location, String)] = stack.lastOption
+  def label[A](s: String): ParseError =
+    ParseError(latestLoc.map((_,s)).toList)
 
-  def latestLoc: Option[Location] = latest map (_._1)
+  def latest: Option[(Location,String)] =
+    stack.lastOption
 
-  def label[A](s: String): ParseError = ParseError(latestLoc.map((_, s)).toList)
+  def latestLoc: Option[Location] =
+    latest map (_._1)
 
-  def push(loc: Location, msg: String): ParseError = copy(stack = (loc, msg) :: stack)
+  /**
+  Display collapsed error stack - any adjacent stack elements with the
+  same location are combined on one line. For the bottommost error, we
+  display the full line, with a caret pointing to the column of the error.
+  Example:
+
+  1.1 file 'companies.json'; array
+  5.1 object
+  5.2 key-value
+  5.10 ':'
+
+  { "MSFT" ; 24,
+  */
+  override def toString =
+    if (stack.isEmpty) "no error message"
+    else {
+      val collapsed = collapseStack(stack)
+      val context =
+        collapsed.lastOption.map("\n\n" + _._1.currentLine).getOrElse("") +
+        collapsed.lastOption.map("\n" + _._1.columnCaret).getOrElse("")
+      collapsed.map { case (loc,msg) => loc.line.toString + "." + loc.col + " " + msg }.mkString("\n") +
+      context
+    }
+
+  /* Builds a collapsed version of the given error stack -
+   * messages at the same location have their messages merged,
+   * separated by semicolons */
+  def collapseStack(s: List[(Location,String)]): List[(Location,String)] =
+    s.groupBy(_._1).
+      mapValues(_.map(_._2).mkString("; ")).
+      toList.sortBy(_._1.offset)
+
+  def formatLoc(l: Location): String = l.line + "." + l.col
+}
+
+object Parsers {
+
 }
