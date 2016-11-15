@@ -27,8 +27,8 @@
       <file leaf-file-name="Monad.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <state relative-caret-position="656">
+              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
               <folding>
                 <element signature="e#24#46#0" expanded="true" />
               </folding>
@@ -39,8 +39,8 @@
       <file leaf-file-name="State.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2944">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state relative-caret-position="256">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -59,8 +59,8 @@
       <file leaf-file-name="Gen.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="192" column="7" selection-start-line="192" selection-start-column="7" selection-end-line="192" selection-end-column="7" />
+            <state relative-caret-position="212">
+              <caret line="198" column="56" selection-start-line="198" selection-start-column="56" selection-end-line="198" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -1289,14 +1289,7 @@
       <workItem from="1479223347011" duration="1469000" />
       <workItem from="1479239805622" duration="3162000" />
       <workItem from="1479243534947" duration="324000" />
-      <workItem from="1479247412836" duration="1966000" />
-    </task>
-    <task id="LOCAL-00103" summary="Make product and map2 non-strict in their second arguments&#10;&#10;&#10;">
-      <created>1457112628900</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1457112628900</updated>
+      <workItem from="1479247412836" duration="2146000" />
     </task>
     <task id="LOCAL-00104" summary="Exercise 9.5&#10;&#10;Added the wrap combinator for non-strictness&#10;&#10;&#10;">
       <created>1457118836034</created>
@@ -1634,11 +1627,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479243846873</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="Exercise 11.3">
+      <created>1479249390239</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1479249390239</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255350000" />
+    <option name="totallyTimeSpent" value="255530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
@@ -1697,7 +1697,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement scope and label&#10;&#10;" />
     <MESSAGE value="Exercise 9.14" />
     <MESSAGE value="Finishe up section 9.6.4" />
     <MESSAGE value="Start section 9.6.5" />
@@ -1722,7 +1721,8 @@
     <MESSAGE value="Filler" />
     <MESSAGE value="Start Chapter 11 Ex 1" />
     <MESSAGE value="Exercise 11.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 11.2" />
+    <MESSAGE value="Exercise 11.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 11.3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2035,14 +2035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2944">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3218">
@@ -2071,14 +2063,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="192" column="7" selection-start-line="192" selection-start-column="7" selection-end-line="192" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3984">
@@ -2089,10 +2073,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="198" column="56" selection-start-line="198" selection-start-column="56" selection-end-line="198" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="656">
+          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
           <folding>
             <element signature="e#24#46#0" expanded="true" />
           </folding>
