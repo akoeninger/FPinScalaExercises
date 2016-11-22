@@ -59,11 +59,15 @@ trait Monad[M[_]] extends Functor[M] {
 
   def compose[A,B,C](f: A => M[B], g: B => M[C]): A => M[C] = a => flatMap(f(a))(g)
 
+  /* Associative law for monads
+      compose(compose(f, g), h) == compose(f, compose(g, h))
+   */
+
   // Implement in terms of `compose`:
   def _flatMap[A,B](ma: M[A])(f: A => M[B]): M[B] =
     compose[Unit,A, B](_ => ma, f)(())
 
-  def join[A](mma: M[M[A]]): M[A] = ???
+  def join[A](mma: M[M[A]]): M[A] = flatMap(mma)(identity)
 
   // Implement in terms of `join`:
   def __flatMap[A,B](ma: M[A])(f: A => M[B]): M[B] = ???
