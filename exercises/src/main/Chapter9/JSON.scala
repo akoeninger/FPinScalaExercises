@@ -35,13 +35,13 @@ object JSON {
       keyValue sep  "," map (kvs => JObject(kvs.toMap))
     ) scope "object"
 
-    def keyValue: Parser[(String, JSON)] = escapedQuoted ** (":" *> value)
+    def keyValue: Parser[(String, JSON)] = escapedQuoted ** (string(":") *> value)
 
-    def lit: Parser[JSON] = "null".as(JNull) |
+    def lit: Parser[JSON] = string("null").as(JNull) |
       double.map(JNumber(_)) |
       escapedQuoted.map(JString(_)) |
-      "true".as(JBool(true)) |
-      "false".as(JBool(false))
+      string("true").as(JBool(true)) |
+      string("false").as(JBool(false))
 
     def value: Parser[JSON] = lit | obj | array
 

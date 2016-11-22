@@ -1,11 +1,12 @@
 package main.Chapter11
 
-import main.Chapter9._
-import main.Chapter8._
-import main.Chapter7._
-import main.Chapter7.Par._
+import scala.language.{higherKinds, implicitConversions, reflectiveCalls}
+
 import main.Chapter6._
-import language.{higherKinds, implicitConversions, reflectiveCalls}
+import main.Chapter7.Par._
+import main.Chapter7._
+import main.Chapter8._
+import main.Chapter9._
 
 
 trait Functor[F[_]] {
@@ -91,7 +92,7 @@ object Monad {
   }
 
   def parserMonad[P[+_]](p: Parsers[P]) = new Monad[P] {
-    override def flatMap[A, B](ma: P[A])(f: A => P[B]) = p flatMap f
+    override def flatMap[A, B](ma: P[A])(f: A => P[B]) = p.flatMap(ma)(f)
 
     override def unit[A](a: => A) = p.succeed(a)
   }
@@ -142,4 +143,14 @@ object Reader {
     def unit[A](a: => A): Reader[R,A] = ???
     override def flatMap[A,B](st: Reader[R,A])(f: A => Reader[R,B]): Reader[R,B] = ???
   }
+}
+
+
+object Test extends App {
+  import Monad._
+  val monad = Monad.stateMonad[Int]
+
+  monad.replicateM[Int](5, State(a => (a, a+1))).map(a => println(a)).run(0)
+  monad.sequence[Int](List.fill(5)(State(a => (a, a + 1)))).map(a => println(a)).run(0)
+  monad.map2(State.apply[Int, Int](a => (a, a + 1)), State.apply[Int, Int](a => (a, a + 2)))(_ + _).map(a => println(a)).run(0)
 }

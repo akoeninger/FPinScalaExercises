@@ -46,7 +46,7 @@ object MyParserTypes {
 
 }
 
-object MyParsers extends Parsers[ParseError, Parser] {
+object MyParsers extends Parsers[Parser] {
 
   override def errorLocation(e: ParseError): Location = e.latestLoc.get
 

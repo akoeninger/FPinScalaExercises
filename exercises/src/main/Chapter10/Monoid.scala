@@ -129,7 +129,7 @@ object Monoid {
   }
 
   def parFoldMap[A,B](v: IndexedSeq[A], m: Monoid[B])(f: A => B): Par[B] =
-    Par.parMap(v)(f).flatMap(bs => foldMapV(bs, par(m))(Par.lazyUnit))
+    Par.parMap(v)(f).flatMap(bs => foldMapV(bs, par(m))(Par.unit))
 
   val wcMonoid: Monoid[WC] = new Monoid[WC] {
     override def op(a1: WC, a2: WC) = (a1, a2) match {

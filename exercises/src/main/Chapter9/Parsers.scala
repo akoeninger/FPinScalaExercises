@@ -147,7 +147,8 @@ trait Parsers[Parser[+_]] {
   implicit def toParserOps[A](a: A)(implicit f: A => Parser[A]): ParserOps[A] = ParserOps(f(a))
 
   case class ParserOps[A](p: Parser[A]) {
-    def |[B >: A](p2: Parser[B]): Parser[B] = self.or(p, p2)
+    def |[B>:A](p2: => Parser[B]): Parser[B] = self.or(p,p2) // use `self` to explicitly disambiguate reference to the `or` method on the `trait`
+    def or[B>:A](p2: => Parser[B]): Parser[B] = self.or(p,p2)
 
     def wrap: Parser[A] = self.wrap(p)
 
@@ -184,20 +185,16 @@ trait Parsers[Parser[+_]] {
 
     def product[B](p2: => Parser[B]): Parser[(A, B)] = self.product(p, p2)
 
-    def **[B](p2: Parser[B]): Parser[(A, B)] = self.product(p, p2)
+    def **[B](p2: => Parser[B]): Parser[(A, B)] = self.product(p, p2)
 
     def map[B](f: A => B): Parser[B] = self.map(p)(f)
 
     def flatMap[B](f: A => Parser[B]): Parser[B] = self.flatMap(p)(f)
 
     def map2[B, C](p2: => Parser[B])(f: (A, B) => C): Parser[C] = self.map2(p, p2)(f)
-
-    def run(input: String): Either[ParseError, A] = self.run(p)(input)
   }
 
   object Laws {
-    def charIdentity(c: Char): Boolean = char(c).run(c.toString) == Right(c)
-
     def stringId(s: String): Boolean = run(string(s))(s) == Right(s)
 
     def mapLaw[A](p: Parser[A])(in: Gen[String]): Prop =
@@ -225,14 +222,6 @@ trait Parsers[Parser[+_]] {
       product(a, b) map (ab => (f(ab._1), g(ab._2)))
     )(in)
   }
-
-  def labelLaw[A](p: Parser[A], inputs: SGen[String]): Prop =
-    Prop.forAll(inputs ** Gen.string) { case (input, msg) ⇒
-      label(msg)(p).run(input) match {
-        case Left(e) ⇒ errorMessage(e) == msg
-        case _ ⇒ true
-      }
-    }
 }
 
 case class Location(input: String, offset: Int = 0) {
