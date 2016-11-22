@@ -119,7 +119,7 @@ object Monad {
   }
 
   def stateMonad[S] = new Monad[({type f[x] = State[S, x]})#f] {
-    override def unit[A](a: => A) = State(s => (a, s))
+    override def unit[A](a: => A) = State.unit(a)
 
     override def flatMap[A, B](ma: State[S, A])(f: (A) => State[S, B]) = ma.flatMap(f)
   }
@@ -130,7 +130,7 @@ object Monad {
     override def unit[A](a: => A) = Id(a)
   }
 
-  def readerMonad[R] = ???
+  def readerMonad[R] = Reader.readerMonad
 }
 
 case class Id[A](value: A) {
@@ -140,14 +140,14 @@ case class Id[A](value: A) {
 
 object Reader {
   def readerMonad[R] = new Monad[({type f[x] = Reader[R,x]})#f] {
-    def unit[A](a: => A): Reader[R,A] = ???
-    override def flatMap[A,B](st: Reader[R,A])(f: A => Reader[R,B]): Reader[R,B] = ???
+    def unit[A](a: => A): Reader[R,A] = Reader(R => a)
+    override def flatMap[A,B](st: Reader[R,A])(f: A => Reader[R,B]): Reader[R,B] = f(st.run)
   }
 }
 
 
 object Test extends App {
-  import Monad._
+
   val monad = Monad.stateMonad[Int]
 
   monad.replicateM[Int](5, State(a => (a, a+1))).map(a => println(a)).run(0)
