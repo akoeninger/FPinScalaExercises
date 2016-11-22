@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala" />
     </list>
@@ -28,8 +27,8 @@
       <file leaf-file-name="Monad.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="72" column="56" lean-forward="false" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="56" />
+            <state relative-caret-position="738">
+              <caret line="73" column="15" lean-forward="false" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -905,14 +904,7 @@
       <workItem from="1479495185197" duration="1822000" />
       <workItem from="1479823661845" duration="1243000" />
       <workItem from="1479825981683" duration="42000" />
-      <workItem from="1479826049610" duration="430000" />
-    </task>
-    <task id="LOCAL-00108" summary="Exercise 9.9&#10;&#10;Implement JSON parser. &#10;&#10;">
-      <created>1457963671325</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1457963671326</updated>
+      <workItem from="1479826049610" duration="534000" />
     </task>
     <task id="LOCAL-00109" summary="Exercise 9.9&#10;&#10;Add combinator for parsing string until some character, 'thru'&#10;Add combinators for skipping everything before or after another parser&#10;&#10;">
       <created>1458222378240</created>
@@ -1250,11 +1242,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479496930423</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="Exercise 11.12">
+      <created>1479826495863</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1479826495863</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260207000" />
+    <option name="totallyTimeSpent" value="260311000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1274,6 +1273,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.51340485" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="2020" y="154" width="1720" height="856" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30784914" sideWeight="0.48659518" order="7" side_tool="false" content_ui="tabs" />
@@ -1325,7 +1325,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 10.2" />
     <MESSAGE value="Add dual construct for Monoids. The dual construct arises from the fact that you have a choice between the order that you combine things in op. a1 then a2 or a2 then a1, both satisfy the monoid laws. The dual method constructs the dual of a given monoid by by flipping the 'op'." />
     <MESSAGE value="Exercise 10.3" />
     <MESSAGE value="Exercise 10.4" />
@@ -1350,7 +1349,8 @@
     <MESSAGE value="Exercise 11.6" />
     <MESSAGE value="Exercise 11.7" />
     <MESSAGE value="Exercise 11.8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 11.8" />
+    <MESSAGE value="Exercise 11.12" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 11.12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1383,8 +1383,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="72" column="56" lean-forward="false" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="56" />
+        <state relative-caret-position="738">
+          <caret line="73" column="15" lean-forward="false" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="19" />
           <folding />
         </state>
       </provider>
