@@ -11,11 +11,13 @@ import main.Chapter6._
 trait Applicative[F[_]] extends Functor[F] {
 
   // primitive combinators
-  def map2[A,B,C](fa: F[A], fb: F[B])(f: (A, B) => C): F[C] = ???
+  def map2[A,B,C](fa: F[A], fb: F[B])(f: (A, B) => C): F[C] =
+    apply(apply(unit[A => B => C](f.curried))(fa))(fb)
 
   def unit[A](a: => A): F[A]
 
-  def apply[A,B](fab: F[A => B])(fa: F[A]): F[B] = ???
+  def apply[A,B](fab: F[A => B])(fa: F[A]): F[B] =
+    map2(fab, fa)((ab, a) => ab(a))
 
   // derived combinators
   /*
@@ -23,7 +25,7 @@ trait Applicative[F[_]] extends Functor[F] {
       map2(fa, unit(()))((a, _) => f(a))
    */
   def map[A,B](fa: F[A])(f: A => B): F[B] =
-    apply(unit(f))(fa)
+    apply(unit[A => B](f))(fa)
 
   def sequence[A](fas: List[F[A]]): F[List[A]] =
     traverse(fas)(fa => fa)
@@ -95,7 +97,7 @@ object Applicative {
 
   type Const[A, B] = A
 
-  implicit def monoidApplicative[M](M: Monoid[M]) =
+  implicit def monoidApplicative[M](M: Monoid[M]): Applicative[({type f[x] = Const[M, x]})#f] =
     new Applicative[({ type f[x] = Const[M, x] })#f] {
       def unit[A](a: => A): M = M.zero
       override def apply[A,B](m1: M)(m2: M): M = M.op(m1, m2)
