@@ -2,148 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$flatMap$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$flatMap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$map$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$map$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$asyncF$1$$anonfun$apply$14.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$asyncF$1$$anonfun$apply$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$asyncF$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$asyncF$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8$$anonfun$apply$17$$anonfun$apply$5.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8$$anonfun$apply$17$$anonfun$apply$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8$$anonfun$apply$17$$anonfun$apply$6.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8$$anonfun$apply$17$$anonfun$apply$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8$$anonfun$apply$17.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8$$anonfun$apply$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1$$anon$10$$anonfun$apply$18$$anonfun$apply$8.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1$$anon$10$$anonfun$apply$18$$anonfun$apply$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1$$anon$10$$anonfun$apply$18.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1$$anon$10$$anonfun$apply$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1$$anon$10.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1$$anon$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1$$anon$9$$anonfun$apply$7$$anonfun$apply$mcVI$sp$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1$$anon$9$$anonfun$apply$7$$anonfun$apply$mcVI$sp$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1$$anon$9$$anonfun$apply$7.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1$$anon$9$$anonfun$apply$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1$$anon$9.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1$$anon$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceViaChoiceN$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceViaChoiceN$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceViaChooser$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceViaChooser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1$$anon$11$$anonfun$apply$19$$anonfun$apply$9.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1$$anon$11$$anonfun$apply$19$$anonfun$apply$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1$$anon$11$$anonfun$apply$19.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1$$anon$11$$anonfun$apply$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1$$anon$11.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1$$anon$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1$$anon$12$$anonfun$apply$20.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1$$anon$12$$anonfun$apply$20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1$$anon$12.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1$$anon$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$join$1$$anon$13$$anonfun$apply$21$$anonfun$apply$10.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$join$1$$anon$13$$anonfun$apply$21$$anonfun$apply$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$join$1$$anon$13$$anonfun$apply$21.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$join$1$$anon$13$$anonfun$apply$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$join$1$$anon$13.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$join$1$$anon$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$join$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$join$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$joinViaFlatMap$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$joinViaFlatMap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$lazyUnit$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$lazyUnit$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequence$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequence$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequenceBalanced$1$$anonfun$apply$15.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequenceBalanced$1$$anonfun$apply$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequenceBalanced$1$$anonfun$apply$16.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequenceBalanced$1$$anonfun$apply$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequenceBalanced$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequenceBalanced$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequenceRight$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequenceRight$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequenceRight$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$sequenceRight$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$ParOps$$anonfun$zip$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$ParOps$$anonfun$zip$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$ParOps.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$ParOps.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Par$$anonfun$lazyUnit$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Par$$anonfun$lazyUnit$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Par$$anonfun$unit$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Par$$anonfun$unit$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/$times$times$.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/$times$times$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$16.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$17.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$18.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$19$$anonfun$apply$12.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$19$$anonfun$apply$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$19.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$boolean$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$boolean$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$choose$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$choose$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$choose$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$choose$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$chooser$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$chooser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$flatMap$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$flatMap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$genStringFn$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$genStringFn$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$listOf$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$listOf$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$listOf1$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$listOf1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$listOfN$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$listOfN$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$map$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$map$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$union$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$union$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$weighted$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$weighted$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$weighted$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$weighted$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$weightedViaChooser$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$weightedViaChooser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$apply$6.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$apply$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$1$$anonfun$apply$7.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$1$$anonfun$apply$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$3$$anonfun$6.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$3$$anonfun$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$3.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAllPar$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAllPar$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/SGen$$anonfun$map$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/SGen$$anonfun$map$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/SGen$.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/SGen$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/SGen.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/SGen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$jsonParser$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$jsonParser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$lit$1$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$lit$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$lit$1$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$lit$1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$lit$1$3.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$lit$1$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$lit$1$4.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$lit$1$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$main$Chapter9$JSON$$keyValue$1$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$$anonfun$main$Chapter9$JSON$$keyValue$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/JSON$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Location.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Location.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/ParseError$.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/ParseError$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/ParseError.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/ParseError.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$char$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$char$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$charCount$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$charCount$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$defaultSucceed$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$defaultSucceed$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$deliminate1$1$$anonfun$apply$6.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$deliminate1$1$$anonfun$apply$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$deliminate1$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$deliminate1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$deliminate1$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$deliminate1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$double$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$double$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$listOfN$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$listOfN$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$listOfN$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$listOfN$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many$1$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many$1$$anonfun$apply$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many1$1$$anonfun$apply$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many1$1$$anonfun$apply$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many1$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many1$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$many1$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$map$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$map$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$map2$1$$anonfun$apply$4.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$map2$1$$anonfun$apply$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$map2$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$map2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$opL$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$opL$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$opL$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$opL$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$opt$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$opt$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$product$1$$anonfun$apply$3.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$product$1$$anonfun$apply$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$product$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$product$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$quoted$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$quoted$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$regexParser$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$regexParser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$regexParser$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$regexParser$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$regexParser$3$$anonfun$apply$5.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$regexParser$3$$anonfun$apply$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$regexParser$3.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$regexParser$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$root$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$root$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$skipL$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$skipL$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$skipL$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$skipL$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$skipR$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$skipR$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$skipR$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$skipR$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$surround$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$surround$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$surround$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$surround$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$thruExclusive$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$thruExclusive$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$token$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$$anonfun$token$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$equal$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$equal$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$mapLaw$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$mapLaw$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$productLaw$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$productLaw$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$productLaw$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$productLaw$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$productMapLaw$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$productMapLaw$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$productMapLaw$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$productMapLaw$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$productMapLaw$3.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$$anonfun$productMapLaw$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$Laws$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$$anonfun$$times$greater$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$$anonfun$$times$greater$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$$anonfun$as$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$$anonfun$as$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$$anonfun$or$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$$anonfun$or$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$$anonfun$surround$3.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$$anonfun$surround$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$$anonfun$wrap$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$$anonfun$wrap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$ParserOps.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$class.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers$class.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter9/Parsers.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala" />
     </list>
     <ignored path="FPiS Exercises.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -164,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Monad.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Monad.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="685">
-              <caret line="149" column="2" lean-forward="false" selection-start-line="149" selection-start-column="2" selection-end-line="149" selection-end-column="2" />
+            <state relative-caret-position="318">
+              <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
               <folding>
                 <element signature="e#24#97#0" expanded="true" />
               </folding>
@@ -181,9 +42,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2286">
               <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
-              <folding>
-                <element signature="e#24#51#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -227,9 +86,21 @@
       <file leaf-file-name="State.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-576">
-              <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="306">
+              <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Applicative.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+              <folding>
+                <element signature="e#24#80#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -279,7 +150,6 @@
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/package.scala" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2" />
-        <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/pkmn/Type.scala" />
@@ -291,6 +161,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.scala" />
         <option value="$USER_HOME$/.IntelliJIdea2016.3/idea64.vmoptions" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala" />
       </list>
     </option>
   </component>
@@ -351,34 +223,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -402,6 +247,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chapter12" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -455,36 +326,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Chapter10" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functionalProgramming" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chapter9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Parsers.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -667,7 +508,34 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
     </panes>
   </component>
@@ -1312,14 +1180,8 @@
       <workItem from="1479845961099" duration="19000" />
       <workItem from="1479846012870" duration="26000" />
       <workItem from="1479846054153" duration="4000" />
-      <workItem from="1479849797437" duration="376000" />
-    </task>
-    <task id="LOCAL-00112" summary="Exercise 9.9&#10;&#10;Added double&#10;&#10;Need to add combinator to attempt a parser, a token parser for keywords, root etc&#10;">
-      <created>1459786472835</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1459786472866</updated>
+      <workItem from="1479849797437" duration="403000" />
+      <workItem from="1480346424948" duration="2142000" />
     </task>
     <task id="LOCAL-00113" summary="Exercise 9.9&#10;&#10;Added lift to Option&#10;">
       <created>1460641229819</created>
@@ -1657,11 +1519,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479841592125</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="Exercise 11.20">
+      <created>1479850445258</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1479850445258</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265342000" />
+    <option name="totallyTimeSpent" value="267511000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1677,7 +1546,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16488793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1664888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.51340485" order="7" side_tool="true" content_ui="tabs" />
@@ -1733,7 +1602,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 10.5" />
     <MESSAGE value="Exercise 10.6" />
     <MESSAGE value="Exercise 10.7" />
     <MESSAGE value="Exercise 10.8" />
@@ -1758,7 +1626,8 @@
     <MESSAGE value="Exercise 11.13" />
     <MESSAGE value="Exercise 11.17" />
     <MESSAGE value="Exercise 11.18" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 11.18" />
+    <MESSAGE value="Exercise 11.20" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 11.20" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1779,9 +1648,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2286">
           <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5238">
+          <caret line="296" column="0" lean-forward="false" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
           <folding>
-            <element signature="e#24#51#0" expanded="false" />
+            <element signature="e#23#50#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+          <folding>
+            <element signature="e#23#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+          <folding>
+            <element signature="e#22#54#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2286">
+          <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1837,9 +1760,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2358">
           <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
-          <folding>
-            <element signature="e#24#51#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1895,9 +1816,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2358">
           <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
-          <folding>
-            <element signature="e#24#51#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1953,9 +1872,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2358">
           <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
-          <folding>
-            <element signature="e#24#51#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2051,9 +1968,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2286">
           <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
-          <folding>
-            <element signature="e#24#51#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2105,24 +2020,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-576">
-          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="306">
+          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/languageFeature.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="149" column="2" lean-forward="false" selection-start-line="149" selection-start-column="2" selection-end-line="149" selection-end-column="2" />
+        <state relative-caret-position="318">
+          <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
           <folding>
             <element signature="e#24#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <folding>
+            <element signature="e#24#80#0" expanded="true" />
           </folding>
         </state>
       </provider>
