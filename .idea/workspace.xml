@@ -2,7 +2,270 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Candy$$anonfun$simulateMachine$1$$anonfun$apply$9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Candy$$anonfun$simulateMachine$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Candy$$anonfun$simulateMachine$2$$anonfun$apply$10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Candy$$anonfun$simulateMachine$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Candy$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Candy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Coin$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Coin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Input.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Machine$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Machine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$_ints$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$_map$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$_map2$1$$anonfun$apply$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$_map2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$both$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$both$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$flatMap$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$flatMap$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$initsViaSequence$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$map$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$map$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$map2$2$$anonfun$apply$4$$anonfun$apply$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$map2$2$$anonfun$apply$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$map2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$map2$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$nonNegativeEven$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$nonNegativeEven$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$nonNegativeLessThan$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$nonNegativeLessThan$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$nonNegativeLessThan$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$nonNegativeLessThan$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$sequence$2$$anonfun$apply$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$sequence$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$sequence$3$$anonfun$apply$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$sequence$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$unit$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$$anonfun$unit$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$Simple$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$Simple.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG$class.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/RNG.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$flatMap$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$get$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$map$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$map2$1$$anonfun$apply$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$map2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$modify$1$$anonfun$apply$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$modify$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$sequence$1$$anonfun$apply$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$sequence$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$set$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$$anonfun$unit$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/State.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Turn$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter6/Turn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/$times$times$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/$times$times.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$$times$times$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$19$$anonfun$apply$12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$boolean$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$choose$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$choose$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$chooser$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$flatMap$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$genStringFn$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$listOf$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$listOf1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$listOfN$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$listOfN$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$map$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$union$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$unsized$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$weighted$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$weighted$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$$anonfun$weightedViaChooser$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen$Cogen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Gen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$$amp$amp$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$$bar$bar$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$1$$anonfun$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$10$$anonfun$apply$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$14$$anonfun$apply$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$4$$anonfun$apply$mcZ$sp$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$apply$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$check$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$checkPar$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$checkPar$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$equal$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$1$$anonfun$apply$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$1$$anonfun$apply$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$1$$anonfun$apply$9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$3$$anonfun$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$3$$anonfun$7$$anonfun$apply$10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$3$$anonfun$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$3$$anonfun$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAll$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$forAllPar$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$randomStream$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$$anonfun$tag$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$Falsified$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$Falsified.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$Passed$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$Proved$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop$Result.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/Prop.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/SGen$$anonfun$map$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/SGen$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/SGen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$$times$times$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$16$$anonfun$apply$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$17$$anonfun$apply$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$18$$anonfun$apply$23.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$boolean$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$bools$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$bounded$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$cartesian$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$cartesian$2$$anonfun$apply$12$$anonfun$apply$13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$cartesian$2$$anonfun$apply$12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$cartesian$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$choose$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$choose$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$choose$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$choose$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$even$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$flatMap$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$flatMap$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$genStringIntFn$1$$anonfun$apply$26.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$genStringIntFn$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$interleave$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$interleave$2$$anonfun$apply$20.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$interleave$2$$anonfun$apply$21.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$interleave$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$interleave$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$listOf$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$listOf1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$listOfN$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$listOfN$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$listOfN$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$listOfN_1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$listOfN_1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$listOfN_1$3$$anonfun$apply$19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$listOfN_1$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$map$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$map2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$map2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$map2Option$1$$anonfun$apply$14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$map2Option$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$map2Stream$1$$anonfun$apply$15$$anonfun$apply$16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$map2Stream$1$$anonfun$apply$15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$map2Stream$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$odd$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$pint2$1$$anonfun$apply$24$$anonfun$apply$25$$anonfun$apply$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$pint2$1$$anonfun$apply$24$$anonfun$apply$25.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$pint2$1$$anonfun$apply$24.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$pint2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$randomStream$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$sameParity$1$$anonfun$apply$18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$sameParity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$sequenceOption$1$$anonfun$apply$17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$sequenceOption$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$sequenceOption$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$string$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$stringN$1$$anonfun$apply$22.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$stringN$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$uniform$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$union$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$union$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$union_1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$weighted$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$anonfun$weighted$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$$times$times$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$Sized$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$Sized.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$Unsized$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen$Unsized.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Gen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$$amp$amp$1$$anonfun$apply$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$$amp$amp$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$$bar$bar$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$1$$anonfun$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$10$$anonfun$apply$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$14$$anonfun$apply$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$15$$anonfun$apply$11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$3$$anonfun$apply$mcZ$sp$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$apply$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$check$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$check$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$checkPar$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$checkPar$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$equal$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAll$1$$anonfun$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAll$1$$anonfun$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAll$1$$anonfun$apply$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAll$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAll$2$$anonfun$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAll$2$$anonfun$7$$anonfun$apply$9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAll$2$$anonfun$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAll$2$$anonfun$8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAll$2$$anonfun$apply$10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAll$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAllPar$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAllPar$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAllPar2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$forAllPar3$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$$anonfun$tag$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Prop.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/SGen$$anonfun$$times$times$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/SGen$$anonfun$$times$times$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/SGen$$anonfun$$times$times$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/SGen$$anonfun$flatMap$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/SGen$$anonfun$map$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/SGen$class.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/SGen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Status$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Status$Exhausted$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Status$Proven$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Status$Unfalsified$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter8/exhaustive/Status.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala" />
     </list>
     <ignored path="FPiS Exercises.iws" />
@@ -27,8 +290,8 @@
       <file leaf-file-name="Monad.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="49" column="30" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+            <state relative-caret-position="495">
+              <caret line="155" column="1" lean-forward="true" selection-start-line="155" selection-start-column="1" selection-end-line="155" selection-end-column="1" />
               <folding>
                 <element signature="e#24#97#0" expanded="true" />
               </folding>
@@ -95,11 +358,9 @@
       <file leaf-file-name="Applicative.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="42" column="1" lean-forward="false" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-              <folding>
-                <element signature="e#24#80#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1952">
+              <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,8 +420,8 @@
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.scala" />
         <option value="$USER_HOME$/.IntelliJIdea2016.3/idea64.vmoptions" />
-        <option value="$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala" />
       </list>
     </option>
@@ -222,36 +483,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -536,6 +769,34 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -583,27 +844,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration default="false" name="Chapter4" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="main.Chapter4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="main.Chapter4.Chapter4" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="exercises" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.Test (1)">
     <configuration default="false" name="package (2)" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -672,6 +913,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="main.Chapter11.Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="exercises" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test (1)" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="main.Chapter12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="main.Chapter12.Test" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -963,19 +1224,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.package (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Chapter4" />
-      <item index="2" class="java.lang.String" itemvalue="Application.package (2)" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Examples" />
-      <item index="4" class="java.lang.String" itemvalue="Application.JSONExample" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="1" class="java.lang.String" itemvalue="Application.package (2)" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Examples" />
+      <item index="3" class="java.lang.String" itemvalue="Application.JSONExample" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Test (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="1" class="java.lang.String" itemvalue="Application.JSONExample" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Examples" />
-        <item index="3" class="java.lang.String" itemvalue="Application.package (2)" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Chapter4" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Test (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="2" class="java.lang.String" itemvalue="Application.JSONExample" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Examples" />
+        <item index="4" class="java.lang.String" itemvalue="Application.package (2)" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
@@ -1183,14 +1444,8 @@
       <workItem from="1480346424948" duration="2279000" />
       <workItem from="1480352186994" duration="1370000" />
       <workItem from="1480353723601" duration="338000" />
-      <workItem from="1480440172902" duration="1130000" />
-    </task>
-    <task id="LOCAL-00115" summary="Exercise 9.9&#10;&#10;Define token and attempt">
-      <created>1461073147760</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1461073147761</updated>
+      <workItem from="1480440172902" duration="1305000" />
+      <workItem from="1480442861836" duration="1302000" />
     </task>
     <task id="LOCAL-00116" summary="Exercise 9.9&#10;">
       <created>1461162279196</created>
@@ -1528,11 +1783,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480354045468</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="Chapter 12 .3&#10;">
+      <created>1480441317698</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1480441317698</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270486000" />
+    <option name="totallyTimeSpent" value="271963000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1547,28 +1809,28 @@
     <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16614583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.51340485" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30784914" sideWeight="0.48659518" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32619774" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16614583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="2020" y="154" width="1720" height="856" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32672232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1604,7 +1866,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 10.8" />
     <MESSAGE value="Exercise 10.9&#10;&#10;Had help, but used the more efficient forall method" />
     <MESSAGE value="Exercise 10.10" />
     <MESSAGE value="Exercise 10.11" />
@@ -1629,7 +1890,8 @@
     <MESSAGE value="Exercise 11.20" />
     <MESSAGE value="Chapter 12 .1" />
     <MESSAGE value="Chapter 12 .2&#10;&#10;The set of primitives (map2 and unit) is equivalently expressive as the set of (apply and unit)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 12 .2&#10;&#10;The set of primitives (map2 and unit) is equivalently expressive as the set of (apply and unit)" />
+    <MESSAGE value="Chapter 12 .3&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 12 .3&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1678,9 +1940,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#80#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2090,8 +2350,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="49" column="30" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        <state relative-caret-position="495">
+          <caret line="155" column="1" lean-forward="true" selection-start-line="155" selection-start-column="1" selection-end-line="155" selection-end-column="1" />
           <folding>
             <element signature="e#24#97#0" expanded="true" />
           </folding>
@@ -2100,11 +2360,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="42" column="1" lean-forward="false" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-          <folding>
-            <element signature="e#24#80#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1952">
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

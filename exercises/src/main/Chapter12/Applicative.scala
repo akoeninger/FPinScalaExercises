@@ -5,7 +5,7 @@ import scala.language.{higherKinds, implicitConversions}
 import main.Chapter10._
 import main.Chapter11.Functor
 import main.Chapter12.StateUtil._
-import main.Chapter6.State._
+import main.Chapter6.State
 import main.Chapter6._
 
 trait Applicative[F[_]] extends Functor[F] {
@@ -193,4 +193,8 @@ object StateUtil {
 
   def set[S](s: S): State[S, Unit] =
     State(_ => ((), s))
+}
+
+object Test extends App {
+  Applicative.streamApplicative.sequence(List(Applicative.streamApplicative.unit(1), Applicative.streamApplicative.unit(2))).take(5).foreach(println)
 }
