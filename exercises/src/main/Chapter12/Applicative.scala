@@ -1,6 +1,6 @@
 package main.Chapter12
 
-import scala.language.{higherKinds, implicitConversions}
+import scala.language.{higherKinds, implicitConversions, reflectiveCalls}
 
 import main.Chapter10._
 import main.Chapter11.Functor
@@ -24,7 +24,7 @@ trait Applicative[F[_]] extends Functor[F] {
     impl using map2 and unit:
       map2(fa, unit(()))((a, _) => f(a))
    */
-  override def map[A,B](fa: F[A])(f: A => B): F[B] =
+  def map[A,B](fa: F[A])(f: A => B): F[B] =
     apply(unit[A => B](f))(fa)
 
   def map3[A,B,C,D](
@@ -68,9 +68,22 @@ trait Applicative[F[_]] extends Functor[F] {
     sequence(List.fill(n)(fa))
 
   def factor[A,B](fa: F[A], fb: F[B]): F[(A,B)] =
-    map2(fa, fb)((a, b) => (a, b))
+    map2(fa, fb)((_, _))
 
-  def product[G[_]](G: Applicative[G]): Applicative[({type f[x] = (F[x], G[x])})#f] = ???
+  def assoc[A, B, C](p: (A, (B, C))): ((A, B), C) = p match {
+    case (a, (b, c)) => ((a, b), c)
+  }
+
+  def product[G[_]](G: Applicative[G]): Applicative[({type f[x] = (F[x], G[x])})#f] = {
+    val self = this
+    new Applicative[({type f[x] = (F[x], G[x])})#f] {
+
+      override def unit[A](a: => A): (F[A], G[A]) = (self.unit(a), G.unit(a))
+
+      override def apply[A, B](fab: (F[(A) => B], G[(A) => B]))(fa: (F[A], G[A])): (F[B], G[B]) =
+        (self.apply(fab._1)(fa._1), G.apply(fab._2)(fa._2))
+    }
+  }
 
   def compose[G[_]](G: Applicative[G]): Applicative[({type f[x] = F[G[x]]})#f] = ???
 
