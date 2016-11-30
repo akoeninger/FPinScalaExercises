@@ -27,8 +27,8 @@
       <file leaf-file-name="Monoid.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2286">
-              <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
+            <state relative-caret-position="-12">
+              <caret line="215" column="7" lean-forward="false" selection-start-line="215" selection-start-column="7" selection-end-line="215" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -77,8 +77,8 @@
       <file leaf-file-name="Applicative.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="215" column="47" lean-forward="false" selection-start-line="215" selection-start-column="47" selection-end-line="215" selection-end-column="47" />
+            <state relative-caret-position="564">
+              <caret line="209" column="46" lean-forward="true" selection-start-line="209" selection-start-column="46" selection-end-line="209" selection-end-column="46" />
               <folding>
                 <element signature="e#24#97#0" expanded="true" />
               </folding>
@@ -319,6 +319,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Chapter10" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Monoid.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1211,14 +1215,7 @@
       <workItem from="1480442861836" duration="5800000" />
       <workItem from="1480454876612" duration="6474000" />
       <workItem from="1480535149283" duration="3272000" />
-      <workItem from="1480541607294" duration="517000" />
-    </task>
-    <task id="LOCAL-00125" summary="Exercise 9.13&#10;&#10;">
-      <created>1463751250640</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1463751250641</updated>
+      <workItem from="1480541607294" duration="1415000" />
     </task>
     <task id="LOCAL-00126" summary="Implement scope and label&#10;&#10;">
       <created>1463752716579</created>
@@ -1556,11 +1553,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480537213853</updated>
     </task>
-    <option name="localTasksCounter" value="174" />
+    <task id="LOCAL-00174" summary="Chapter 12 .17&#10;">
+      <created>1480542134398</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1480542134398</updated>
+    </task>
+    <option name="localTasksCounter" value="175" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286724000" />
+    <option name="totallyTimeSpent" value="287622000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1632,7 +1636,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Start Chapter 11 Ex 1" />
     <MESSAGE value="Exercise 11.2" />
     <MESSAGE value="Exercise 11.3" />
     <MESSAGE value="Exercise 11.4&#10;&#10;Nice use of sequence" />
@@ -1657,7 +1660,8 @@
     <MESSAGE value="Chapter 12 .13&#10;" />
     <MESSAGE value="Chapter 12 .14&#10;&#10;Used the Id monad&#10;" />
     <MESSAGE value="Chapter 12 .16&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 12 .16&#10;" />
+    <MESSAGE value="Chapter 12 .17&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 12 .17&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2048,14 +2052,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2286">
-          <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar!/scala/collection/immutable/Map.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-223">
@@ -2081,10 +2077,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="215" column="7" lean-forward="false" selection-start-line="215" selection-start-column="7" selection-end-line="215" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="215" column="47" lean-forward="false" selection-start-line="215" selection-start-column="47" selection-end-line="215" selection-end-column="47" />
+        <state relative-caret-position="564">
+          <caret line="209" column="46" lean-forward="true" selection-start-line="209" selection-start-column="46" selection-end-line="209" selection-end-column="46" />
           <folding>
             <element signature="e#24#97#0" expanded="true" />
           </folding>
