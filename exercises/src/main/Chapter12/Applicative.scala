@@ -192,8 +192,7 @@ trait Traverse[F[_]] extends Functor[F] with Foldable[F] {
   import Applicative._
 
   override def foldMap[A,B](as: F[A])(f: A => B)(mb: Monoid[B]): B =
-    traverse[({type f[x] = Const[B,x]})#f,A,Nothing](
-      as)(f)(monoidApplicative(mb))
+    traverse[({type f[x] = Const[B,x]})#f,A,Nothing](as)(f)(monoidApplicative(mb))
 
   def traverseS[S,A,B](fa: F[A])(f: A => State[S, B]): State[S, F[B]] =
     traverse[({type f[x] = State[S,x]})#f,A,B](fa)(f)(Monad.stateMonad)
@@ -211,7 +210,7 @@ trait Traverse[F[_]] extends Functor[F] with Foldable[F] {
   def zipWithIndex[A](fa: F[A]): F[(A, Int)] =
     mapAccum(fa, 0)((a, s) => ((a, s), s + 1))._1
 
-  def reverse[A](fa: F[A]): F[A] = ???
+  def reverse[A](fa: F[A]): F[A] = mapAccum(fa, toList(fa).reverse)((_, as) => (as.head, as.tail))._1
 
   override def foldLeft[A,B](fa: F[A])(z: B)(f: (B, A) => B): B = ???
 
@@ -262,5 +261,5 @@ object StateUtil {
 }
 
 object Test extends App {
-  Applicative.streamApplicative.sequence(List(Applicative.streamApplicative.unit(1), Applicative.streamApplicative.unit(2))).take(5).foreach(println)
+  Traverse.listTraverse.toList(List(1,2,3,4)).foreach(println)
 }
