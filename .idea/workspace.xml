@@ -85,8 +85,8 @@
       <file leaf-file-name="Applicative.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="776">
-              <caret line="238" column="89" lean-forward="false" selection-start-line="238" selection-start-column="89" selection-end-line="238" selection-end-column="89" />
+            <state relative-caret-position="200">
+              <caret line="183" column="31" lean-forward="true" selection-start-line="183" selection-start-column="31" selection-end-line="183" selection-end-column="31" />
               <folding>
                 <element signature="e#24#97#0" expanded="true" />
               </folding>
@@ -1217,14 +1217,7 @@
       <workItem from="1480353723601" duration="338000" />
       <workItem from="1480440172902" duration="1305000" />
       <workItem from="1480442861836" duration="5800000" />
-      <workItem from="1480454876612" duration="5767000" />
-    </task>
-    <task id="LOCAL-00122" summary="Exercise 9.13&#10;&#10;implement string">
-      <created>1463153508798</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1463153508799</updated>
+      <workItem from="1480454876612" duration="6399000" />
     </task>
     <task id="LOCAL-00123" summary="Exercise 9.13&#10;&#10;implement string">
       <created>1463153530286</created>
@@ -1562,11 +1555,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480456745835</updated>
     </task>
-    <option name="localTasksCounter" value="171" />
+    <task id="LOCAL-00171" summary="Chapter 12 .13&#10;">
+      <created>1480518368894</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1480518368894</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282228000" />
+    <option name="totallyTimeSpent" value="282860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1638,7 +1638,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 10.17" />
     <MESSAGE value="Exercise 10.18" />
     <MESSAGE value="Filler" />
     <MESSAGE value="Start Chapter 11 Ex 1" />
@@ -1663,7 +1662,8 @@
     <MESSAGE value="Chapter 12 .8" />
     <MESSAGE value="Chapter 12 .9" />
     <MESSAGE value="Chapter 12 .12&#10;&#10;Basically implemented traverse but specialized" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 12 .12&#10;&#10;Basically implemented traverse but specialized" />
+    <MESSAGE value="Chapter 12 .13&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 12 .13&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2139,8 +2139,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="776">
-          <caret line="238" column="89" lean-forward="false" selection-start-line="238" selection-start-column="89" selection-end-line="238" selection-end-column="89" />
+        <state relative-caret-position="200">
+          <caret line="183" column="31" lean-forward="true" selection-start-line="183" selection-start-column="31" selection-end-line="183" selection-end-column="31" />
           <folding>
             <element signature="e#24#97#0" expanded="true" />
           </folding>
