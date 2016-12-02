@@ -1,6 +1,7 @@
 package main.Chapter13
 
 import scala.annotation.tailrec
+import scala.language.{higherKinds, implicitConversions, reflectiveCalls}
 
 object IO0 {
   trait IO { self =>
@@ -203,32 +204,32 @@ object IO2aTests {
 
 object IO2b {
   sealed trait TailRec[A] {
-      def flatMap[B](f: A => TailRec[B]): TailRec[B] = FlatMap(this, f)
-      def map[B](f: A => B): TailRec[B] = flatMap(f andThen (Return(_)))
-    }
-    case class Return[A](a: A) extends TailRec[A]
-    case class Suspend[A](resume: () => A) extends TailRec[A]
-    case class FlatMap[A, B](sub: TailRec[A], k: A => TailRec[B]) extends TailRec[B]
+    def flatMap[B](f: A => TailRec[B]): TailRec[B] = FlatMap(this, f)
+    def map[B](f: A => B): TailRec[B] = flatMap(f andThen (Return(_)))
+  }
+  case class Return[A](a: A) extends TailRec[A]
+  case class Suspend[A](resume: () => A) extends TailRec[A]
+  case class FlatMap[A, B](sub: TailRec[A], k: A => TailRec[B]) extends TailRec[B]
 
-    object TailRec extends Monad[TailRec] {
-      def unit[A](a: => A): TailRec[A] = Return(a)
-      def flatMap[A,B](a: TailRec[A])(f: A => TailRec[B]): TailRec[B] = a flatMap f
-      def suspend[A](a: => TailRec[A]) =
-        Suspend(() => ()).flatMap(_ => a)
-    }
-    def printLine(s: String): TailRec[Unit] = Suspend(() => Return(println(s)))
-    val p = TailRec.forever(printLine("Still going..."))
+  object TailRec extends Monad[TailRec] {
+    def unit[A](a: => A): TailRec[A] = Return(a)
+    def flatMap[A,B](a: TailRec[A])(f: A => TailRec[B]): TailRec[B] = a flatMap f
+    def suspend[A](a: => TailRec[A]) =
+      Suspend(() => ()).flatMap(_ => a)
+  }
+  def printLine(s: String): TailRec[Unit] = Suspend(() => Return(println(s)))
+  val p = TailRec.forever(printLine("Still going..."))
 
-    @tailrec
-    def run[A](io: TailRec[A]): A = io match {
-      case Return(a) => a
-      case Suspend(resume) => resume()
-      case FlatMap(x, f) => x match {
-        case Return(a) => run(f(a))
-        case Suspend(resume) => run(f(resume))
-        case FlatMap(y, g) => run(TailRec.flatMap(y)(a => TailRec.flatMap(g(a))(f)))
-      }
+  @tailrec
+  def run[A](io: TailRec[A]): A = io match {
+    case Return(a) => a
+    case Suspend(resume) => resume()
+    case FlatMap(x, f) => x match {
+      case Return(a) => run(f(a))
+      case Suspend(r) => run(f(r))
+      case FlatMap(y, g) => run(TailRec.flatMap(y)(a => TailRec.flatMap(g(a))(f)))
     }
+  }
 }
 
 object IO2bTests {
@@ -248,5 +249,61 @@ object IO2bTests {
     val gFortyTwo = g(42)
     println("g(42) = " + gFortyTwo)
     println("run(g(42)) = " + run(gFortyTwo))
+  }
+}
+
+object IO2c {
+  import main.Chapter7.Nonblocking._
+
+  sealed trait Async[A] {
+    def flatMap[B](f: A => Async[B]): Async[B] = FlatMap(this, f)
+    def map[B](f: A => B): Async[B] = flatMap(f andThen (Return(_)))
+  }
+  case class Return[A](a: A) extends Async[A]
+  case class Suspend[A](resume: Par[A]) extends Async[A]
+  case class FlatMap[A, B](sub: Async[A], k: A => Async[B]) extends Async[B]
+
+  object Async extends Monad[Async] {
+    def unit[A](a: => A): Async[A] = Return(a)
+    def flatMap[A,B](a: Async[A])(f: A => Async[B]): Async[B] = a flatMap f
+  }
+
+  @tailrec
+  def step[A](async: Async[A]): Async[A] = async match {
+    case FlatMap(FlatMap(x, f), g) => step(x flatMap (a => f(a) flatMap g))
+    case FlatMap(Return(x), f) => step(f(x))
+    case _ => async
+  }
+
+  def run[A](async: Async[A]): Par[A] = step(async) match {
+    case Return(a) => Par.unit(a)
+    case Suspend(resume) => resume
+    case FlatMap(x, f) => x match {
+      case Suspend(r) => Par.flatMap(r)(a => run(f(a)))
+      case _ => sys.error("Impossible; `step` eliminates these cases")
+    }
+  }
+}
+
+object IO3 {
+  import main.Chapter7.Nonblocking.Par
+
+  sealed trait Free[F[_], A] {
+    def flatMap[B](f: A => Free[F,B]): Free[F,B] =
+      FlatMap(this, f)
+    def map[B](f: A => B): Free[F,B] =
+      flatMap(f andThen (Return(_)))
+  }
+  case class Return[F[_], A](a: A) extends Free[F, A]
+  case class Suspend[F[_], A](s: F[A]) extends Free[F, A]
+  case class FlatMap[F[_], A, B](s: Free[F,A], f: A => Free[F, B]) extends Free[F, B]
+
+  type TailRec[A] = Free[Function0, A]
+  type Async[A] = Free[Par, A]
+
+  def freeMonad[F[_]]: Monad[({type f[a] = Free[F, a]})#f] = new Monad[({type f[a] = Free[F, a]})#f] {
+    override def unit[A](a: => A) = Return(a)
+
+    override def flatMap[A, B](a: Free[F, A])(f: (A) => Free[F, B]) = FlatMap(a, f)
   }
 }
