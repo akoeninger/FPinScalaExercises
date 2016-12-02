@@ -1,6 +1,6 @@
 package main.Chapter13
 
-import main.Chapter11.Monad
+import scala.annotation.tailrec
 
 object IO0 {
   trait IO { self =>
@@ -136,4 +136,117 @@ object IO1 {
         } yield () }
       }
     )
+}
+
+object IO2a {
+
+  sealed trait IO[A] {
+    def flatMap[B](f: A => IO[B]): IO[B] = FlatMap(this, f)
+    def map[B](f: A => B): IO[B] = flatMap(f andThen (Return(_)))
+  }
+  case class Return[A](a: A) extends IO[A]
+  case class Suspend[A](resume: () => A) extends IO[A]
+  case class FlatMap[A, B](sub: IO[A], k: A => IO[B]) extends IO[B]
+
+  object IO extends Monad[IO] {
+    def unit[A](a: => A): IO[A] = Return(a)
+    def flatMap[A,B](a: IO[A])(f: A => IO[B]): IO[B] = a flatMap f
+    def suspend[A](a: => IO[A]) =
+      Suspend(() => ()).flatMap(_ => a)
+  }
+  def printLine(s: String): IO[Unit] = Suspend(() => Return(println(s)))
+  val p = IO.forever(printLine("Still going..."))
+
+  @tailrec
+  def run[A](io: IO[A]): A = io match {
+    case Return(a) => a
+    case Suspend(resume) => resume()
+    case FlatMap(x, f) => x match {
+      case Return(a) => run(f(a))
+      case Suspend(resume) => run(f(resume))
+      case FlatMap(y, g) => run(IO.flatMap(y)(a => IO.flatMap(g(a))(f)))
+    }
+  }
+}
+
+object IO2aTests {
+  import IO2a._
+
+  /*
+  Pg 240: REPL session has a typo, should be:
+  val g = List.fill(100000)(f).foldLeft(f) {
+    (a, b) => x => Suspend(() => ()).flatMap { _ => a(x).flatMap(b)}
+  }
+  Note: we could write a little helper function to make this nicer:
+  def suspend[A](a: => IO[A]) = Suspend(() => ()).flatMap { _ => a }
+  val g = List.fill(100000)(f).foldLeft(f) {
+    (a, b) => x => suspend { a(x).flatMap(b) }
+  }
+   */
+
+  val f: Int => IO[Int] = (i: Int) => Return(i)
+
+  val g: Int => IO[Int] =
+    List.fill(10000)(f).foldLeft(f){
+      (a: Function1[Int, IO[Int]],
+        b: Function1[Int, IO[Int]]) => {
+        (x: Int) => IO.suspend(a(x).flatMap(b))
+      }
+    }
+
+  def main(args: Array[String]): Unit = {
+    val gFortyTwo = g(42)
+    println("g(42) = " + gFortyTwo)
+    println("run(g(42)) = " + run(gFortyTwo))
+  }
+}
+
+object IO2b {
+  sealed trait TailRec[A] {
+      def flatMap[B](f: A => TailRec[B]): TailRec[B] = FlatMap(this, f)
+      def map[B](f: A => B): TailRec[B] = flatMap(f andThen (Return(_)))
+    }
+    case class Return[A](a: A) extends TailRec[A]
+    case class Suspend[A](resume: () => A) extends TailRec[A]
+    case class FlatMap[A, B](sub: TailRec[A], k: A => TailRec[B]) extends TailRec[B]
+
+    object TailRec extends Monad[TailRec] {
+      def unit[A](a: => A): TailRec[A] = Return(a)
+      def flatMap[A,B](a: TailRec[A])(f: A => TailRec[B]): TailRec[B] = a flatMap f
+      def suspend[A](a: => TailRec[A]) =
+        Suspend(() => ()).flatMap(_ => a)
+    }
+    def printLine(s: String): TailRec[Unit] = Suspend(() => Return(println(s)))
+    val p = TailRec.forever(printLine("Still going..."))
+
+    @tailrec
+    def run[A](io: TailRec[A]): A = io match {
+      case Return(a) => a
+      case Suspend(resume) => resume()
+      case FlatMap(x, f) => x match {
+        case Return(a) => run(f(a))
+        case Suspend(resume) => run(f(resume))
+        case FlatMap(y, g) => run(TailRec.flatMap(y)(a => TailRec.flatMap(g(a))(f)))
+      }
+    }
+}
+
+object IO2bTests {
+  import IO2b._
+
+  val f: Int => TailRec[Int] = (i: Int) => Return(i)
+
+  val g: Int => TailRec[Int] =
+    List.fill(10000)(f).foldLeft(f){
+      (a: Function1[Int, TailRec[Int]],
+        b: Function1[Int, TailRec[Int]]) => {
+        (x: Int) => TailRec.suspend(a(x).flatMap(b))
+      }
+    }
+
+  def main(args: Array[String]): Unit = {
+    val gFortyTwo = g(42)
+    println("g(42) = " + gFortyTwo)
+    println("run(g(42)) = " + run(gFortyTwo))
+  }
 }
