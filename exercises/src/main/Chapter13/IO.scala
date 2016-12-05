@@ -306,4 +306,15 @@ object IO3 {
 
     override def flatMap[A, B](a: Free[F, A])(f: (A) => Free[F, B]) = FlatMap(a, f)
   }
+
+  @tailrec
+  def runTrampoline[A](a: Free[Function0, A]): A = a match {
+    case Return(x) => x
+    case Suspend(s) => s()
+    case FlatMap(s, f) => s match {
+      case Return(a1) => runTrampoline { f(a) }
+      case Suspend(r) => runTrampoline { f(r()) }
+      case FlatMap(a0, g) => runTrampoline { a0 flatMap { a1 => g(a1) flatMap f } }
+    }
+  }
 }
