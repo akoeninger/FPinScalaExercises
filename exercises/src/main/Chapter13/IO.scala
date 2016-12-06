@@ -3,6 +3,7 @@ package main.Chapter13
 import scala.annotation.tailrec
 import scala.language.{higherKinds, implicitConversions, reflectiveCalls}
 
+import main.Chapter11.Monad
 import main.Chapter13.IO3.Console.ConsoleIO
 
 object IO0 {
@@ -391,7 +392,7 @@ object IO3 {
 
   implicit val function0Monad = new Monad[Function0] {
     def unit[A](a: => A) = () => a
-    def flatMap[A,B](a: Function0[A])(f: A => Function0[B]) = () => f(a())()
+    def flatMap[A,B](a: () => A)(f: A => (() => B)) = () => f(a())()
   }
   implicit val parMonad = new Monad[Par] {
     override def unit[A](a: => A): Par[A] = Par.unit(a)
@@ -400,4 +401,29 @@ object IO3 {
       Par.flatMap(a)(f)
     }
   }
+
+  /*
+   The `runConsoleFunction0` implementation is unfortunately not stack safe,
+   because it relies of the stack safety of the underlying monad, and the
+   `Function0` monad we gave is not stack safe. To see the problem, try
+   running: `freeMonad.forever(Console.printLn("Hello"))`.
+   */
+
+   // Exercise 4 (optional, hard): Implement `runConsole` using `runFree`,
+   // without going through `Par`. Hint: define `translate` using `runFree`.
+
+
+   def translate[F[_],G[_],A](f: Free[F,A])(fg: F ~> G): Free[G,A] = {
+     type FreeG[B] = Free[G, B]
+     val t = new (F ~> FreeG) {
+       override def apply[B](f: F[B]): FreeG[B] = Suspend { fg(f) }
+     }
+     runFree(f)(t)(freeMonad[G])
+   }
+
+   def runConsole[A](a: Free[Console,A]): A = runTrampoline {
+     translate(a)(new (Console ~> Function0) {
+       override def apply[A](f: Console[A]): () => A = f.toThunk
+     })
+   }
 }
