@@ -337,16 +337,28 @@ object IO3 {
     }
   }
 
-  import main.Chapter7.Nonblocking._
+  import main.Chapter7.Nonblocking.Par
 
   sealed trait Console[A] {
     def toPar: Par[A]
     def toThunk: () => A
+
+    def toReader: ConsoleReader[A]
+    def toState: ConsoleState[A]
   }
   case object ReadLine extends Console[Option[String]] {
     override def toPar: Par[Option[String]] = Par.lazyUnit(run)
 
     override def toThunk: () => Option[String] = () => run
+
+    override def toReader: ConsoleReader[Option[String]] = ConsoleReader(in => Some(in))
+
+    override def toState: ConsoleState[Option[String]] = ConsoleState { bufs =>
+      bufs.in match {
+        case Nil => (None, bufs)
+        case h :: t => (Some(h), bufs.copy(in = t))
+      }
+    }
 
     def run: Option[String] =
       try Some(scala.io.StdIn.readLine())
@@ -356,6 +368,10 @@ object IO3 {
     override def toPar: Par[Unit] = Par.lazyUnit(println(line))
 
     override def toThunk: () => Unit = () => println(line)
+
+    override def toReader: ConsoleReader[Unit] = ConsoleReader(s => ())
+
+    override def toState: ConsoleState[Unit] = ConsoleState { bufs => ((), bufs.copy(out = bufs.out :+ line)) }
   }
   object Console {
     type ConsoleIO[A] = Free[Console, A]
@@ -372,10 +388,19 @@ object IO3 {
   trait Translate[F[_], G[_]] { def apply[A](f: F[A]): G[A] }
   type ~>[F[_], G[_]] = Translate[F, G]
 
-  val consoleToFunction0 =
-    new (Console ~> Function0) { override def apply[A](f: Console[A]) = f.toThunk }
-  val consoleToPar =
-    new (Console ~> Par) { override def apply[A](f: Console[A]): Par[A] = f.toPar }
+  val consoleToFunction0 = new (Console ~> Function0) {
+    override def apply[A](f: Console[A]): Function0[A] = f.toThunk
+  }
+  val consoleToPar = new (Console ~> Par) {
+    override def apply[A](f: Console[A]): Par[A] = f.toPar
+  }
+
+  val consoleToReader = new (Console ~> ConsoleReader) {
+    override def apply[A](f: Console[A]): ConsoleReader[A] = f.toReader
+  }
+  val consoleToState = new (Console ~> ConsoleState) {
+    override def apply[A](f: Console[A]): ConsoleState[A] = f.toState
+  }
 
   def runFree[F[_], G[_], A](free: Free[F, A])(t: F ~> G)(implicit G: Monad[G]): G[A] = step(free) match {
     case Return(a) => G.unit(a)
@@ -389,6 +414,12 @@ object IO3 {
 
   def runConsolePar[A](a: ConsoleIO[A]): Par[A] =
     runFree[Console,Par,A](a)(consoleToPar)
+
+  def runConsoleReader[A](io: ConsoleIO[A]): ConsoleReader[A] =
+    runFree[Console,ConsoleReader,A] (io)(consoleToReader)
+
+  def runConsoleState[A](io: ConsoleIO[A]): ConsoleState[A] =
+    runFree[Console,ConsoleState,A](io)(consoleToState)
 
   implicit val function0Monad = new Monad[Function0] {
     def unit[A](a: => A) = () => a
@@ -426,4 +457,40 @@ object IO3 {
        override def apply[A](f: Console[A]): () => A = f.toThunk
      })
    }
+
+  case class ConsoleReader[A](run: String => A) {
+    def map[B](f: A => B): ConsoleReader[B] =
+      ConsoleReader(r => f(run(r)))
+
+    def flatMap[B](f: A => ConsoleReader[B]): ConsoleReader[B] =
+      ConsoleReader(r => f(run(r)).run(r))
+  }
+  object ConsoleReader {
+    implicit val monad = new Monad[ConsoleReader] {
+      override def unit[A](a: => A): ConsoleReader[A] = ConsoleReader(_ => a)
+
+      override def flatMap[A, B](a: ConsoleReader[A])(f: (A) => ConsoleReader[B]): ConsoleReader[B] =
+        a flatMap f
+    }
+  }
+  // TODO: Use TailRec to make this stack safe
+  case class Buffers(in: List[String], out: List[String])
+  case class ConsoleState[A](run: Buffers => (A, Buffers)) {
+    def map[B](f: A => B): ConsoleState[B] = ConsoleState { s =>
+      val (a, s1) = run(s)
+      (f(a), s1)
+    }
+
+    def flatMap[A,B](f: A => ConsoleState[B]): ConsoleState[B] = ConsoleState { s =>
+      val (a, s1) = run(s)
+      f(a).run(s1)
+    }
+  }
+  object ConsoleState {
+    implicit val monad: Monad[ConsoleState] = new Monad[ConsoleState] {
+      override def flatMap[A, B](a: ConsoleState[A])(f: (A) => ConsoleState[B]): ConsoleState[B] = a flatMap f
+
+      override def unit[A](a: => A): ConsoleState[A] = ConsoleState(bufs => (a, bufs))
+    }
+  }
 }

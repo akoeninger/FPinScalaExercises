@@ -97,8 +97,8 @@
       <file leaf-file-name="IO.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="428" column="1" lean-forward="true" selection-start-line="428" selection-start-column="1" selection-end-line="428" selection-end-column="1" />
+            <state relative-caret-position="438">
+              <caret line="475" column="46" lean-forward="false" selection-start-line="475" selection-start-column="46" selection-end-line="475" selection-end-column="46" />
               <folding>
                 <element signature="e#24#55#0" expanded="true" />
               </folding>
@@ -1268,14 +1268,7 @@
       <workItem from="1481042424580" duration="390000" />
       <workItem from="1481045324624" duration="1556000" />
       <workItem from="1481050973083" duration="1866000" />
-      <workItem from="1481060908294" duration="229000" />
-    </task>
-    <task id="LOCAL-00134" summary="Exercise 10.3">
-      <created>1478796214610</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1478796214610</updated>
+      <workItem from="1481060908294" duration="2548000" />
     </task>
     <task id="LOCAL-00135" summary="Exercise 10.4">
       <created>1478797165156</created>
@@ -1613,11 +1606,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481046852325</updated>
     </task>
-    <option name="localTasksCounter" value="183" />
+    <task id="LOCAL-00183" summary="Exercise 13.4">
+      <created>1481061165303</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1481061165303</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="306742000" />
+    <option name="totallyTimeSpent" value="309061000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1689,7 +1689,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 11.17" />
     <MESSAGE value="Exercise 11.18" />
     <MESSAGE value="Exercise 11.20" />
     <MESSAGE value="Chapter 12 .1" />
@@ -1714,7 +1713,8 @@
     <MESSAGE value="Exercise 13.2" />
     <MESSAGE value="Exercise 13.3" />
     <MESSAGE value="Create  a restricted IO type allowing only console IO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create  a restricted IO type allowing only console IO" />
+    <MESSAGE value="Exercise 13.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 13.4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2115,8 +2115,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="428" column="1" lean-forward="true" selection-start-line="428" selection-start-column="1" selection-end-line="428" selection-end-column="1" />
+        <state relative-caret-position="438">
+          <caret line="475" column="46" lean-forward="false" selection-start-line="475" selection-start-column="46" selection-end-line="475" selection-end-column="46" />
           <folding>
             <element signature="e#24#55#0" expanded="true" />
           </folding>
