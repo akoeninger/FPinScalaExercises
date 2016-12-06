@@ -217,7 +217,7 @@ object IO2b {
     def suspend[A](a: => TailRec[A]) =
       Suspend(() => ()).flatMap(_ => a)
   }
-  def printLine(s: String): TailRec[Unit] = Suspend(() => Return(println(s)))
+  def printLine(s: String): TailRec[Unit] = Suspend(() => println(s))
   val p = TailRec.forever(printLine("Still going..."))
 
   @tailrec
@@ -239,8 +239,8 @@ object IO2bTests {
 
   val g: Int => TailRec[Int] =
     List.fill(10000)(f).foldLeft(f){
-      (a: Function1[Int, TailRec[Int]],
-        b: Function1[Int, TailRec[Int]]) => {
+      (a: (Int) => TailRec[Int],
+        b: (Int) => TailRec[Int]) => {
         (x: Int) => TailRec.suspend(a(x).flatMap(b))
       }
     }
@@ -315,6 +315,22 @@ object IO3 {
       case Return(a1) => runTrampoline { f(a) }
       case Suspend(r) => runTrampoline { f(r()) }
       case FlatMap(a0, g) => runTrampoline { a0 flatMap { a1 => g(a1) flatMap f } }
+    }
+  }
+
+  @tailrec
+  private def step[F[_], A](free: Free[F, A]): Free[F, A] = free match {
+    case FlatMap(Return(a), f) => step(f(a))
+    case FlatMap(FlatMap(x, f), g) => step(x.flatMap(a => f(a).flatMap(g)))
+    case _ => free
+  }
+
+  def run[F[_],A](free: Free[F,A])(implicit F: Monad[F]): F[A] = step(free) match {
+    case Return(a) => F.unit(a)
+    case Suspend(s) => s
+    case FlatMap(x, f) => x match {
+      case Suspend(r) => F.flatMap(r)(a => run(f(a)))
+      case _ => sys.error("Impossible due to step method")
     }
   }
 }
