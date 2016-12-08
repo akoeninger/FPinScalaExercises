@@ -416,10 +416,10 @@ object IO3 {
     runFree[Console,Par,A](a)(consoleToPar)
 
   def runConsoleReader[A](io: ConsoleIO[A]): ConsoleReader[A] =
-    runFree[Console,ConsoleReader,A] (io)(consoleToReader)
+    runFree[Console,ConsoleReader,A] (io)(consoleToReader)(ConsoleReader.monad)
 
   def runConsoleState[A](io: ConsoleIO[A]): ConsoleState[A] =
-    runFree[Console,ConsoleState,A](io)(consoleToState)
+    runFree[Console,ConsoleState,A](io)(consoleToState)(ConsoleState.monad)
 
   implicit val function0Monad = new Monad[Function0] {
     def unit[A](a: => A) = () => a
@@ -481,7 +481,7 @@ object IO3 {
       (f(a), s1)
     }
 
-    def flatMap[A,B](f: A => ConsoleState[B]): ConsoleState[B] = ConsoleState { s =>
+    def flatMap[B](f: A => ConsoleState[B]): ConsoleState[B] = ConsoleState { s =>
       val (a, s1) = run(s)
       f(a).run(s1)
     }
@@ -492,5 +492,38 @@ object IO3 {
 
       override def unit[A](a: => A): ConsoleState[A] = ConsoleState(bufs => (a, bufs))
     }
+  }
+
+  type IO[A] = Free[Par, A]
+
+  import java.nio._
+  import java.nio.channels._
+
+  def Async[A](cb: (A => Unit) => Unit): IO[A] = Suspend(Par.async(cb))
+
+  def IO[A](a: => A): IO[A] = Suspend { Par.delay(a) }
+
+  def read(
+    file: AsynchronousFileChannel,
+    fromPosition: Long,
+    numBytes: Int
+  ): Par[Either[Throwable, Array[Byte]]] = Par.async { (cb: Either[Throwable, Array[Byte]] => Unit) =>
+    val byteBuf = ByteBuffer.allocate(numBytes)
+    file.read(byteBuf, fromPosition, (), new CompletionHandler[Integer, Unit] {
+      override def completed(result: Integer, attachment: Unit): Unit = {
+        val arr = new Array[Byte](result)
+        byteBuf.slice().get(arr, 0, result)
+        cb(Right(arr))
+      }
+
+      override def failed(exc: Throwable, attachment: Unit): Unit = cb(Left(exc))
+    })
+
+  }
+
+  abstract class App {
+    import java.util.concurrent._
+
+    def unsa
   }
 }

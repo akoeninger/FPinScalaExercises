@@ -16,7 +16,7 @@ object Nonblocking {
     // 7.10 Future needs to wrap an Either or Try then wrap the run of the Future in a tray catch
     // if an exception occurs propagate the Left or Failure result instead
     def run[A](es: ExecutorService)(p: Par[A]): A = {
-      val ref = new java.util.concurrent.atomic.AtomicReference[A] // A mutable, threadsafe reference, to use for storing the result
+      val ref = new AtomicReference[A] // A mutable, threadsafe reference, to use for storing the result
       val latch = new CountDownLatch(1) // A latch which, when decremented, implies that `ref` has the result
       p(es) { a => ref.set(a); latch.countDown() } // Asynchronously set the result, and decrement the latch
       latch.await() // Block until the `latch.countDown` is invoked asynchronously

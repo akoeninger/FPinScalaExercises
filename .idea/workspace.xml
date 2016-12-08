@@ -4,6 +4,7 @@
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" />
     </list>
     <ignored path="FPiS Exercises.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,17 +30,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3798">
               <caret line="215" column="7" lean-forward="false" selection-start-line="215" selection-start-column="7" selection-end-line="215" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parsers.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5238">
-              <caret line="296" column="0" lean-forward="false" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#24#51#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,7 +42,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="738">
               <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-              <folding />
+              <folding>
+                <element signature="e#23#50#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,7 +54,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="828">
               <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
-              <folding />
+              <folding>
+                <element signature="e#22#54#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,7 +76,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="22" />
-              <folding />
+              <folding>
+                <element signature="e#24#97#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,21 +96,12 @@
       <file leaf-file-name="IO.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="475" column="46" lean-forward="false" selection-start-line="475" selection-start-column="46" selection-end-line="475" selection-end-column="46" />
+            <state relative-caret-position="870">
+              <caret line="526" column="12" lean-forward="false" selection-start-line="526" selection-start-column="12" selection-end-line="526" selection-end-column="12" />
               <folding>
                 <element signature="e#24#55#0" expanded="true" />
+                <element signature="e#15742#15759#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Monad.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/Monad.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="50" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -164,7 +154,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter8/Gen.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/pkmn/Type.scala" />
-        <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala" />
@@ -175,6 +164,7 @@
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter13/Monad.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala" />
       </list>
     </option>
@@ -236,36 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -275,6 +235,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -606,6 +580,36 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -653,27 +657,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IO2bTests">
-    <configuration default="false" name="Examples" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="main.Chapter7.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="main.Chapter7.Examples" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="exercises" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Scala Console.Scala Console">
     <configuration default="false" name="JSONExample" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -752,6 +736,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="exercises" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
+      <module name="exercises" />
+      <setting name="vmparams4" value="-Djline.terminal=NONE" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="consoleArgs" value="-usejavacp" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -1033,19 +1024,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.package (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Examples" />
-      <item index="2" class="java.lang.String" itemvalue="Application.JSONExample" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Test" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Test (1)" />
-      <item index="5" class="java.lang.String" itemvalue="Application.IO2bTests" />
+      <item index="1" class="java.lang.String" itemvalue="Application.JSONExample" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Test (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Application.IO2bTests" />
+      <item index="5" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.IO2bTests" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Test (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="3" class="java.lang.String" itemvalue="Application.JSONExample" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Examples" />
+        <item index="0" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+        <item index="1" class="java.lang.String" itemvalue="Application.IO2bTests" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Test (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="4" class="java.lang.String" itemvalue="Application.JSONExample" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
@@ -1268,14 +1259,9 @@
       <workItem from="1481042424580" duration="390000" />
       <workItem from="1481045324624" duration="1556000" />
       <workItem from="1481050973083" duration="1866000" />
-      <workItem from="1481060908294" duration="2548000" />
-    </task>
-    <task id="LOCAL-00135" summary="Exercise 10.4">
-      <created>1478797165156</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1478797165156</updated>
+      <workItem from="1481060908294" duration="3717000" />
+      <workItem from="1481123611401" duration="2601000" />
+      <workItem from="1481205565641" duration="1812000" />
     </task>
     <task id="LOCAL-00136" summary="Exercise 10.5">
       <created>1478797816260</created>
@@ -1613,11 +1599,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481061165303</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="ConsoleReader and ConsoleState">
+      <created>1481063475778</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1481063475778</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309061000" />
+    <option name="totallyTimeSpent" value="314643000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1689,7 +1682,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 11.18" />
     <MESSAGE value="Exercise 11.20" />
     <MESSAGE value="Chapter 12 .1" />
     <MESSAGE value="Chapter 12 .2&#10;&#10;The set of primitives (map2 and unit) is equivalently expressive as the set of (apply and unit)" />
@@ -1714,34 +1706,21 @@
     <MESSAGE value="Exercise 13.3" />
     <MESSAGE value="Create  a restricted IO type allowing only console IO" />
     <MESSAGE value="Exercise 13.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 13.4" />
+    <MESSAGE value="ConsoleReader and ConsoleState" />
+    <option name="LAST_COMMIT_MESSAGE" value="ConsoleReader and ConsoleState" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter10/Monoid.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2286">
-          <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/Parsers.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5238">
-          <caret line="296" column="0" lean-forward="false" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
           <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="e#23#50#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1749,7 +1728,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#22#54#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1773,7 +1754,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2286">
           <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
-          <folding />
+          <folding>
+            <element signature="e#24#51#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1789,7 +1772,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
           <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="e#23#50#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1797,7 +1782,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#22#54#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1821,7 +1808,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2358">
           <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
-          <folding />
+          <folding>
+            <element signature="e#24#51#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1837,7 +1826,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
           <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="e#23#50#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1845,7 +1836,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#22#54#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1869,7 +1862,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2358">
           <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
-          <folding />
+          <folding>
+            <element signature="e#24#51#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1885,7 +1880,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
           <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="e#23#50#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1893,7 +1890,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#22#54#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1917,7 +1916,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2358">
           <caret line="131" column="66" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
-          <folding />
+          <folding>
+            <element signature="e#24#51#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1933,7 +1934,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
           <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="e#23#50#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1941,7 +1944,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#22#54#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2005,7 +2010,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
           <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="e#23#50#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2013,7 +2020,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#22#54#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2085,15 +2094,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3798">
           <caret line="215" column="7" lean-forward="false" selection-start-line="215" selection-start-column="7" selection-end-line="215" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#24#51#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/Monad.scala">
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="50" />
-          <folding />
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="e#24#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2105,20 +2118,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Par.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1530">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding>
+            <element signature="e#23#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/Monad.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="22" />
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="475" column="46" lean-forward="false" selection-start-line="475" selection-start-column="46" selection-end-line="475" selection-end-column="46" />
+        <state relative-caret-position="870">
+          <caret line="526" column="12" lean-forward="false" selection-start-line="526" selection-start-column="12" selection-end-line="526" selection-end-column="12" />
           <folding>
             <element signature="e#24#55#0" expanded="true" />
+            <element signature="e#15742#15759#0" expanded="true" />
           </folding>
         </state>
       </provider>
