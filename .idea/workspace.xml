@@ -4,7 +4,6 @@
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" />
     </list>
     <ignored path="FPiS Exercises.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,8 +95,8 @@
       <file leaf-file-name="IO.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="526" column="12" lean-forward="false" selection-start-line="526" selection-start-column="12" selection-end-line="526" selection-end-column="12" />
+            <state relative-caret-position="762">
+              <caret line="533" column="98" lean-forward="false" selection-start-line="533" selection-start-column="98" selection-end-line="533" selection-end-column="98" />
               <folding>
                 <element signature="e#24#55#0" expanded="true" />
                 <element signature="e#15742#15759#0" expanded="true" />
@@ -119,6 +118,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -1261,14 +1263,7 @@
       <workItem from="1481050973083" duration="1866000" />
       <workItem from="1481060908294" duration="3717000" />
       <workItem from="1481123611401" duration="2601000" />
-      <workItem from="1481205565641" duration="1812000" />
-    </task>
-    <task id="LOCAL-00136" summary="Exercise 10.5">
-      <created>1478797816260</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1478797816260</updated>
+      <workItem from="1481205565641" duration="2428000" />
     </task>
     <task id="LOCAL-00137" summary="Exercise 10.6">
       <created>1478798349799</created>
@@ -1606,11 +1601,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481063475778</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="Exercise 13.5">
+      <created>1481207402206</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1481207402206</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314643000" />
+    <option name="totallyTimeSpent" value="315259000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1682,7 +1684,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Exercise 11.20" />
     <MESSAGE value="Chapter 12 .1" />
     <MESSAGE value="Chapter 12 .2&#10;&#10;The set of primitives (map2 and unit) is equivalently expressive as the set of (apply and unit)" />
     <MESSAGE value="Chapter 12 .3&#10;" />
@@ -1707,7 +1708,8 @@
     <MESSAGE value="Create  a restricted IO type allowing only console IO" />
     <MESSAGE value="Exercise 13.4" />
     <MESSAGE value="ConsoleReader and ConsoleState" />
-    <option name="LAST_COMMIT_MESSAGE" value="ConsoleReader and ConsoleState" />
+    <MESSAGE value="Exercise 13.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 13.5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2146,8 +2148,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="526" column="12" lean-forward="false" selection-start-line="526" selection-start-column="12" selection-end-line="526" selection-end-column="12" />
+        <state relative-caret-position="762">
+          <caret line="533" column="98" lean-forward="false" selection-start-line="533" selection-start-column="98" selection-end-line="533" selection-end-column="98" />
           <folding>
             <element signature="e#24#55#0" expanded="true" />
             <element signature="e#15742#15759#0" expanded="true" />
