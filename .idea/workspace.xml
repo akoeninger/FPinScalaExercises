@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter14/LocalEffects.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala" />
     </list>
@@ -87,20 +88,31 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1314">
               <caret line="79" column="7" lean-forward="false" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
-              <folding />
+              <folding>
+                <element signature="e#24#97#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IO.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IO.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="533" column="98" lean-forward="false" selection-start-line="533" selection-start-column="98" selection-end-line="533" selection-end-column="98" />
+            <state relative-caret-position="72">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
-                <element signature="e#24#55#0" expanded="true" />
-                <element signature="e#15742#15759#0" expanded="true" />
+                <element signature="e#15714#15731#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocalEffects.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter14/LocalEffects.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -168,6 +180,7 @@
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter13/Monad.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter7/Nonblocking.scala" />
         <option value="$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala" />
+        <option value="$PROJECT_DIR$/exercises/src/main/Chapter14/LocalEffects.scala" />
       </list>
     </option>
   </component>
@@ -265,6 +278,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chapter14" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1263,14 +1302,7 @@
       <workItem from="1481050973083" duration="1866000" />
       <workItem from="1481060908294" duration="3717000" />
       <workItem from="1481123611401" duration="2601000" />
-      <workItem from="1481205565641" duration="2428000" />
-    </task>
-    <task id="LOCAL-00137" summary="Exercise 10.6">
-      <created>1478798349799</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1478798349799</updated>
+      <workItem from="1481205565641" duration="4442000" />
     </task>
     <task id="LOCAL-00138" summary="Exercise 10.7">
       <created>1478806310273</created>
@@ -1608,11 +1640,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481207402206</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="Example of application with pureMain method">
+      <created>1481208017523</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1481208017523</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="315259000" />
+    <option name="totallyTimeSpent" value="317273000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1684,7 +1723,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chapter 12 .1" />
     <MESSAGE value="Chapter 12 .2&#10;&#10;The set of primitives (map2 and unit) is equivalently expressive as the set of (apply and unit)" />
     <MESSAGE value="Chapter 12 .3&#10;" />
     <MESSAGE value="Chapter 12 .4&#10;&#10;It transposes the list" />
@@ -1709,23 +1747,14 @@
     <MESSAGE value="Exercise 13.4" />
     <MESSAGE value="ConsoleReader and ConsoleState" />
     <MESSAGE value="Exercise 13.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 13.5" />
+    <MESSAGE value="Example of application with pureMain method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Example of application with pureMain method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/JSON.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding>
-            <element signature="e#23#50#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
@@ -1748,7 +1777,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#24#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1802,7 +1833,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#24#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1856,7 +1889,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#24#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1910,7 +1945,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#24#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1964,7 +2001,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#24#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1972,7 +2011,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#24#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1980,7 +2021,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#24#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1988,7 +2031,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#24#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1996,7 +2041,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#24#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2116,7 +2163,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1314">
           <caret line="79" column="7" lean-forward="false" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#24#97#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2148,12 +2197,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="533" column="98" lean-forward="false" selection-start-line="533" selection-start-column="98" selection-end-line="533" selection-end-column="98" />
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#24#55#0" expanded="true" />
-            <element signature="e#15742#15759#0" expanded="true" />
+            <element signature="e#15714#15731#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter14/LocalEffects.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

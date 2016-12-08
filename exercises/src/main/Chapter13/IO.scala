@@ -3,7 +3,6 @@ package main.Chapter13
 import scala.annotation.tailrec
 import scala.language.{higherKinds, implicitConversions, reflectiveCalls}
 
-import main.Chapter11.Monad
 import main.Chapter13.IO3.Console.ConsoleIO
 
 object IO0 {
