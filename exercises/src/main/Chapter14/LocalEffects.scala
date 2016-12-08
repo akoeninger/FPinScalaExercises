@@ -1,5 +1,6 @@
 package main.Chapter14
 
+import language.implicitConversions
 import main.Chapter11._
 
 object Mutable {
@@ -57,6 +58,7 @@ object ST {
       override protected def run(s: S): (A, S) = (memo, s)
     }
   }
+  def runST[A](st: RunnableST[A]): A = st.apply[Unit].run(())._1
 }
 
 sealed trait STRef[S,A] {
@@ -73,5 +75,30 @@ sealed trait STRef[S,A] {
 object STRef {
   def apply[S,A](a: A): ST[S, STRef[S,A]] = ST(new STRef[S,A] {
     override protected var cell: A = a
+  })
+}
+
+trait RunnableST[A] {
+  def apply[S]: ST[S,A]
+}
+
+sealed abstract class STArray[S, A](implicit manifest: Manifest[A]) {
+  protected def value: Array[A]
+  def size: ST[S, Int] = ST(value.length)
+
+  def write(i: Int, a: A): ST[S, Unit] = new ST[S, Unit] {
+    override protected def run(s: S): (Unit, S) = {
+      value(i) = a
+      ((), s)
+    }
+  }
+
+  def read(i: Int): ST[S, A] = ST(value(i))
+  def freeze: ST[S, List[A]] = ST(value.toList)
+}
+
+object STArray {
+  def apply[S, A: Manifest](sz: Int, v: A): ST[S, STArray[S,A]] = ST(new STArray[S,A] {
+    override protected lazy val value: Array[A] = Array.fill(sz)(v)
   })
 }
