@@ -1,6 +1,8 @@
 package main.Chapter14
 
 import language.implicitConversions
+import scala.collection.mutable
+
 import main.Chapter11._
 
 object Mutable {
@@ -118,6 +120,40 @@ object STArray {
     ST(new STArray[S,A] {
       override protected lazy val value: Array[A] = xs.toArray
     })
+}
+
+sealed abstract class STHashMap[S, K, V] {
+
+  protected def table: mutable.HashMap[K, V]
+
+  def size: ST[S, Int] = ST(table.size)
+
+  def put(k: K, v: V): ST[S, Unit] = new ST[S, Unit] {
+    override protected def run(s: S): (Unit, S) = {
+      table.put(k, v)
+      ((), s)
+    }
+  }
+
+  def +=(kv: (K, V)): ST[S, Unit] = ST(table += kv)
+
+  def -=(key: K): ST[S, Unit] = ST(table -= key)
+
+  def get(key: K): ST[S, Option[V]] = ST(table.get(key))
+
+  def apply(k: K): ST[S, V] = ST(table(k))
+
+}
+
+object STHashMap {
+  import scala.collection.mutable.HashMap
+  def empty[S, K, V]: ST[S, STHashMap[S, K, V]] = ST(new STHashMap[S,K,V] {
+    override protected def table: mutable.HashMap[K, V] = mutable.HashMap.empty[K, V]
+  })
+
+  def fromMap[S,K,V](m: Map[K,V]): ST[S, STHashMap[S,K,V]] = ST(new STHashMap[S,K,V] {
+    override protected def table: mutable.HashMap[K, V] = (mutable.HashMap.newBuilder ++= m).result()
+  })
 }
 
 object Immutable {
