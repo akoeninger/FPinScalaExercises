@@ -2,6 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$async$1$$anon$4.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$async$1$$anon$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$async$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$async$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$asyncF$1$$anonfun$apply$14.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$asyncF$1$$anonfun$apply$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$asyncF$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$asyncF$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8$$anonfun$apply$17$$anonfun$apply$6.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8$$anonfun$apply$17$$anonfun$apply$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1$$anon$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choice$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1$$anon$10.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1$$anon$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceMap$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1$$anon$9.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1$$anon$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$choiceN$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1$$anon$11$$anonfun$apply$19$$anonfun$apply$9.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1$$anon$11$$anonfun$apply$19$$anonfun$apply$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1$$anon$11.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1$$anon$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$chooser$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$delay$1$$anon$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$delay$1$$anon$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$delay$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$delay$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1$$anon$12$$anonfun$apply$20.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1$$anon$12$$anonfun$apply$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1$$anon$12.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1$$anon$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$flatMap$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$fork$1$$anon$3$$anonfun$apply$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$fork$1$$anon$3$$anonfun$apply$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$fork$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$fork$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$lazyUnit$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$lazyUnit$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map$1$$anon$7$$anonfun$apply$13$$anonfun$apply$4.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map$1$$anon$7$$anonfun$apply$13$$anonfun$apply$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map$1$$anon$7.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map$1$$anon$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map2$1$$anon$6$$anonfun$1$$anonfun$apply$2.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map2$1$$anon$6$$anonfun$1$$anonfun$apply$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map2$1$$anon$6$$anonfun$1$$anonfun$apply$3.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map2$1$$anon$6$$anonfun$1$$anonfun$apply$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map2$1$$anon$6.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map2$1$$anon$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map2$1.class" afterPath="$PROJECT_DIR$/out/production/exercises/main/Chapter7/Nonblocking$Par$$anonfun$map2$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter15/StreamingIO.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter15/StreamingIO.scala" />
     </list>
@@ -23,118 +52,98 @@
     <favorites_list name="FPiS Exercises" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MyParser.scala" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="828">
-                  <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
-                  <folding>
-                    <element signature="e#22#54#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="State.scala" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Applicative.scala" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="36">
-                  <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#24#97#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Monad.scala" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1314">
-                  <caret line="79" column="7" lean-forward="false" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IO.scala" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#15714#15731#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="LocalEffects.scala" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter14/LocalEffects.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="101" column="74" lean-forward="true" selection-start-line="101" selection-start-column="74" selection-end-line="101" selection-end-column="74" />
-                  <folding>
-                    <element signature="e#24#59#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="package.scala" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/package.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="307">
-                  <caret line="30" column="3" lean-forward="false" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="LocalEffects.scala" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter14/LocalEffects.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="18">
-                  <caret line="124" column="42" lean-forward="false" selection-start-line="124" selection-start-column="42" selection-end-line="124" selection-end-column="42" />
-                  <folding>
-                    <element signature="e#24#59#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="StreamingIO.scala" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter15/StreamingIO.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="397">
-                  <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#24#86#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MyParser.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter9/MyParser.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+              <folding>
+                <element signature="e#22#54#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="State.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter6/State.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Applicative.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter12/Applicative.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="22" />
+              <folding>
+                <element signature="e#24#97#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Monad.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter11/Monad.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1314">
+              <caret line="79" column="7" lean-forward="false" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IO.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/IO.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding>
+                <element signature="e#15714#15731#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocalEffects.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter14/LocalEffects.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="101" column="74" lean-forward="false" selection-start-line="101" selection-start-column="74" selection-end-line="101" selection-end-column="74" />
+              <folding>
+                <element signature="e#24#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/package.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="30" column="3" lean-forward="false" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StreamingIO.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter15/StreamingIO.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="541">
+              <caret line="68" column="3" lean-forward="true" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
+              <folding>
+                <element signature="e#24#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -290,6 +299,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chapter15" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalProgramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1241,14 +1306,7 @@
       <workItem from="1481293059955" duration="1928000" />
       <workItem from="1481323042720" duration="284000" />
       <workItem from="1481553979225" duration="1937000" />
-      <workItem from="1481637380755" duration="1845000" />
-    </task>
-    <task id="LOCAL-00145" summary="Exercise 10.15">
-      <created>1479138211787</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1479138211787</updated>
+      <workItem from="1481637380755" duration="3502000" />
     </task>
     <task id="LOCAL-00146" summary="Exercise 10.16">
       <created>1479138430470</created>
@@ -1586,11 +1644,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481638897964</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="Chapter 15.2: Simple stream transducers (or processors)">
+      <created>1481639258878</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1481639258878</updated>
+    </task>
+    <option name="localTasksCounter" value="195" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="329953000" />
+    <option name="totallyTimeSpent" value="331610000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1605,28 +1670,28 @@
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17789757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.51340485" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30784914" sideWeight="0.48659518" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256785" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18242122" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39959225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="2020" y="224" width="1720" height="856" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32619774" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39959225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1662,7 +1727,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chapter 12 .9" />
     <MESSAGE value="Chapter 12 .12&#10;&#10;Basically implemented traverse but specialized" />
     <MESSAGE value="Chapter 12 .13&#10;" />
     <MESSAGE value="Chapter 12 .14&#10;&#10;Used the Id monad&#10;" />
@@ -1687,7 +1751,8 @@
     <MESSAGE value="Exercise 14.2&#10;&#10;Pure in-line quicksort that mutates the data it recieves but in a safe way" />
     <MESSAGE value="Exercise 14.3&#10;&#10;Built a functionally pure mutable HashMap" />
     <MESSAGE value="Chapter 15: Stream processing and incremental I/O&#10;&#10;imperative example of checking if file is over 40,000 lines long using the IO monad.&#10;&#10;Not very composable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 15: Stream processing and incremental I/O&#10;&#10;imperative example of checking if file is over 40,000 lines long using the IO monad.&#10;&#10;Not very composable" />
+    <MESSAGE value="Chapter 15.2: Simple stream transducers (or processors)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 15.2: Simple stream transducers (or processors)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2065,8 +2130,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter14/LocalEffects.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="124" column="42" lean-forward="false" selection-start-line="124" selection-start-column="42" selection-end-line="124" selection-end-column="42" />
+        <state relative-caret-position="270">
+          <caret line="101" column="74" lean-forward="false" selection-start-line="101" selection-start-column="74" selection-end-line="101" selection-end-column="74" />
           <folding>
             <element signature="e#24#59#0" expanded="true" />
           </folding>
@@ -2075,7 +2140,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter13/package.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
+        <state relative-caret-position="120">
           <caret line="30" column="3" lean-forward="false" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
           <folding />
         </state>
@@ -2083,8 +2148,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter15/StreamingIO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+        <state relative-caret-position="541">
+          <caret line="68" column="3" lean-forward="true" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
           <folding>
             <element signature="e#24#86#0" expanded="true" />
           </folding>

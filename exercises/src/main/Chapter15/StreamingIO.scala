@@ -1,8 +1,9 @@
 package main.Chapter15
 
-import language.{implicitConversions, higherKinds, postfixOps}
+import language.{higherKinds, implicitConversions, postfixOps}
 
-import main.Chapter13.{IO, Monad, Free, unsafePerformIO}
+import main.Chapter13.{Free, IO, Monad, unsafePerformIO}
+import main.Chapter15.SimpleStreamTransducers.Halt
 
 object ImperativeAndLazyIO {
   def linesGt40k(filename: String): IO[Boolean] = IO {
@@ -56,4 +57,30 @@ object SimpleStreamTransducers {
     emitting a value to the output (`Emit`), reading a value from its
     input (`Await`) or signaling termination via `Halt`.
                                */
+  sealed trait Process[I, O] {
+    import Process._
+    def apply(s: Stream[I]): Stream[O] = this match {
+      case Emit(head, tail) => head #:: tail(s)
+      case Await(recv) => s match {
+        case h #:: t => recv(Some(h))(t)
+        case xs => recv(None)(xs)
+      }
+      case Halt() => Stream()
+    }
+  }
+
+  object Process {
+    case class Emit[I, O](head: O, tail: Process[I, O] = Halt[I, O]()) extends Process[I, O]
+      case class Await[I, O](recv: Option[I] => Process[I, O]) extends Process[I, O]
+      case class Halt[I, O]() extends Process[I, O]
+
+
+    def liftOne[I, O](f: I => O): Process[I, O] = Await {
+      case Some(i) => Emit(f(i))
+      case None => Halt()
+    }
+  }
+
 }
+
+
