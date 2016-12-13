@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter13/package.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter15/StreamingIO.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/Chapter15/StreamingIO.scala" afterPath="$PROJECT_DIR$/exercises/src/main/Chapter15/StreamingIO.scala" />
     </list>
     <ignored path="FPiS Exercises.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -124,8 +123,8 @@
           <file leaf-file-name="StreamingIO.scala" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter15/StreamingIO.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+                <state relative-caret-position="397">
+                  <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
                   <folding>
                     <element signature="e#24#86#0" expanded="true" />
                   </folding>
@@ -1242,14 +1241,7 @@
       <workItem from="1481293059955" duration="1928000" />
       <workItem from="1481323042720" duration="284000" />
       <workItem from="1481553979225" duration="1937000" />
-      <workItem from="1481637380755" duration="1439000" />
-    </task>
-    <task id="LOCAL-00144" summary="Exercise 10.13 and 14&#10;&#10;The OptionFoldable could have been implemented using only matches but I wanted to try variety">
-      <created>1479137813652</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1479137813653</updated>
+      <workItem from="1481637380755" duration="1845000" />
     </task>
     <task id="LOCAL-00145" summary="Exercise 10.15">
       <created>1479138211787</created>
@@ -1587,11 +1579,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481555905375</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="Chapter 15: Stream processing and incremental I/O&#10;&#10;imperative example of checking if file is over 40,000 lines long using the IO monad.&#10;&#10;Not very composable">
+      <created>1481638897963</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1481638897964</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="329547000" />
+    <option name="totallyTimeSpent" value="329953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1663,7 +1662,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Chapter 12 .8" />
     <MESSAGE value="Chapter 12 .9" />
     <MESSAGE value="Chapter 12 .12&#10;&#10;Basically implemented traverse but specialized" />
     <MESSAGE value="Chapter 12 .13&#10;" />
@@ -1688,7 +1686,8 @@
     <MESSAGE value="Exercise 14.1" />
     <MESSAGE value="Exercise 14.2&#10;&#10;Pure in-line quicksort that mutates the data it recieves but in a safe way" />
     <MESSAGE value="Exercise 14.3&#10;&#10;Built a functionally pure mutable HashMap" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 14.3&#10;&#10;Built a functionally pure mutable HashMap" />
+    <MESSAGE value="Chapter 15: Stream processing and incremental I/O&#10;&#10;imperative example of checking if file is over 40,000 lines long using the IO monad.&#10;&#10;Not very composable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 15: Stream processing and incremental I/O&#10;&#10;imperative example of checking if file is over 40,000 lines long using the IO monad.&#10;&#10;Not very composable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2084,8 +2083,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/Chapter15/StreamingIO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="397">
+          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
           <folding>
             <element signature="e#24#86#0" expanded="true" />
           </folding>
