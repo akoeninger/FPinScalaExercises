@@ -106,8 +106,15 @@ object SimpleStreamTransducers {
       case Some(i) if p(i) => emit[I, I](i)
       case _ => Halt()
     }.repeat
-  }
 
+    def sum: Process[Double, Double] = {
+      def go(acc: Double): Process[Double, Double] = Await {
+        case Some(d) => emit(d + acc, go(d + acc))
+        case None => Halt()
+      }
+      go(0.0)
+    }
+  }
 }
 
 
