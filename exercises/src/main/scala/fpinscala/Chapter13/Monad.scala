@@ -1,4 +1,4 @@
-package main.scala.Chapter13
+package fpinscala.Chapter13
 
 import language.{higherKinds, implicitConversions}
 

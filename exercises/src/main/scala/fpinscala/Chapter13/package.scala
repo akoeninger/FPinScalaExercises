@@ -1,8 +1,8 @@
-package main
+package fpinscala
 
 import language.higherKinds
 package object Chapter13 {
-  import main.scala.Chapter7.Nonblocking._
+  import Chapter7.Nonblocking._
 
   type IO[A] = IO3.IO[A]
   type Free[F[_], A] = IO3.Free[F, A]

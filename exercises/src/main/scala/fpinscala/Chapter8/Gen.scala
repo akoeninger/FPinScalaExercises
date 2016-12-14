@@ -1,10 +1,10 @@
-package main.scala.Chapter8
+package fpinscala.Chapter8
 
-import main.Chapter5.Stream
-import main.scala.Chapter6._
-import main.scala.Chapter7._
-import main.scala.Chapter7.Par.Par
-import main.scala.Chapter7.Par.toParOps
+import fpinscala.Chapter5.Stream
+import fpinscala.Chapter6._
+import fpinscala.Chapter7._
+import fpinscala.Chapter7.Par.Par
+import fpinscala.Chapter7.Par.toParOps
 import Gen._
 import Prop._
 import language.postfixOps

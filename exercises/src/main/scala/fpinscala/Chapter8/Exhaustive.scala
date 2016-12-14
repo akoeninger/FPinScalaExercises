@@ -1,16 +1,16 @@
-package main.scala.Chapter8.exhaustive
+package fpinscala.Chapter8.exhaustive
 
 import java.util.concurrent.{ExecutorService, Executors}
 
 import scala.language.{implicitConversions, postfixOps}
 
-import main.Chapter5.{Cons, Stream}
-import main.scala.Chapter6.{RNG, State}
-import main.scala.Chapter7.Par.Par
-import main.scala.Chapter7._
-import main.scala.Chapter8.exhaustive.Gen._
-import main.scala.Chapter8.exhaustive.Prop._
-import main.scala.Chapter8.exhaustive.Status._
+import fpinscala.Chapter5.{Cons, Stream}
+import fpinscala.Chapter6.{RNG, State}
+import fpinscala.Chapter7.Par.Par
+import fpinscala.Chapter7._
+import fpinscala.Chapter8.exhaustive.Gen._
+import fpinscala.Chapter8.exhaustive.Prop._
+import fpinscala.Chapter8.exhaustive.Status._
 
 /*
 This source file contains the answers to the last two exercises in the section

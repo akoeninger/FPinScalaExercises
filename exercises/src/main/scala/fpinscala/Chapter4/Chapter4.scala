@@ -1,6 +1,6 @@
-package main.scala.Chapter4
+package fpinscala.Chapter4
 
-import main.Chapter4.Some
+import fpinscala.Chapter4.Some
 
 object Chapter4 {
 

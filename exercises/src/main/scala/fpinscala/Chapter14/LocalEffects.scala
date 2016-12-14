@@ -1,9 +1,9 @@
-package main.scala.Chapter14
+package fpinscala.Chapter14
 
 import language.implicitConversions
 import scala.collection.mutable
 
-import main.scala.Chapter11._
+import fpinscala.Chapter11._
 
 object Mutable {
   def quicksort(xs: List[Int]): List[Int] = if (xs.isEmpty) xs else {

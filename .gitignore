@@ -53,3 +53,6 @@ project/boot/
 .history
 .cache
 
+!/.idea/
+/.idea/
+/root.iml

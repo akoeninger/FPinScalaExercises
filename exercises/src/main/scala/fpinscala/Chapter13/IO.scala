@@ -1,9 +1,9 @@
-package main.scala.Chapter13
+package fpinscala.Chapter13
 
 import scala.annotation.tailrec
 import scala.language.{higherKinds, implicitConversions, reflectiveCalls}
 
-import main.scala.Chapter13.IO3.Console.ConsoleIO
+import fpinscala.Chapter13.IO3.Console.ConsoleIO
 
 object IO0 {
   trait IO { self =>
@@ -131,7 +131,7 @@ object IO1 {
 
     val factorialREPL: IO[Unit] = sequence_(
       IO { println(helpstring) },
-      doWhile { IO { readLine } } { line =>
+      doWhile { IO { scala.io.StdIn.readLine() } } { line =>
         val ok = line != "q"
         when (ok) { for {
           n <- factorial(line.toInt)
@@ -173,7 +173,7 @@ object IO2a {
 }
 
 object IO2aTests {
-  import IO2a._
+  import fpinscala.Chapter13.IO2a._
 
   /*
   Pg 240: REPL session has a typo, should be:
@@ -187,12 +187,12 @@ object IO2aTests {
   }
    */
 
-  val f: Int => IO[Int] = (i: Int) => Return(i)
+  val f: Int => IO2a.IO[Int] = (i: Int) => Return(i)
 
-  val g: Int => IO[Int] =
+  val g: Int => IO2a.IO[Int] =
     List.fill(10000)(f).foldLeft(f){
-      (a: Function1[Int, IO[Int]],
-        b: Function1[Int, IO[Int]]) => {
+      (a: Function1[Int, IO2a.IO[Int]],
+        b: Function1[Int, IO2a.IO[Int]]) => {
         (x: Int) => IO.suspend(a(x).flatMap(b))
       }
     }
@@ -255,7 +255,7 @@ object IO2bTests {
 }
 
 object IO2c {
-  import main.scala.Chapter7.Nonblocking._
+  import fpinscala.Chapter7.Nonblocking._
 
   sealed trait Async[A] {
     def flatMap[B](f: A => Async[B]): Async[B] = FlatMap(this, f)
@@ -288,7 +288,7 @@ object IO2c {
 }
 
 object IO3 {
-  import main.scala.Chapter7.Nonblocking.Par
+  import fpinscala.Chapter7.Nonblocking.Par
 
   sealed trait Free[F[_], A] {
     def flatMap[B](f: A => Free[F,B]): Free[F,B] =
@@ -336,7 +336,7 @@ object IO3 {
     }
   }
 
-  import main.scala.Chapter7.Nonblocking.Par
+  import fpinscala.Chapter7.Nonblocking.Par
 
   sealed trait Console[A] {
     def toPar: Par[A]

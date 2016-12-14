@@ -1,4 +1,4 @@
-package main.Chapter3
+package fpinscala.Chapter3
 
 sealed trait Tree[+A]
 case class Leaf[A](value: A) extends Tree[A]

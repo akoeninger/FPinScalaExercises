@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/functionalprogramming-build.iml" filepath="$PROJECT_DIR$/.idea/modules/functionalprogramming-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/exercises.iml" filepath="$PROJECT_DIR$/.idea/modules/exercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/exercises-build.iml" filepath="$PROJECT_DIR$/.idea/modules/exercises-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fpinscala.iml" filepath="$PROJECT_DIR$/.idea/modules/fpinscala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fpinscala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/fpinscala-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/root.iml" filepath="$PROJECT_DIR$/root.iml" />
     </modules>
   </component>

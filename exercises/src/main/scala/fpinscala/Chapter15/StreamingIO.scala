@@ -1,8 +1,8 @@
-package main.scala.Chapter15
+package fpinscala.Chapter15
 
 import language.{higherKinds, implicitConversions, postfixOps}
 
-import main.scala.Chapter13.{Free, IO, Monad, unsafePerformIO}
+import fpinscala.Chapter13.{Free, IO, Monad, unsafePerformIO}
 
 object ImperativeAndLazyIO {
   def linesGt40k(filename: String): IO[Boolean] = IO {
@@ -56,7 +56,7 @@ object SimpleStreamTransducers {
     emitting a value to the output (`Emit`), reading a value from its
     input (`Await`) or signaling termination via `Halt`.
                                */
-  sealed trait Process[I, O] {
+  sealed trait Process[-I, +O] {
     import Process._
     def apply(s: Stream[I]): Stream[O] = this match {
       case Emit(head, tail) => head #:: tail(s)
@@ -85,12 +85,27 @@ object SimpleStreamTransducers {
     case class Await[I, O](recv: Option[I] => Process[I, O]) extends Process[I, O]
     case class Halt[I, O]() extends Process[I, O]
 
+    def emit[I, O](h: O, t: Process[I, O] = Halt[I, O]()): Process[I, O] = Emit(h, t)
+
+    def await[I, O](
+      f: I => Process[I, O],
+      fallback: Process[I, O] = Halt[I, O]()
+    ): Process[I ,O] = Await {
+      case Some(i) => f(i)
+      case None => fallback
+    }
+
     def liftOne[I, O](f: I => O): Process[I, O] = Await {
-      case Some(i) => Emit(f(i))
+      case Some(i) => emit(f(i))
       case None => Halt()
     }
 
     def lift[I, O](f: I => O): Process[I, O] = liftOne(f).repeat
+
+    def filter[I](p: I => Boolean): Process[I, I] = Await[I, I] {
+      case Some(i) if p(i) => emit[I, I](i)
+      case _ => Halt()
+    }.repeat
   }
 
 }

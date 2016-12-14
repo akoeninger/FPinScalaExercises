@@ -1,11 +1,11 @@
-package main.scala.Chapter9
+package fpinscala.Chapter9
 
 import language.higherKinds
 import language.implicitConversions
 import scala.util.matching.Regex
 
-import main.scala.Chapter8._
-import main.scala.Chapter8.Prop._
+import fpinscala.Chapter8._
+import fpinscala.Chapter8.Prop._
 
 trait Parsers[Parser[+_]] {
   self => // so inner classes may call methods of trait

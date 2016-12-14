@@ -1,4 +1,4 @@
-package functional.Chapter6
+package fpinscala.Chapter6
 
 case class State[S, +A](run: S => (A, S)) {
   import State._

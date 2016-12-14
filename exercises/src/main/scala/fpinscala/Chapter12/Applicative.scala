@@ -1,12 +1,12 @@
-package main.scala.Chapter12
+package fpinscala.Chapter12
 
 import scala.language.{higherKinds, implicitConversions, reflectiveCalls}
 
-import main.scala.Chapter10._
-import main.scala.Chapter11.Functor
-import main.scala.Chapter12.StateUtil._
-import main.scala.Chapter6.State
-import main.scala.Chapter6._
+import fpinscala.Chapter10._
+import fpinscala.Chapter11.Functor
+import fpinscala.Chapter12.StateUtil._
+import fpinscala.Chapter6.State
+import fpinscala.Chapter6._
 
 trait Applicative[F[_]] extends Functor[F] {
 

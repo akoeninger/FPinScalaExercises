@@ -1,10 +1,10 @@
-package main.scala.Chapter10
+package fpinscala.Chapter10
 
 import language.higherKinds
 
-import main.scala.Chapter7.Nonblocking._
-import main.scala.Chapter7.Nonblocking.Par._
-import main.scala.Chapter8._
+import fpinscala.Chapter7.Nonblocking._
+import fpinscala.Chapter7.Nonblocking.Par._
+import fpinscala.Chapter8._
 
 trait Monoid[A] {
   def op(a1: A, a2: A): A

@@ -1,4 +1,4 @@
-package main.scala.Chapter5
+package fpinscala.Chapter5
 
 import scala.annotation.tailrec
 import scala.collection.mutable.ListBuffer

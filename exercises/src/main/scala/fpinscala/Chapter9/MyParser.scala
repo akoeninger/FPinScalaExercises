@@ -1,4 +1,4 @@
-package main.scala.Chapter9
+package fpinscala.Chapter9
 import scala.util.matching.Regex
 
 import MyParserTypes._

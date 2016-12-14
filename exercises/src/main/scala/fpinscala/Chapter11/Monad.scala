@@ -1,12 +1,12 @@
-package main.scala.Chapter11
+package fpinscala.Chapter11
 
 import scala.language.{higherKinds, implicitConversions, reflectiveCalls}
 
-import main.scala.Chapter6._
-import main.scala.Chapter7.Par._
-import main.scala.Chapter7._
-import main.scala.Chapter8._
-import main.scala.Chapter9._
+import fpinscala.Chapter6._
+import fpinscala.Chapter7.Par._
+import fpinscala.Chapter7._
+import fpinscala.Chapter8._
+import fpinscala.Chapter9._
 
 
 trait Functor[F[_]] {

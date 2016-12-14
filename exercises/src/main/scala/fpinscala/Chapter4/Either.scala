@@ -1,4 +1,4 @@
-package main.scala.Chapter4
+package fpinscala.Chapter4
 
 sealed trait Either[+E, +A] {
   def mean(xs: IndexedSeq[Double]): Either[String, Double] =

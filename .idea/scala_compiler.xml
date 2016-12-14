@@ -3,6 +3,6 @@
   <component name="ScalaCompilerConfiguration">
     <option name="postfixOps" value="true" />
     <option name="implicitConversions" value="true" />
-    <profile name="SBT 1" modules="functionalprogramming" />
+    <profile name="SBT 1" modules="functionalprogramming,fpinscala,exercises" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package main.scala.Chapter7
+package fpinscala.Chapter7
 
 import java.util.concurrent.{Callable, CountDownLatch, ExecutorService}
 import java.util.concurrent.atomic.AtomicReference
