@@ -67,6 +67,18 @@ object SimpleStreamTransducers {
       }
       case Halt() => Stream()
     }
+
+    def repeat: Process[I, O] = {
+      def go(p: Process[I, O]): Process[I, O] = p match {
+        case Emit(head, tail) => Emit(head, go(tail))
+        case Await(recv) => Await {
+          case None => recv(None)
+          case i => go(recv(i))
+        }
+        case Halt() => go(this)
+      }
+      go(this)
+    }
   }
 
   object Process {
