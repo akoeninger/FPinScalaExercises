@@ -1,41 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Added filter Process that awaits some input and if it matches the predicate emits it the output. The call to repeat makes sure the Process keeps going until the input stream is exhausted.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter2/MyModule.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/Build.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/functionalprogramming-build.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/functionalprogramming.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sbt.xml" afterPath="$PROJECT_DIR$/.idea/sbt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
+    <list default="true" id="f5c06f28-1486-457c-8535-645258a4bd44" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter10/Monoid.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter10/Monoid.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter11/Monad.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter11/Monad.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter12/Applicative.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter12/Applicative.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter13/IO.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter13/IO.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter13/Monad.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter13/Monad.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter13/package.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter13/package.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter14/LocalEffects.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter14/LocalEffects.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter3/Chapter3.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter3/Chapter3.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter3/List.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter3/List.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter3/Tree.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter3/Tree.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter4/Chapter4.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter4/Chapter4.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter4/Either.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter4/Either.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter4/Option.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter4/Option.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter5/Stream.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter5/Stream.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter6/State.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter6/State.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter7/Actor.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter7/Actor.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter7/Nonblocking.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter7/Nonblocking.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter7/Par.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter7/Par.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter8/Exhaustive.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter8/Exhaustive.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter8/Gen.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter8/Gen.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter9/JSON.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter9/JSON.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter9/MyParser.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter9/MyParser.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter9/Parsers.scala" afterPath="$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter9/Parsers.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/root.iml" afterPath="$PROJECT_DIR$/root.iml" />
     </list>
     <ignored path="FPiS Exercises.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1287,14 +1254,7 @@
       <workItem from="1481637380755" duration="3525000" />
       <workItem from="1481721910060" duration="2046000" />
       <workItem from="1481723997479" duration="2384000" />
-      <workItem from="1481726761587" duration="2770000" />
-    </task>
-    <task id="LOCAL-00148" summary="Exercise 10.18">
-      <created>1479140097887</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1479140097887</updated>
+      <workItem from="1481726761587" duration="2806000" />
     </task>
     <task id="LOCAL-00149" summary="Filler">
       <created>1479140360955</created>
@@ -1632,11 +1592,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481722311153</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Added filter Process that awaits some input and if it matches the predicate emits it the output. The call to repeat makes sure the Process keeps going until the input stream is exhausted.">
+      <created>1481729561381</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1481729561381</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="338833000" />
+    <option name="totallyTimeSpent" value="338869000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1649,10 +1616,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.092708334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1709,6 +1676,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Chapter 12 .16&#10;" />
     <MESSAGE value="Chapter 12 .17&#10;" />
     <MESSAGE value="Chapter 12 .18&#10;" />
@@ -1809,6 +1777,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1816,6 +1785,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
