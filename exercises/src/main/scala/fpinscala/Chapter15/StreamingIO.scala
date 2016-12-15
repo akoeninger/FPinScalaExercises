@@ -134,6 +134,12 @@ object SimpleStreamTransducers {
     )
 
     def id[I]: Process[I,I] = lift(identity)
+
+    def count[I]: Process[I, Int] = {
+      def go(acc: Int): Process[I, Int] =
+        await[I, Int](i => emit(acc + 1, go(acc + 1)))
+      go(0)
+    }
   }
 }
 
