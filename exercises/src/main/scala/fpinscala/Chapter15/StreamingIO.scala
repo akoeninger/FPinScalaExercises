@@ -108,12 +108,32 @@ object SimpleStreamTransducers {
     }.repeat
 
     def sum: Process[Double, Double] = {
-      def go(acc: Double): Process[Double, Double] = Await {
-        case Some(d) => emit(d + acc, go(d + acc))
-        case None => Halt()
-      }
+      def go(acc: Double): Process[Double, Double] =
+        await[Double, Double](d => emit(d+acc, go(d+acc)))
       go(0.0)
     }
+
+    def take[I](n: Int): Process[I, I] = {
+      if (n <= 0) Halt()
+      else await[I, I](i => emit(i, take[I](n - 1)))
+    }
+
+    def drop[I](n: Int): Process[I, I] = {
+      if (n <= 0) id
+      else await[I, I](i => drop[I](n - 1))
+    }
+
+    def takeWhile[I](f: I => Boolean): Process[I, I] = await(i =>
+      if (f(i)) emit(i, takeWhile(f))
+      else Halt()
+    )
+
+    def dropWhile[I](f: I => Boolean): Process[I, I] = await(i =>
+      if (f(i)) dropWhile(f)
+      else emit(i, id)
+    )
+
+    def id[I]: Process[I,I] = lift(identity)
   }
 }
 

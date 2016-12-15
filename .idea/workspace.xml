@@ -58,9 +58,11 @@
       <file leaf-file-name="StreamingIO.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="116" column="3" lean-forward="false" selection-start-line="116" selection-start-column="3" selection-end-line="116" selection-end-column="3" />
-              <folding />
+            <state relative-caret-position="719">
+              <caret line="127" column="17" lean-forward="true" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
+              <folding>
+                <element signature="e#29#91#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -198,7 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -228,6 +229,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -885,7 +887,7 @@
     </configuration>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1481729793659" />
+    <option name="lastUpdateTimestamp" value="1481817274348" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -1134,14 +1136,10 @@
       <workItem from="1481721910060" duration="2046000" />
       <workItem from="1481723997479" duration="2384000" />
       <workItem from="1481726761587" duration="2969000" />
-      <workItem from="1481729778453" duration="944000" />
-    </task>
-    <task id="LOCAL-00149" summary="Filler">
-      <created>1479140360955</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1479140360955</updated>
+      <workItem from="1481729778453" duration="1058000" />
+      <workItem from="1481740831842" duration="43000" />
+      <workItem from="1481812387311" duration="1677000" />
+      <workItem from="1481817262266" duration="1991000" />
     </task>
     <task id="LOCAL-00150" summary="Start Chapter 11 Ex 1">
       <created>1479242938656</created>
@@ -1479,11 +1477,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481729561381</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Added sum">
+      <created>1481730873422</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1481730873423</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339976000" />
+    <option name="totallyTimeSpent" value="343801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1557,7 +1562,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Chapter 12 .16&#10;" />
     <MESSAGE value="Chapter 12 .17&#10;" />
     <MESSAGE value="Chapter 12 .18&#10;" />
     <MESSAGE value="Chapter 12 .19&#10;" />
@@ -1582,7 +1586,8 @@
     <MESSAGE value="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Process" />
     <MESSAGE value="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Added repeat to Process that will repeat the same process forever" />
     <MESSAGE value="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Added filter Process that awaits some input and if it matches the predicate emits it the output. The call to repeat makes sure the Process keeps going until the input stream is exhausted." />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Added filter Process that awaits some input and if it matches the predicate emits it the output. The call to repeat makes sure the Process keeps going until the input stream is exhausted." />
+    <MESSAGE value="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Added sum" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Added sum" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1833,7 +1838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1841,7 +1845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1849,9 +1852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="206" column="13" lean-forward="false" selection-start-line="206" selection-start-column="13" selection-end-line="206" selection-end-column="13" />
-          <folding>
-            <element signature="e#29#60#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1859,17 +1859,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-          <folding>
-            <element signature="e#29#102#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="116" column="3" lean-forward="false" selection-start-line="116" selection-start-column="3" selection-end-line="116" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="719">
+          <caret line="127" column="17" lean-forward="true" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
+          <folding>
+            <element signature="e#29#91#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
