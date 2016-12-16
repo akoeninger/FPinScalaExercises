@@ -58,8 +58,8 @@
       <file leaf-file-name="StreamingIO.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="834">
-              <caret line="158" column="5" lean-forward="false" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
+            <state relative-caret-position="690">
+              <caret line="141" column="27" lean-forward="true" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
               <folding>
                 <element signature="e#29#91#0" expanded="true" />
               </folding>
@@ -1141,14 +1141,7 @@
       <workItem from="1481812387311" duration="1677000" />
       <workItem from="1481817262266" duration="2137000" />
       <workItem from="1481822833582" duration="1093000" />
-      <workItem from="1481902307930" duration="1480000" />
-    </task>
-    <task id="LOCAL-00153" summary="Exercise 11.4&#10;&#10;Nice use of sequence">
-      <created>1479249574646</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1479249574646</updated>
+      <workItem from="1481902307930" duration="1807000" />
     </task>
     <task id="LOCAL-00154" summary="Exercise 11.6">
       <created>1479496032053</created>
@@ -1486,11 +1479,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481903568794</updated>
     </task>
-    <option name="localTasksCounter" value="202" />
+    <task id="LOCAL-00202" summary="Add loop combinator">
+      <created>1481903799120</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1481903799120</updated>
+    </task>
+    <option name="localTasksCounter" value="203" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346520000" />
+    <option name="totallyTimeSpent" value="346847000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1564,7 +1564,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Start of Chapter13&#10;&#10;External effect s and I/O" />
     <MESSAGE value="Chapter work thru 13.4" />
     <MESSAGE value="Exercise 13.1" />
     <MESSAGE value="Exercise 13.2" />
@@ -1589,7 +1588,8 @@
     <MESSAGE value="Chapter 15 Exercise 1" />
     <MESSAGE value="Chapter 15 Exercise 2" />
     <MESSAGE value="Chapter 15 Exercise 3&#10;&#10;Calculate running mean" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 15 Exercise 3&#10;&#10;Calculate running mean" />
+    <MESSAGE value="Add loop combinator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add loop combinator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1864,8 +1864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="834">
-          <caret line="158" column="5" lean-forward="false" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
+        <state relative-caret-position="690">
+          <caret line="141" column="27" lean-forward="true" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
           <folding>
             <element signature="e#29#91#0" expanded="true" />
           </folding>

@@ -107,11 +107,7 @@ object SimpleStreamTransducers {
       case _ => Halt()
     }.repeat
 
-    def sum: Process[Double, Double] = {
-      def go(acc: Double): Process[Double, Double] =
-        await[Double, Double](d => emit(d+acc, go(d+acc)))
-      go(0.0)
-    }
+    def sum: Process[Double, Double] = loop(0.0)((d, s) => (d + s, d + s))
 
     def take[I](n: Int): Process[I, I] = {
       if (n <= 0) Halt()
@@ -135,11 +131,7 @@ object SimpleStreamTransducers {
 
     def id[I]: Process[I,I] = lift(identity)
 
-    def count[I]: Process[I, Int] = {
-      def go(acc: Int): Process[I, Int] =
-        await[I, Int](i => emit(acc + 1, go(acc + 1)))
-      go(0)
-    }
+    def count[I]: Process[I, Int] = loop(0)((_, s) => (s + 1, s + 1))
 
     def mean: Process[Double, Double] = {
       def go(accMean: Double, count: Int): Process[Double, Double] = Await {
