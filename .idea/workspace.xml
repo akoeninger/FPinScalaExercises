@@ -58,8 +58,8 @@
       <file leaf-file-name="StreamingIO.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+            <state relative-caret-position="834">
+              <caret line="158" column="5" lean-forward="false" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
               <folding>
                 <element signature="e#29#91#0" expanded="true" />
               </folding>
@@ -1141,14 +1141,7 @@
       <workItem from="1481812387311" duration="1677000" />
       <workItem from="1481817262266" duration="2137000" />
       <workItem from="1481822833582" duration="1093000" />
-      <workItem from="1481902307930" duration="1245000" />
-    </task>
-    <task id="LOCAL-00152" summary="Exercise 11.3">
-      <created>1479249390239</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1479249390239</updated>
+      <workItem from="1481902307930" duration="1480000" />
     </task>
     <task id="LOCAL-00153" summary="Exercise 11.4&#10;&#10;Nice use of sequence">
       <created>1479249574646</created>
@@ -1486,11 +1479,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481823921596</updated>
     </task>
-    <option name="localTasksCounter" value="201" />
+    <task id="LOCAL-00201" summary="Chapter 15 Exercise 3&#10;&#10;Calculate running mean">
+      <created>1481903568793</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1481903568794</updated>
+    </task>
+    <option name="localTasksCounter" value="202" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346285000" />
+    <option name="totallyTimeSpent" value="346520000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1564,7 +1564,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Chapter 12 .19&#10;" />
     <MESSAGE value="Start of Chapter13&#10;&#10;External effect s and I/O" />
     <MESSAGE value="Chapter work thru 13.4" />
     <MESSAGE value="Exercise 13.1" />
@@ -1589,7 +1588,8 @@
     <MESSAGE value="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Added sum" />
     <MESSAGE value="Chapter 15 Exercise 1" />
     <MESSAGE value="Chapter 15 Exercise 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 15 Exercise 2" />
+    <MESSAGE value="Chapter 15 Exercise 3&#10;&#10;Calculate running mean" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 15 Exercise 3&#10;&#10;Calculate running mean" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1864,8 +1864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+        <state relative-caret-position="834">
+          <caret line="158" column="5" lean-forward="false" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
           <folding>
             <element signature="e#29#91#0" expanded="true" />
           </folding>
