@@ -58,8 +58,8 @@
       <file leaf-file-name="StreamingIO.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="138" column="41" lean-forward="true" selection-start-line="138" selection-start-column="41" selection-end-line="138" selection-end-column="41" />
+            <state relative-caret-position="870">
+              <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
               <folding>
                 <element signature="e#29#91#0" expanded="true" />
               </folding>
@@ -200,8 +200,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPiS Exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -406,34 +434,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="fpinscala" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FPiS Exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -887,7 +887,7 @@
     </configuration>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1481822841054" />
+    <option name="lastUpdateTimestamp" value="1481902320829" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -1140,14 +1140,8 @@
       <workItem from="1481740831842" duration="43000" />
       <workItem from="1481812387311" duration="1677000" />
       <workItem from="1481817262266" duration="2137000" />
-      <workItem from="1481822833582" duration="1074000" />
-    </task>
-    <task id="LOCAL-00151" summary="Exercise 11.2">
-      <created>1479243846873</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1479243846873</updated>
+      <workItem from="1481822833582" duration="1093000" />
+      <workItem from="1481902307930" duration="1245000" />
     </task>
     <task id="LOCAL-00152" summary="Exercise 11.3">
       <created>1479249390239</created>
@@ -1485,11 +1479,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481819850053</updated>
     </task>
-    <option name="localTasksCounter" value="200" />
+    <task id="LOCAL-00200" summary="Chapter 15 Exercise 2">
+      <created>1481823921596</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1481823921596</updated>
+    </task>
+    <option name="localTasksCounter" value="201" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345021000" />
+    <option name="totallyTimeSpent" value="346285000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1563,7 +1564,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Chapter 12 .18&#10;" />
     <MESSAGE value="Chapter 12 .19&#10;" />
     <MESSAGE value="Start of Chapter13&#10;&#10;External effect s and I/O" />
     <MESSAGE value="Chapter work thru 13.4" />
@@ -1588,7 +1588,8 @@
     <MESSAGE value="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Added filter Process that awaits some input and if it matches the predicate emits it the output. The call to repeat makes sure the Process keeps going until the input stream is exhausted." />
     <MESSAGE value="Chapter 15.2: Simple stream transducers (or processors)&#10;&#10;Added sum" />
     <MESSAGE value="Chapter 15 Exercise 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 15 Exercise 1" />
+    <MESSAGE value="Chapter 15 Exercise 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 15 Exercise 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1863,8 +1864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="138" column="41" lean-forward="true" selection-start-line="138" selection-start-column="41" selection-end-line="138" selection-end-column="41" />
+        <state relative-caret-position="870">
+          <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
           <folding>
             <element signature="e#29#91#0" expanded="true" />
           </folding>

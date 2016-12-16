@@ -140,6 +140,17 @@ object SimpleStreamTransducers {
         await[I, Int](i => emit(acc + 1, go(acc + 1)))
       go(0)
     }
+
+    def mean: Process[Double, Double] = {
+      def go(accMean: Double, count: Int): Process[Double, Double] = Await {
+        case Some(x) =>
+          val count1 = count + 1
+          val mean = accMean + (x - accMean) / count1
+          emit(mean, go(mean, count1))
+        case None => Halt()
+      }
+      go(0.0, 0)
+    }
   }
 }
 
