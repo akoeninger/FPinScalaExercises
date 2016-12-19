@@ -78,6 +78,16 @@ object SimpleStreamTransducers {
       }
       go(this)
     }
+
+    def |>[O2](p2: Process[O, O2]): Process[I, O2] = p2 match {
+      case Halt() => Halt()
+      case Emit(head, tail) => Emit(head, this |> tail)
+      case Await(f) => this match {
+        case Halt() => Halt() |> f(None)
+        case Emit(head, tail) => tail |> f(Some(head))
+        case Await(g) => Await((i: Option[I]) => g(i) |> p2)
+      }
+    }
   }
 
   object Process {
