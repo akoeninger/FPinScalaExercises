@@ -58,8 +58,8 @@
       <file leaf-file-name="StreamingIO.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="87" column="59" lean-forward="false" selection-start-line="87" selection-start-column="59" selection-end-line="87" selection-end-column="59" />
+            <state relative-caret-position="438">
+              <caret line="122" column="105" lean-forward="false" selection-start-line="122" selection-start-column="105" selection-end-line="122" selection-end-column="105" />
               <folding>
                 <element signature="e#29#91#0" expanded="true" />
               </folding>
@@ -1436,7 +1436,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Exercise 13.1" />
     <MESSAGE value="Exercise 13.2" />
     <MESSAGE value="Exercise 13.3" />
     <MESSAGE value="Create  a restricted IO type allowing only console IO" />
@@ -1461,7 +1460,8 @@
     <MESSAGE value="Chapter 15 Exercise 3&#10;&#10;Calculate running mean" />
     <MESSAGE value="Add loop combinator" />
     <MESSAGE value="Exercise 15.4 Re-write sum and count in terms of loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 15.4 Re-write sum and count in terms of loop" />
+    <MESSAGE value="Exercise 15.5&#10;&#10;Implement pipe on Process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 15.5&#10;&#10;Implement pipe on Process" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1736,8 +1736,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="87" column="59" lean-forward="false" selection-start-line="87" selection-start-column="59" selection-end-line="87" selection-end-column="59" />
+        <state relative-caret-position="438">
+          <caret line="122" column="105" lean-forward="false" selection-start-line="122" selection-start-column="105" selection-end-line="122" selection-end-column="105" />
           <folding>
             <element signature="e#29#91#0" expanded="true" />
           </folding>

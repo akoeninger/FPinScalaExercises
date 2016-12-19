@@ -56,7 +56,7 @@ object SimpleStreamTransducers {
     emitting a value to the output (`Emit`), reading a value from its
     input (`Await`) or signaling termination via `Halt`.
                                */
-  sealed trait Process[-I, +O] {
+  sealed trait Process[I, O] {
     import Process._
     def apply(s: Stream[I]): Stream[O] = this match {
       case Emit(head, tail) => head #:: tail(s)
@@ -88,6 +88,20 @@ object SimpleStreamTransducers {
         case Await(g) => Await((i: Option[I]) => g(i) |> p2)
       }
     }
+
+    def map[O2](f: O => O2): Process[I, O2] = this |> lift(f)
+
+    def ++(p: => Process[I, O]): Process[I, O] = this match {
+      case Emit(head, tail) => Emit(head, tail ++ p)
+      case Await(recv) => Await(recv andThen (_ ++ p))
+      case Halt() => p
+    }
+
+    def flatMap[O2](f: O => Process[I, O2]): Process[I, O2] = this match {
+      case Halt() => Halt()
+      case Emit(head, tail) => f(head) ++ tail.flatMap(f)
+      case Await(recv) => Await(recv andThen (_ flatMap f))
+    }
   }
 
   object Process {
@@ -103,6 +117,12 @@ object SimpleStreamTransducers {
     ): Process[I ,O] = Await {
       case Some(i) => f(i)
       case None => fallback
+    }
+
+    def monad[I]: Monad[({ type f[x] = Process[I, x]})#f] = new Monad[({type f[x] = Process[I, x]})#f] {
+      override def flatMap[O, O2](p: Process[I, O])(f: O => Process[I, O2]): Process[I, O2] = p flatMap f
+
+      override def unit[O](o: => O): Process[I, O] = Emit(o)
     }
 
     def liftOne[I, O](f: I => O): Process[I, O] = Await {
