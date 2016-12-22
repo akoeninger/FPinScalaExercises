@@ -2,7 +2,7 @@ package fpinscala.Chapter15
 
 import language.{higherKinds, implicitConversions, postfixOps}
 
-import fpinscala.Chapter13.{Free, IO, Monad, unsafePerformIO}
+import fpinscala.Chapter13.{Free, IO, Monad, Monadic, unsafePerformIO}
 
 object ImperativeAndLazyIO {
   def linesGt40k(filename: String): IO[Boolean] = IO {
@@ -102,6 +102,11 @@ object SimpleStreamTransducers {
       case Emit(head, tail) => f(head) ++ tail.flatMap(f)
       case Await(recv) => Await(recv andThen (_ flatMap f))
     }
+
+    def zip[O2](p: Process[I, O2]): Process[I, (O, O2)] = Process.zip(this, p)
+
+    //      this.map2[Int, (O, Int)](count[I])((o, i) => (o, i - 1))
+    def zipWithIndex: Process[I, (O, Int)] = this.zip(count map (_ - 1))
   }
 
   object Process {
@@ -124,6 +129,9 @@ object SimpleStreamTransducers {
 
       override def unit[O](o: => O): Process[I, O] = Emit(o)
     }
+
+    implicit def toMonadic[I, O](a: Process[I, O]): Monadic[({type f[x] = Process[I, x]})#f, O] =
+      monad[I].toMonadic(a)
 
     def liftOne[I, O](f: I => O): Process[I, O] = Await {
       case Some(i) => emit(f(i))
@@ -179,6 +187,20 @@ object SimpleStreamTransducers {
         case (o, s2) => emit(o, loop(s2)(f))
       }
     )
+
+    def zip[I, O, O2](p1: Process[I, O], p2: Process[I, O2]): Process[I, (O, O2)] = (p1, p2) match {
+      case (Halt(), _) => Halt()
+      case (_, Halt()) => Halt()
+      case (Emit(b, t1), Emit(c, t2)) => Emit((b, c), zip(t1, t2))
+      case (Await(recv1), _) => Await((oi: Option[I]) => zip(recv1(oi), feed(oi)(p2)))
+      case (_, Await(recv2)) => Await((oi: Option[I]) => zip(feed(oi)(p1), recv2(oi)))
+    }
+
+    def feed[I, O](oi: Option[I])(p: Process[I, O]): Process[I, O] = p match {
+      case Halt() => p
+      case Emit(head, tail) => Emit(head, feed(oi)(tail))
+      case Await(recv) => recv(oi)
+    }
   }
 }
 
