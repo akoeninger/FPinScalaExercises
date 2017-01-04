@@ -203,6 +203,10 @@ object SimpleStreamTransducers {
       case Emit(head, tail) => Emit(head, feed(oi)(tail))
       case Await(recv) => recv(oi)
     }
+
+    def exists[I](f: I => Boolean): Process[I, Boolean] = lift(f) |> any
+
+    def any: Process[Boolean, Boolean] = loop(false)((b: Boolean, s) => (s || b, s || b))
   }
 }
 
