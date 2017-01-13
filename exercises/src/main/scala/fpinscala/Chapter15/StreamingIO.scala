@@ -212,7 +212,7 @@ object SimpleStreamTransducers {
 
     def processFile[A, B](
       f: File,
-      p: Process[String ,A],
+      p: Process[String, A],
       z: B
     )(g: (B, A) => B): IO[B] = IO {
       @annotation.tailrec
@@ -226,6 +226,13 @@ object SimpleStreamTransducers {
       val s = io.Source.fromFile(f)
       try go(s.getLines(), p, z)
       finally s.close()
+    }
+
+    def convertFahrenheit: Process[String, String] = {
+      def toCelsius(fahrenheit: Double): Double = (5.0 / 9.0) * (fahrenheit - 32.0)
+
+      filter[String](ln => ln.nonEmpty && !ln.startsWith("#")) |>
+        lift(st => toCelsius(st.toDouble).toString)
     }
   }
 }
