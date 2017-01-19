@@ -59,7 +59,7 @@ object SimpleStreamTransducers {
     input (`Await`) or signaling termination via `Halt`.
                                */
   sealed trait Process[I, O] {
-    import Process._
+    import SimpleStreamTransducers.Process._
     def apply(s: Stream[I]): Stream[O] = this match {
       case Emit(head, tail) => head #:: tail(s)
       case Await(recv) => s match {
@@ -237,4 +237,111 @@ object SimpleStreamTransducers {
   }
 }
 
+object GeneralizedStreamTransducers {
+
+  /*
+Our generalized process type is parameterized on the protocol used for
+communicating with the driver. This works similarly to the `IO` type
+we defined in chapter 13. The `Await` constructor emits a request of
+type `F[A]`, and receives a response of type `Either[Throwable,A]`:
+trait Process[F,A]
+case class Await[F[_],A,O](
+req: F[A],
+recv: Either[Throwable,A] => Process[F,O]) extends Process[F,O]
+case class Halt[F[_],O](err: Throwable) extends Process[F,O]
+case class Emit[F[_],O](head: O, tail: Process[F,O]) extends Process[F,O]
+The `Await` constructor may now receive a successful result or an error.
+The `Halt` constructor now has a _reason_ for termination, which may be
+either normal termination indicated by the special exception `End`,
+forceful terimation, indicated by the special exception `Kill`,
+or some other error.
+We'll use the improved `Await` and `Halt` cases together to ensure
+that all resources get released, even in the event of exceptions.
+*/
+
+  trait Process[F[_], O] {
+    import fpinscala.Chapter15.GeneralizedStreamTransducers.Process._
+
+    def onHalt(f: Throwable => Process[F, O]): Process[F, O] = this match {
+      case Halt(err) => Try(f(err))
+      case Emit(head, tail) => Emit(head, tail.onHalt(f))
+      case Await(req, recv) => Await(req, recv andThen (_.onHalt(f)))
+    }
+
+    def ++(p: => Process[F, O]): Process[F, O] = this.onHalt {
+      case End => p
+      case err => Halt(err)
+    }
+
+    def flatMap[O2](f: O => Process[F, O2]): Process[F, O2] = this match {
+      case Halt(err) => Halt(err)
+      case Emit(head, tail) => Try(f(head)) ++ tail.flatMap(f)
+      case Await(req, recv) => Await(req, recv andThen (_ flatMap f))
+    }
+  }
+
+  object Process {
+    case class Halt[F[_], O](
+      err: Throwable
+    ) extends Process[F, O]
+
+    case class Emit[F[_], O](
+      head: O,
+      tail: Process[F, O]
+    ) extends Process[F, O]
+
+    case class Await[F[_], A, O](
+      req: F[A],
+      recv: Either[Throwable, A] => Process[F, O]
+    ) extends Process[F, O]
+
+    def await[F[_], A, O](req: F[A])(recv: Either[Throwable, A] => Process[F, O]): Process[F, O] = Await(req, recv)
+
+    def emit[F[_], O](head: O, tail: Process[F,O] = Halt[F,O](End)): Process[F, O] = Emit(head, tail)
+
+
+    def runLog[O](src: Process[IO, O]): IO[IndexedSeq[O]] = IO {
+      val E = java.util.concurrent.Executors.newFixedThreadPool(4)
+
+      @annotation.tailrec
+      def go(cur: Process[IO, O], acc: IndexedSeq[O]): IndexedSeq[O] = cur match {
+        case Emit(head, tail) => go(tail, acc :+ head)
+        case Halt(End) => acc
+        case Halt(err) => throw err
+        case Await(req, recv) =>
+          val next = try {
+            recv(Right(unsafePerformIO(req)(E)))
+          } catch { case err: Throwable => recv(Left(err)) }
+          go(next, acc)
+      }
+      try go(src, IndexedSeq())
+      finally E.shutdown()
+    }
+
+    import java.io.{BufferedReader, FileReader}
+    val p: Process[IO, String] = await(IO(new BufferedReader(new FileReader("lines.txt")))) {
+      case Right(b) =>
+        lazy val next: Process[IO, String] = await(IO(b.readLine())) {
+          case Left(e) => await(IO(b.close()))(_ => Halt(e))
+          case Right(line) =>
+            if (line eq null) Halt(End)
+            else emit(line, next)
+        }
+        next
+      case Left(e) => Halt(e)
+    }
+
+
+    /**
+      * Helper function to safely produce `p`, or gracefully halt
+      * with an error if an exception is thrown.
+      */
+    def Try[F[_],O](p: => Process[F,O]): Process[F,O] =
+      try p
+      catch { case e: Throwable => Halt(e) }
+
+    case object End extends Exception
+    case object Kill extends Exception
+  }
+}
 
