@@ -278,6 +278,16 @@ that all resources get released, even in the event of exceptions.
       case Emit(head, tail) => Try(f(head)) ++ tail.flatMap(f)
       case Await(req, recv) => Await(req, recv andThen (_ flatMap f))
     }
+
+    def runLog(implicit F: MonadCatch[F]): F[IndexedSeq[O]] = {
+      def go(cur: Process[F, O], acc: IndexedSeq[O]): F[IndexedSeq[O]] = cur match {
+        case Emit(head, tail) => go(tail, acc :+ head)
+        case Halt(End) => F.unit(acc)
+        case Halt(err) => F.fail(err)
+        case Await(req, recv) => F.flatMap(F.attempt(req)) { e => go(Try(recv(e)), acc) }
+      }
+      go(this, IndexedSeq())
+    }
   }
 
   object Process {
