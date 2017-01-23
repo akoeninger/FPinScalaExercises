@@ -273,6 +273,26 @@ that all resources get released, even in the event of exceptions.
       case err => Halt(err)
     }
 
+    def onComplete(p: => Process[F, O]): Process[F, O] = this.onHalt {
+      case End => p.asFinalizer
+      case err => p.asFinalizer ++ Halt(err)
+    }
+
+    private def asFinalizer: Process[F, O] = this match {
+      case Emit(h, t) => Emit(h, t.asFinalizer)
+      case Halt(e) => Halt(e)
+      case Await(req, recv) => await(req) {
+        case Left(Kill) => this.asFinalizer
+        case x => recv(x)
+      }
+    }
+
+    final def drain[O2]: Process[F, O2] = this match {
+      case Halt(err) => Halt(err)
+      case Emit(head, tail) => tail.drain
+      case Await(req, recv) => Await(req, recv andThen(_.drain))
+    }
+
     def flatMap[O2](f: O => Process[F, O2]): Process[F, O2] = this match {
       case Halt(err) => Halt(err)
       case Emit(head, tail) => Try(f(head)) ++ tail.flatMap(f)
@@ -309,6 +329,25 @@ that all resources get released, even in the event of exceptions.
 
     def emit[F[_], O](head: O, tail: Process[F,O] = Halt[F,O](End)): Process[F, O] = Emit(head, tail)
 
+    def eval[F[_], A](a: F[A]): Process[F, A] = await[F, A, A](a) {
+      case Right(b) => emit(b, Halt(End))
+      case Left(e) => Halt(e)
+    }
+
+    def eval_[F[_], A, B](a: F[A]): Process[F, B] = eval[F, A](a).drain[B]
+
+    def lines(filename: String): Process[IO, String] = resource(IO(io.Source.fromFile(filename)))(
+      src => {
+        lazy val iter = src.getLines()
+        def step = if (iter.hasNext) Some(iter.next) else None
+        lazy val lines: Process[IO, String] = eval(IO(step)).flatMap {
+          case None => Halt(End)
+          case Some(line) => Emit(line, lines)
+        }
+        lines
+      },
+      src => eval_ { IO(src.close()) }
+    )
 
     def runLog[O](src: Process[IO, O]): IO[IndexedSeq[O]] = IO {
       val E = java.util.concurrent.Executors.newFixedThreadPool(4)
@@ -340,6 +379,11 @@ that all resources get released, even in the event of exceptions.
         next
       case Left(e) => Halt(e)
     }
+
+    def resource[R, O](acquire: IO[R])(
+      use: R => Process[IO, O],
+      release: R => Process[IO, O]
+    ): Process[IO, O] = await[IO, R, O](acquire)(r => use(r).onComplete(release(r)))
 
 
     /**
