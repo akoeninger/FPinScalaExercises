@@ -1,8 +1,9 @@
 package fpinscala.Chapter15
 
-import java.io.File
+import java.io.{File, FileWriter}
 
 import language.{higherKinds, implicitConversions, postfixOps}
+import scala.util.{Left, Right}
 
 import fpinscala.Chapter13.{Free, IO, Monad, Monadic, unsafePerformIO}
 
@@ -287,6 +288,29 @@ that all resources get released, even in the event of exceptions.
       }
     }
 
+    def repeat: Process[F, O] = this ++ this.repeat
+
+
+    def |>[O2](p2: Process1[O, O2]): Process[F, O2] = p2 match {
+      case Halt(err) => this.kill onHalt { Halt(err) ++ Halt(e2)}
+      case Emit(h, t) => Emit(h, this |> t)
+      case Await(req0, recv0) => await(req0)(recv0 andThen (_ |> p2))
+    }
+
+    def pipe[O2](p2: Process1[O, O2]): Process[F, O2] = this |> p2
+
+    @annotation.tailrec
+    final def kill[O2]: Process[F, O2] = this match {
+      case Await(req, recv) => recv(Left(Kill)).drain.onHalt {
+        case Kill => Halt(End)
+        case e => Halt(e)
+      }
+      case Halt(e) => Halt(e)
+      case Emit(h, t) => t.kill
+    }
+
+    def filter(f: O => Boolean): Process[F, O] = this |> Process.filter(f)
+
     final def drain[O2]: Process[F, O2] = this match {
       case Halt(err) => Halt(err)
       case Emit(head, tail) => tail.drain
@@ -308,6 +332,28 @@ that all resources get released, even in the event of exceptions.
       }
       go(this, IndexedSeq())
     }
+
+    def tee[O2, O3](p2: Process[F, O2])(t: Tee[O, O2, O3]): Process[F, O3] = t match {
+      case Halt(e) => this.kill onComplete p2.kill onComplete Halt(e)
+      case Emit(h, tail) => Emit(h, (this tee p2)(t))
+      case Await(side, recv) => side.get match {
+        case Left(isO) => this match {
+          case Halt(e) => p2.kill onComplete Halt(e)
+          case Emit(o, ot) => (ot tee p2)(Try(recv(Right(o))))
+          case Await(reqL, recvL) => await(reqL)(recvL andThen (this2 => this2.tee(p2)(t)))
+        }
+        case Right(isO2) => p2 match {
+          case Halt(e) => this.kill onComplete Halt(e)
+          case Emit(o2, ot) => (this tee ot)(Try(recv(Right(o2))))
+          case Await(reqR, recvR) => await(reqR)(recvR andThen (p3 => this.tee(p3)(t)))
+        }
+      }
+    }
+
+    def to[O2](sink: Sink[F, O]): Process[F, Unit] =
+      join { (this zipWith sink)((o, f) => f(o)) }
+
+    def join[F[_], O](p: Process[F, Process[F, O]]): Process[F, O]
   }
 
   object Process {
@@ -385,6 +431,83 @@ that all resources get released, even in the event of exceptions.
       release: R => Process[IO, O]
     ): Process[IO, O] = await[IO, R, O](acquire)(r => use(r).onComplete(release(r)))
 
+    case class Is[I]() {
+      sealed trait f[X]
+      val Get = new f[I] {}
+    }
+
+    def Get[I] = Is[I]().Get
+
+    type Process1[I, O] = Process[Is[I]#f, O]
+
+    def await1[I, O](
+      recv: I => Process1[I, O],
+      fallback: Process1[I, O] = halt1[I, O]
+    ): Process1[I, O] = Await(Get[I], (e: Either[Throwable, I]) => e match {
+      case Left(End) => fallback
+      case Left(err) => Halt(err)
+      case Right(i) => Try(recv(i))
+    })
+
+    def emit1[I, O](h: O, t1: Process1[I, O] = halt1[I, O]): Process1[I, O] = emit(h, t1)
+
+    def halt1[I, O]: Process1[I, O] = Halt[Is[I]#f, O](End)
+
+    def lift[I, O](f: I => O): Process1[I, O] =
+      await1[I, O](i => emit(f(i))).repeat
+
+    def filter[I](f: I => Boolean): Process1[I, I] = await1[I, I](i => if (f(i)) emit(i) else halt1).repeat
+
+    case class T[I, I2]() {
+      sealed trait f[X] { def get: Either[I => X, I2 => X] }
+      val L = new f[I] { def get = Left(identity) }
+      val R = new f[I2] { def get = Right(identity) }
+    }
+
+    def L[I, I2] = T[I, I2]().L
+    def R[I, I2] = T[I, I2]().R
+
+    type Tee[I, I2, O] = Process[T[I, I2]#f, O]
+
+    def haltT[I, I2, O]: Tee[I, I2, O] = Halt[T[I,I2]#f, O](End)
+    def awaitL[I, I2, O](
+      recv: I => Tee[I, I2, O],
+      fallback: => Tee[I, I2, O] = haltT[I, I2, O]
+    ): Tee[I, I2, O] = await[T[I, I2]#f, I, O](L) {
+      case Left(End) => fallback
+      case Left(err) => Halt(err)
+      case Right(a) => Try(recv(a))
+    }
+
+    def awaitR[I, I2, O](
+      recv: I => Tee[I, I2, O],
+      fallback: => Tee[I, I2, O] = haltT[I, I2, O]
+    ): Tee[I, I2, O] = await[T[I, I2]#f, I, O](R) {
+      case Left(End) => fallback
+      case Left(err) => Halt(err)
+      case Right(a) => Try(recv(a))
+    }
+
+    def emitT[I, I2, O](h: O, t1: Tee[I, I2, O] = haltT[I, I2, O]): Tee[I, I2, O] = emit(h, t1)
+
+    def zipWith[I, I2, O](f: (I, I2) => O): Tee[I, I2, O] = awaitL[I, I2, O](i =>
+      awaitR(i2 => emitT(f(i, i2)))
+    ).repeat
+
+    def zip[I, I2]: Tee[I, I2, (I, I2)] = zipWith((_, _))
+
+    type Sink[F[_], O] = Process[F[_], O => Process[F, Unit]]
+
+    def fileW(file: String, append: Boolean = false): Sink[IO, String] = {
+      resource[FileWriter, String => Process[IO, Unit]](
+        IO { new FileWriter(file, append)}
+      )(
+        w => constant { (s: String) => eval[IO, Unit](IO(w.write(s))) },
+        w => eval_(IO(w.close()))
+      )
+    }
+
+    def constant[A](a: A): Process[IO, A] = eval[IO, A](IO(a)).repeat
 
     /**
       * Helper function to safely produce `p`, or gracefully halt
