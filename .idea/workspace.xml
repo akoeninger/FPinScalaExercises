@@ -58,8 +58,8 @@
       <file leaf-file-name="StreamingIO.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-834">
-              <caret line="353" column="21" lean-forward="false" selection-start-line="353" selection-start-column="21" selection-end-line="353" selection-end-column="21" />
+            <state relative-caret-position="722">
+              <caret line="370" column="25" lean-forward="true" selection-start-line="370" selection-start-column="25" selection-end-line="370" selection-end-column="25" />
               <folding>
                 <element signature="e#29#62#0" expanded="true" />
               </folding>
@@ -104,7 +104,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="522">
               <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-              <folding />
+              <folding>
+                <element signature="e#29#68#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -245,6 +247,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -385,7 +388,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -736,7 +738,7 @@
     </configuration>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1485271591461" />
+    <option name="lastUpdateTimestamp" value="1485364581847" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -1413,7 +1415,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Exercise 14.1" />
     <MESSAGE value="Exercise 14.2&#10;&#10;Pure in-line quicksort that mutates the data it recieves but in a safe way" />
     <MESSAGE value="Exercise 14.3&#10;&#10;Built a functionally pure mutable HashMap" />
     <MESSAGE value="Chapter 15: Stream processing and incremental I/O&#10;&#10;imperative example of checking if file is over 40,000 lines long using the IO monad.&#10;&#10;Not very composable" />
@@ -1438,7 +1439,8 @@
     <MESSAGE value="15.3.1 Sources&#10;&#10;Create Task and MonadCatch" />
     <MESSAGE value="Exercise 15.10" />
     <MESSAGE value="Exercise 15.11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise 15.11" />
+    <MESSAGE value="Add Tee and Sink types" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Tee and Sink types" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1469,7 +1471,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#29#68#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1513,7 +1517,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#29#68#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1557,7 +1563,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#29#68#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1601,7 +1609,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#29#68#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1645,7 +1655,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#29#68#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1875,7 +1887,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#29#68#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1891,8 +1905,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercises/src/main/scala/fpinscala/Chapter15/StreamingIO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-834">
-          <caret line="353" column="21" lean-forward="false" selection-start-line="353" selection-start-column="21" selection-end-line="353" selection-end-column="21" />
+        <state relative-caret-position="722">
+          <caret line="370" column="25" lean-forward="true" selection-start-line="370" selection-start-column="25" selection-end-line="370" selection-end-column="25" />
           <folding>
             <element signature="e#29#62#0" expanded="true" />
           </folding>

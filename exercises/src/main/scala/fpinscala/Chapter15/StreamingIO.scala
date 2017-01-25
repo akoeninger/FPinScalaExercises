@@ -350,10 +350,15 @@ that all resources get released, even in the event of exceptions.
       }
     }
 
+    def zipWith[O2,O3](p2: Process[F,O2])(f: (O,O2) => O3): Process[F,O3] =
+      (this tee p2)(Process.zipWith(f))
+
+    def zip[O2](p2: Process[F,O2]): Process[F,(O,O2)] =
+      zipWith(p2)((_,_))
+
     def to[O2](sink: Sink[F, O]): Process[F, Unit] =
       join { (this zipWith sink)((o, f) => f(o)) }
 
-    def join[F[_], O](p: Process[F, Process[F, O]]): Process[F, O]
   }
 
   object Process {
@@ -508,6 +513,8 @@ that all resources get released, even in the event of exceptions.
     }
 
     def constant[A](a: A): Process[IO, A] = eval[IO, A](IO(a)).repeat
+
+    def join[F[_], O](p: Process[F, Process[F, O]]): Process[F, O] = p.flatMap(pp => pp)
 
     /**
       * Helper function to safely produce `p`, or gracefully halt
