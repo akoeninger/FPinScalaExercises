@@ -359,6 +359,8 @@ that all resources get released, even in the event of exceptions.
     def to[O2](sink: Sink[F, O]): Process[F, Unit] =
       join { (this zipWith sink)((o, f) => f(o)) }
 
+    def through[O2](p2: Process[F, O => Process[F, O2]]): Process[F, O2] =
+      join { (this zipWith p2)((o, f) => f(o)) }
   }
 
   object Process {
@@ -515,6 +517,8 @@ that all resources get released, even in the event of exceptions.
     def constant[A](a: A): Process[IO, A] = eval[IO, A](IO(a)).repeat
 
     def join[F[_], O](p: Process[F, Process[F, O]]): Process[F, O] = p.flatMap(pp => pp)
+
+    type Channel[F[_], I, O] = Process[F, I => Process[F, O]]
 
     /**
       * Helper function to safely produce `p`, or gracefully halt
